@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Networking</name>
+    </assembly>
+    <members>
+        <member name="T:Networking.Client">
+            <summary>
+            A client manages the connection to the server
+            </summary>
+        </member>
+        <member name="E:Networking.Client.Disconnected">
+            <summary>
+            Gets called if this client gets disconnected from the server
+            </summary>
+        </member>
+        <member name="E:Networking.Client.MessageReceived">
+            <summary>
+            Gets called if a message from the server is received
+            </summary>
+        </member>
+        <member name="M:Networking.Client.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a new instance
+            </summary>
+            <param name="address">The address to connect to</param>
+            <param name="port">The port to use for the connection</param>
+        </member>
+        <member name="M:Networking.Client.Connect">
+            <summary>
+            Connects the client to the server
+            </summary>
+        </member>
+        <member name="M:Networking.Client.Disconnect">
+            <summary>
+            Disconnects the client from the server
+            </summary>
+        </member>
+        <member name="M:Networking.Client.Send(System.Byte[])">
+            <summary>
+            Sends a bunch of data to the server
+            </summary>
+            <param name="data">The data to send</param>
+        </member>
+        <member name="T:Networking.Server">
+            <summary>
+            A Server manages client connections
+            </summary>
+        </member>
+        <member name="E:Networking.Server.MessageReceived">
+            <summary>
+            Gets called if a client receives a message. Forwards <see cref="E:Networking.ServerInstance.MessageReceived"/>
+            </summary>
+        </member>
+        <member name="E:Networking.Server.ClientConnected">
+            <summary>
+            Gets called if a client gets connected
+            </summary>
+        </member>
+        <member name="E:Networking.Server.ClientDisconnected">
+            <summary>
+            Gets called if a client gets disconnected
+            </summary>
+        </member>
+        <member name="M:Networking.Server.#ctor">
+            <summary>
+            Creates a new instance
+            </summary>
+        </member>
+        <member name="M:Networking.Server.Close(Networking.ServerInstance)">
+            <summary>
+            Closes the connection to one client
+            </summary>
+            <param name="instance">The connection to close</param>
+        </member>
+        <member name="M:Networking.Server.Start">
+            <summary>
+            Starts the server
+            </summary>
+        </member>
+        <member name="M:Networking.Server.Stop">
+            <summary>
+            Stops the server
+            </summary>
+        </member>
+        <member name="T:Networking.ServerInstance">
+            <summary>
+            A server instance is a connected client on the server side
+            </summary>
+        </member>
+        <member name="E:Networking.ServerInstance.MessageReceived">
+            <summary>
+            Gets called if the instance receives data from the client
+            </summary>
+        </member>
+        <member name="E:Networking.ServerInstance.InstanceClosed">
+            <summary>
+            Gets called if the instances connection is closed
+            </summary>
+        </member>
+        <member name="P:Networking.ServerInstance.IP">
+            <summary>
+            The ip of the connected client
+            </summary>
+        </member>
+        <member name="P:Networking.ServerInstance.Connected">
+            <summary>
+            States if the instance is currently connected to the server
+            </summary>
+        </member>
+        <member name="M:Networking.ServerInstance.#ctor(System.Net.Sockets.Socket)">
+            <summary>
+            Creates a new connection
+            </summary>
+            <param name="socket">The socket that handles the connection</param>
+        </member>
+        <member name="M:Networking.ServerInstance.Send(System.Byte[])">
+            <summary>
+            Sends a bunch of data to the client
+            </summary>
+            <param name="data">The data to send</param>
+        </member>
+        <member name="M:Networking.ServerInstance.Close">
+            <summary>
+            Closes the connection
+            </summary>
+        </member>
+    </members>
+</doc>

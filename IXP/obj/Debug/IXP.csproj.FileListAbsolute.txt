@@ -1,0 +1,5 @@
+D:\Projects\IntelligentHome\IXP\bin\Debug\IXP.XML
+D:\Projects\IntelligentHome\IXP\bin\Debug\IXP.dll
+D:\Projects\IntelligentHome\IXP\bin\Debug\IXP.pdb
+D:\Projects\IntelligentHome\IXP\obj\Debug\IXP.dll
+D:\Projects\IntelligentHome\IXP\obj\Debug\IXP.pdb

@@ -1,0 +1,15 @@
+D:\Projects\IntelligentHome\Client\bin\Debug\Client.exe.config
+D:\Projects\IntelligentHome\Client\bin\Debug\Client.exe
+D:\Projects\IntelligentHome\Client\bin\Debug\Client.pdb
+D:\Projects\IntelligentHome\Client\bin\Debug\IXP.dll
+D:\Projects\IntelligentHome\Client\bin\Debug\Networking.dll
+D:\Projects\IntelligentHome\Client\bin\Debug\IXP.pdb
+D:\Projects\IntelligentHome\Client\bin\Debug\IXP.xml
+D:\Projects\IntelligentHome\Client\bin\Debug\Networking.pdb
+D:\Projects\IntelligentHome\Client\bin\Debug\Networking.xml
+D:\Projects\IntelligentHome\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome\Client\obj\Debug\Client.Form1.resources
+D:\Projects\IntelligentHome\Client\obj\Debug\Client.Properties.Resources.resources
+D:\Projects\IntelligentHome\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+D:\Projects\IntelligentHome\Client\obj\Debug\Client.exe
+D:\Projects\IntelligentHome\Client\obj\Debug\Client.pdb

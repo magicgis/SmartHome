@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="9ce88e8c-497a-473d-ab63-ee17fe4151e2" Title="Namespaces" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="a1d0ac64-7700-4677-8ea3-2dcae423d31b" Title="AdminTools" Url="html/d1740e75-1f86-205f-1b00-2b99e96de20e.htm">
+      <HelpTOCNode Id="0bcf6cbd-f07d-4058-ae11-f44beaf8247b" Title="CLog Class" Url="html/644be53e-7b4a-0f0e-53e6-f637d83b9370.htm">
+        <HelpTOCNode Title="CLog Constructor " Url="html/066d4e6f-d907-2e7b-8e29-493154bbaf13.htm" />
+        <HelpTOCNode Id="a753ef0d-9030-4b5b-a5aa-66271829c48e" Title="CLog Methods" Url="html/f547849c-d91a-b76a-fcfa-7979b38f2d6a.htm">
+          <HelpTOCNode Title="AddMessage Method " Url="html/5e3ec987-8627-7cb2-965f-1d018a83924e.htm" />
+          <HelpTOCNode Id="487fe735-6cb2-4e71-bd8f-9187c8b39e8e" Title="Dispose Method " Url="html/4c7a442c-2779-346e-2636-43c56901dc70.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/aadca80a-2849-8f22-f37e-9bcd9511ffa1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="RefreshDisabledChannels Method " Url="html/7ba2180f-1a4a-4ec9-81a7-6acdc40f9de0.htm" />
+          <HelpTOCNode Title="RefreshEnabledChannels Method " Url="html/a1d2ec65-ccd6-04f6-2e17-4a2c9d224818.htm" />
+          <HelpTOCNode Title="WriteCache Method " Url="html/b852c39c-5d7b-4e2c-6152-058b340d0be8.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="CLog Properties" Url="html/df2ddd7e-ca34-46e8-830a-933f4ef938b1.htm" />
+        <HelpTOCNode Title="CLog Events" Url="html/5ab0b518-4ab9-d3f5-6acf-3968e02f6d42.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fe64e69f-c981-4f37-8c52-c808b7336253" Title="CNetworkFunctions Class" Url="html/25114a68-3a12-f447-5f6e-63aba7ad65a9.htm">
+        <HelpTOCNode Title="CNetworkFunctions Constructor " Url="html/3a34c652-1d3d-0eea-0e26-fa70e602355b.htm" />
+        <HelpTOCNode Id="cc93cfb6-0961-45c0-b95c-2be065656f62" Title="CNetworkFunctions Methods" Url="html/f3efaaa0-2229-27c9-cf86-16c6e545ba66.htm">
+          <HelpTOCNode Id="79e398b5-e1f0-4ed2-a7b3-01b88ee67720" Title="Dispose Method " Url="html/95e33e12-5b68-c89b-c830-a5beff5d61fa.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/b6a2be86-22cc-fffd-71d0-2dfbb9acfcde.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="RefreshFunctions Method " Url="html/c8f1ce34-b7be-e1ed-4022-c4e16b693792.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="CNetworkFunctions Properties" Url="html/d3615b4d-7920-fb31-d361-0461415e22ed.htm" />
+        <HelpTOCNode Title="CNetworkFunctions Events" Url="html/dda2bfce-a656-99ae-fc38-dd3db48c7fb4.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d40db1ff-954f-42df-8728-cb10a0d14fdd" Title="CPluginOverview Class" Url="html/3c71a251-43a8-c6ae-f5b3-51c54458b0e0.htm">
+        <HelpTOCNode Title="CPluginOverview Constructor " Url="html/b32127d6-9afb-c17d-c795-74b09db413db.htm" />
+        <HelpTOCNode Id="f1566e44-9851-4888-ac34-58fa14602e39" Title="CPluginOverview Methods" Url="html/38115239-8733-38bd-58cf-dcf36c31f49c.htm">
+          <HelpTOCNode Id="45b1a362-7c25-45e4-b596-d886b32f5dba" Title="Dispose Method " Url="html/2f5b3dc8-49ff-d89e-ac51-339d62fe79c3.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/619b5277-b754-2d80-549e-5632529e26c9.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="RefreshPlugins Method " Url="html/73dc29ad-0620-0e07-3176-189b92359a24.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="CPluginOverview Properties" Url="html/47224c3a-0c48-a999-07ab-ff3e1dbaa1d8.htm" />
+        <HelpTOCNode Title="CPluginOverview Events" Url="html/8f1d4d10-04b8-419d-7f7c-c60a21536ba5.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e1d46ce6-5599-4846-9689-07a65b2484cf" Title="DPLog Class" Url="html/002e90d1-49b2-3a5b-e361-2b954f4dbe78.htm">
+        <HelpTOCNode Title="DPLog Constructor " Url="html/f76287ac-0e2f-d41a-fa0d-591e47e7edcb.htm" />
+        <HelpTOCNode Id="2b68cb1d-e2ed-4fcf-9fba-6825ab2a799c" Title="DPLog Methods" Url="html/f41070f7-893d-6149-7258-cc57fb356cdb.htm">
+          <HelpTOCNode Title="OnControlLoad Method " Url="html/156b7353-a92b-fc1e-f60b-550b62343185.htm" />
+          <HelpTOCNode Title="OnPluginLoad Method " Url="html/7eb06c4c-3024-d532-d1bc-78f8d6a0c3b4.htm" />
+          <HelpTOCNode Title="OnPluginUnload Method " Url="html/6f083059-3e8d-fce2-eebb-93ad3f768342.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="28f37771-de34-4086-ae46-5171a96c0f50" Title="DPLog Properties" Url="html/2d4e9f89-679c-d8dd-a71d-67f4c434568f.htm">
+          <HelpTOCNode Title="Control Property " Url="html/613bf109-5682-7ba3-77f7-9f52b7164c96.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/4d773657-30c8-a5e4-76e3-301ffaf8b8df.htm" />
+          <HelpTOCNode Title="TabName Property " Url="html/778df663-89d5-bc2d-d9e2-c97a49197e58.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/86aca196-cf21-0a82-975c-eadb4ca83c37.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="929d0208-f39f-4346-b24a-7a4d1867bcab" Title="DPNetworkFunctions Class" Url="html/60543cc8-08a1-6be9-3563-a28dc28ccfd8.htm">
+        <HelpTOCNode Title="DPNetworkFunctions Constructor " Url="html/7997fb09-0d63-da85-cac6-a61d3d181372.htm" />
+        <HelpTOCNode Id="49d0aaf6-5923-457d-a2c6-e65d6b6272ad" Title="DPNetworkFunctions Methods" Url="html/e3bc8ba6-c08c-553c-6cc8-9787b2bfe0d5.htm">
+          <HelpTOCNode Title="OnControlLoad Method " Url="html/c726a337-4ccb-162d-8d2a-1c99489ae5a9.htm" />
+          <HelpTOCNode Title="OnControlUnload Method " Url="html/a2d36461-1257-1226-0b37-dded53af2ac1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="bbd9638e-75ad-4b26-bdbb-a601e67a02d0" Title="DPNetworkFunctions Properties" Url="html/bd616121-79c4-4537-fc67-aaa0a4fe978d.htm">
+          <HelpTOCNode Title="Control Property " Url="html/348fa417-829f-28eb-9171-b5944ed48f6a.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/1822d138-5ca4-0382-4fef-cd249fc399ac.htm" />
+          <HelpTOCNode Title="TabName Property " Url="html/eb98894f-a30c-3107-5b2f-4feea1fdd723.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/80c89154-3b78-ff22-0d54-c41e2a8e4565.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="2cbd3fd7-42a1-45a4-aaf4-09549415d96e" Title="DPPluginOverview Class" Url="html/eae46643-edd9-0b08-be9c-d99e670e65f9.htm">
+        <HelpTOCNode Title="DPPluginOverview Constructor " Url="html/6e48063e-92c5-c178-f909-f2f50c9de160.htm" />
+        <HelpTOCNode Id="850ca8d3-fe00-4b19-8cd0-5fed1fc5bf70" Title="DPPluginOverview Methods" Url="html/ee16ed42-d02d-229e-48d2-38595e140c88.htm">
+          <HelpTOCNode Title="OnControlLoad Method " Url="html/c010a726-4461-c532-7d1b-3e7ec07b7be3.htm" />
+          <HelpTOCNode Title="OnControlUnload Method " Url="html/81d14fbb-9645-551f-3ce5-d730719bdffd.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="08b6b0a5-963e-44b3-bd75-dd3df226885e" Title="DPPluginOverview Properties" Url="html/4d7d0607-2850-7bd4-ac54-daa1c5da5d6f.htm">
+          <HelpTOCNode Title="Control Property " Url="html/960b4232-b1ee-a8e3-af9f-022da4012d1e.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/1177a4f3-09e6-f55f-62b1-97a788a32767.htm" />
+          <HelpTOCNode Title="TabName Property " Url="html/f4254b62-f77c-ea13-3a80-a349813fcaed.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/54264969-7dfb-2163-7909-4ff014126886.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="3e536fa3-777f-407c-8193-b525b230a571" Title="PLog Class" Url="html/dc1f9224-eb6c-799f-e618-c754af89c3fd.htm">
+        <HelpTOCNode Title="PLog Constructor " Url="html/1cb7476d-537a-1078-e879-7042e19aeefd.htm" />
+        <HelpTOCNode Id="d13ff9d8-991e-4950-a2da-ddf98775b50d" Title="PLog Methods" Url="html/2bbca1fa-fbad-f890-59a4-4ddac76186ce.htm">
+          <HelpTOCNode Title="OnPluginLoad Method " Url="html/49292e32-a823-e80f-4b9b-b25d080f7b27.htm" />
+          <HelpTOCNode Title="OnPluginUnload Method " Url="html/e4f7aec5-1084-9dbd-9a80-1cf1e2b4e009.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="eaf57c90-d5f3-44f2-9cb9-8940af406be7" Title="PLog Properties" Url="html/9331a9ef-4ca6-c7b5-e098-78558084c91b.htm">
+          <HelpTOCNode Title="Name Property " Url="html/9b036a2f-fd35-f866-f355-ef87438181af.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/935253c9-4943-bdbf-e679-b02837d4e150.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8d19fd72-10de-4cc1-a8c8-9abd0ed8e429" Title="Clock" Url="html/7f3109c7-3f63-4657-668f-3501ac8768d8.htm">
+      <HelpTOCNode Id="4c938167-b36b-438d-8d8f-3fbfa9c3648c" Title="PAlarm Class" Url="html/085bf69f-40bd-4e92-6147-a68014b5f4ad.htm">
+        <HelpTOCNode Title="PAlarm Constructor " Url="html/145d2f80-6149-6366-9ea9-971db819b5eb.htm" />
+        <HelpTOCNode Id="17080520-6862-474e-9ed8-820c4e0df153" Title="PAlarm Methods" Url="html/4bcda3fb-340e-8766-6302-270c322bd96c.htm">
+          <HelpTOCNode Title="NetworkGetAlarm Method " Url="html/ba4cdada-42bc-7f5e-f169-00d5fae8283e.htm" />
+          <HelpTOCNode Title="NetworkGetAlarms Method " Url="html/c4083304-3ae6-eeea-e5dd-4a19babf94d7.htm" />
+          <HelpTOCNode Title="NetworkRegisterAlarm Method " Url="html/bb2bf22a-62ae-61c9-c0d6-895bbfce2e2b.htm" />
+          <HelpTOCNode Title="NetworkSetAlarmEnabled Method " Url="html/499c21ab-342b-f0c1-7c32-5f0bfb01d14b.htm" />
+          <HelpTOCNode Title="NetworkSetAlarmName Method " Url="html/19099aa7-545f-6412-bc82-450d6b1b591e.htm" />
+          <HelpTOCNode Title="NetworkSetAlarmTime Method " Url="html/0582c4e5-fcf9-402c-d02d-c80491ddc8a5.htm" />
+          <HelpTOCNode Title="NetworkSetAlarmWeekdays Method " Url="html/0019522b-3bd8-debf-80cb-541f9ff32f93.htm" />
+          <HelpTOCNode Title="NetworkUnregisterAlarm Method " Url="html/02490537-7a53-ddb2-2ed2-4a9d0b667bfa.htm" />
+          <HelpTOCNode Title="OnPluginLoad Method " Url="html/433673d4-5739-1c20-b5e8-bfad7952b6a6.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e8149e2a-7d64-4291-9803-2a847f9f881b" Title="PAlarm Properties" Url="html/68168590-55cb-3e93-d479-28f1080062e2.htm">
+          <HelpTOCNode Title="Name Property " Url="html/8bd008bd-ec5f-434b-70cc-f32b1e2944bd.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/f8aaf77d-8f7a-1f0f-09b8-15a5b53c87c6.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="70623184-9d6d-4d7e-a1a4-9cf22d43b146" Title="PClock Class" Url="html/c1a0df3c-9808-2a72-fe8c-914e2f9063b7.htm">
+        <HelpTOCNode Title="PClock Constructor " Url="html/dcdb2943-a020-e280-a999-93e55cd4d5b4.htm" />
+        <HelpTOCNode Id="397c40b1-bada-4651-b007-faabb7b21a41" Title="PClock Methods" Url="html/b54a751d-1eb4-9ea0-c5dd-1f1316f2f3fc.htm">
+          <HelpTOCNode Title="NetworkGetDate Method " Url="html/9f42cdfd-c72f-f5ac-7f64-2931f5999267.htm" />
+          <HelpTOCNode Title="NetworkGetTime Method " Url="html/595858b4-a3e2-af90-d8b0-0205c4864f07.htm" />
+          <HelpTOCNode Title="NetworkRegisterToTimeService Method " Url="html/6f560911-99db-92f0-096d-bf5eeb010f9a.htm" />
+          <HelpTOCNode Title="NetworkUnregisterFromTimeService Method " Url="html/7c7ef2b4-9d54-d666-c832-6aba4bbe7b07.htm" />
+          <HelpTOCNode Title="OnPluginLoad Method " Url="html/a5b1e872-20c5-aa83-ce4d-6b88a48375cf.htm" />
+          <HelpTOCNode Title="OnPluginUnload Method " Url="html/419c076a-8806-fd70-de32-0d61a099c5e8.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b405d3e3-211a-4d2d-ae38-2248725c3c16" Title="PClock Properties" Url="html/8d659b33-10a5-dc4c-594e-8c9707641907.htm">
+          <HelpTOCNode Title="Name Property " Url="html/c4781042-910a-245c-b76c-88da847d342e.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/72923108-1d34-8549-d88f-6f23fa945da0.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="29739657-56e8-4b8b-af1d-ebd6547d8418" Title="TimeService Class" Url="html/b50d9ba6-5abc-93bf-9ed0-506f76744025.htm">
+        <HelpTOCNode Id="7e14faa5-aaa6-4525-8dcb-c450751fd7aa" Title="TimeService Methods" Url="html/8af39ef3-6e1d-a67a-ffc4-87afdf4e3d35.htm">
+          <HelpTOCNode Title="Register Method " Url="html/d5f9f3e5-afb5-0ba5-ad82-c16ef8becaac.htm" />
+          <HelpTOCNode Title="Start Method " Url="html/6e907baa-ad6e-a62e-f9d1-918f3aefc575.htm" />
+          <HelpTOCNode Title="Stop Method " Url="html/48b9543f-1fa2-47ac-2907-6ae85a02423f.htm" />
+          <HelpTOCNode Title="Unregister Method " Url="html/f484a2ab-ade2-746a-460a-1c9a798e2d1d.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e490ab43-fa87-43ab-b254-4d14d5c3a187" Title="IXP" Url="html/d4dfb9c3-f8f3-e9be-21a2-df6de4922c8d.htm">
+      <HelpTOCNode Id="f84fd483-d33b-4f1f-9347-df5b79a0e58d" Title="IXPFile Class" Url="html/78cc1c8e-f152-e39e-572f-f5eab8b17d9b.htm">
+        <HelpTOCNode Id="e5b35dc4-0d48-4e3c-9392-4be1bcc3bdfa" Title="IXPFile Constructor " Url="html/494607b3-9ac4-3991-ef15-715fd95c24db.htm">
+          <HelpTOCNode Title="IXPFile Constructor " Url="html/109e7d96-dbb1-dfaf-c5df-48af16d860b9.htm" />
+          <HelpTOCNode Title="IXPFile Constructor (String)" Url="html/194f1e14-0ce3-6f17-0c64-7499db89e432.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d6d39099-771b-4e7e-a64d-384aa59db697" Title="IXPFile Methods" Url="html/1d1634da-6df2-9da5-a9d9-aded5b50237a.htm">
+          <HelpTOCNode Title="GetHeaderValue Method " Url="html/32639e83-2d7b-8989-b198-5ec85311222d.htm" />
+          <HelpTOCNode Title="GetInfoValue Method " Url="html/1a54c753-7a29-5de9-62b3-3fc93a490d08.htm" />
+          <HelpTOCNode Title="PutHeader Method " Url="html/5e102be9-ce74-4121-0487-882e2af1fe07.htm" />
+          <HelpTOCNode Title="PutInfo Method " Url="html/fb398dc3-a595-1a12-dac0-17cac390215f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e86f32b7-2a6a-491d-9903-b4632f8d87fd" Title="IXPFile Properties" Url="html/1ba43c36-3358-9162-07d3-034c3bc951b1.htm">
+          <HelpTOCNode Title="Headers Property " Url="html/a6e6a235-0cb5-8f38-e943-0dd7e28a9489.htm" />
+          <HelpTOCNode Title="Infos Property " Url="html/83cf7202-68ca-4cb6-757d-3f092cdba089.htm" />
+          <HelpTOCNode Title="NetworkFunction Property " Url="html/c5d02c9a-c1ca-f937-a01f-f5103e945022.htm" />
+          <HelpTOCNode Title="XML Property " Url="html/d77694cb-7dc9-8f2a-60aa-5e8a6d7160e4.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="de0014ef-79c3-428d-a0b4-8d6159de85ab" Title="Networking" Url="html/c09cd9e7-3a47-b71d-4f95-c64ab632e4d7.htm">
+      <HelpTOCNode Id="a385a30b-d0f2-489c-893b-ac42caae0055" Title="Client Class" Url="html/dbadaac3-ca34-f2ca-29f4-10e2d5f92f3f.htm">
+        <HelpTOCNode Title="Client Constructor " Url="html/ee8bbdbb-62df-46ad-c352-7b01b8e96f74.htm" />
+        <HelpTOCNode Id="34b3d320-c900-4a85-a8b3-184165dba21b" Title="Client Methods" Url="html/3ddeb338-e054-71ec-1e99-025ebb945454.htm">
+          <HelpTOCNode Title="Connect Method " Url="html/58bf07e0-de46-8221-1caf-49f54932e803.htm" />
+          <HelpTOCNode Title="Disconnect Method " Url="html/3912d258-b5a3-60ab-7fc3-380fceff0d5e.htm" />
+          <HelpTOCNode Title="Send Method " Url="html/327b121c-de1c-e0ce-493e-6e33b960f4ee.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d0912bc1-d016-4284-9fd5-92f6fbd6245e" Title="Client Events" Url="html/37f5e7a3-fdf7-8f29-d5d2-212e8692c1e2.htm">
+          <HelpTOCNode Title="Disconnected Event" Url="html/c6f190c9-5c9d-0f33-d235-80d390ebe519.htm" />
+          <HelpTOCNode Title="MessageReceived Event" Url="html/288d793a-d5ed-4936-6d95-b34e3a26a3fc.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a92b790e-2001-4b7f-9254-ad144c69c5aa" Title="Server Class" Url="html/dd605b63-7287-5593-178a-3efac3749537.htm">
+        <HelpTOCNode Title="Server Constructor " Url="html/844acec1-935b-5bf4-5470-26c687864dcc.htm" />
+        <HelpTOCNode Id="219db912-9ace-409c-b079-a2a137d4e29a" Title="Server Methods" Url="html/5f0d2e7e-764e-2d42-2045-a3c40bc30a93.htm">
+          <HelpTOCNode Title="Close Method " Url="html/2f773130-936a-ba83-f82d-44815eb5330c.htm" />
+          <HelpTOCNode Title="Start Method " Url="html/e2361e71-7339-14ea-f761-2174a00ee06a.htm" />
+          <HelpTOCNode Title="Stop Method " Url="html/d37f0f5b-ad7b-286c-a308-0a6b26fa0da9.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="af43ea74-f4eb-4f6f-a912-57c892739cd6" Title="Server Events" Url="html/496e1c65-a83f-fd7a-8f1e-178334fd636b.htm">
+          <HelpTOCNode Title="ClientConnected Event" Url="html/b2765e3a-08f9-1943-645d-df6c356b1a10.htm" />
+          <HelpTOCNode Title="ClientDisconnected Event" Url="html/57e60d9d-1b70-4d51-4863-05298109452d.htm" />
+          <HelpTOCNode Title="MessageReceived Event" Url="html/2705506a-d4f9-540f-793a-6ead445e5118.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1267cd1b-da58-4989-8a6a-217f1f4f8d33" Title="ServerInstance Class" Url="html/73178f72-7075-a9ec-79b3-87dd762f4f91.htm">
+        <HelpTOCNode Title="ServerInstance Constructor " Url="html/584e42b9-5b96-8bd5-4fae-dc6b8396dc13.htm" />
+        <HelpTOCNode Id="54e8fe1d-f8a1-4f65-a13d-52a4d85b4039" Title="ServerInstance Methods" Url="html/0335f79d-89d7-aacc-c6b9-88f8ecd784ad.htm">
+          <HelpTOCNode Title="Close Method " Url="html/7458cf60-fd5d-2cc7-068e-c1684359ce8a.htm" />
+          <HelpTOCNode Title="Send Method " Url="html/b8fe305f-bdf8-4473-7862-8b5378f0513b.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="8eedcf4c-fe7a-460f-89a8-30ea2a24df08" Title="ServerInstance Properties" Url="html/88477266-e97c-eef3-ba58-bdab0cb28a8a.htm">
+          <HelpTOCNode Title="Connected Property " Url="html/3c934f0b-d62f-648b-4f7d-475ab4db2f3e.htm" />
+          <HelpTOCNode Title="IP Property " Url="html/c2dfaedc-1b65-10fb-cf71-c4a46b9047e1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="bafca57e-ec19-4f68-8ff4-f88c81610a13" Title="ServerInstance Events" Url="html/0d57e4dc-134f-5047-2042-01949ab261f7.htm">
+          <HelpTOCNode Title="InstanceClosed Event" Url="html/36399d16-17e6-279d-1447-16294c7e13cc.htm" />
+          <HelpTOCNode Title="MessageReceived Event" Url="html/10c88e62-8d8f-590e-8bb3-d385ba59faf3.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="93a02fb9-e500-408e-9dac-69d34cbfcc9d" Title="Plugin" Url="html/7f61bf48-89b9-0710-6848-79100596f9ba.htm">
+      <HelpTOCNode Id="6c3f3596-e41a-4295-b11d-a3d8dfdfcbe7" Title="Debug Class" Url="html/c75a3418-4b63-2f9c-b3a8-0c96493ac336.htm">
+        <HelpTOCNode Id="58803967-a374-4d2b-aea1-ef09fbdfd9f7" Title="Debug Methods" Url="html/1e64134b-f005-4c7b-8f39-033b7760abcd.htm">
+          <HelpTOCNode Title="AddChannel Method " Url="html/ee818fb1-5faa-38ff-fd7b-6baef064837f.htm" />
+          <HelpTOCNode Title="DeleteChannel Method " Url="html/a44ddabc-d0ae-0998-700c-dcf2657dc83d.htm" />
+          <HelpTOCNode Title="DisableCaching Method " Url="html/be9b1f0e-9a92-7bb9-c016-d6f592ab5c07.htm" />
+          <HelpTOCNode Title="DisableChannel Method " Url="html/794a0296-4741-abec-a4f4-30d470b61ff0.htm" />
+          <HelpTOCNode Title="EnableCaching Method " Url="html/b53629f2-cc04-bb42-d4dd-65d176b5ffc6.htm" />
+          <HelpTOCNode Title="EnableChannel Method " Url="html/a3191348-8d7d-7bda-08e0-51392dbf4a20.htm" />
+          <HelpTOCNode Title="GetChannelId Method " Url="html/bf459678-0521-f870-cb46-47eb3b378478.htm" />
+          <HelpTOCNode Title="GetChannelName Method " Url="html/800bf434-d8b8-ab61-86df-20e3fe970c82.htm" />
+          <HelpTOCNode Title="Log Method " Url="html/338145a8-c0ee-e9d6-8e97-ffd4742122b7.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="4b7f0a0b-e85f-405e-90cf-8b9064f982b2" Title="Debug Properties" Url="html/3467b4d7-b86a-955c-285a-6dcedecf35e9.htm">
+          <HelpTOCNode Title="Cache Property " Url="html/ebd9b153-0d78-3ed6-4f1b-42a5f5eba098.htm" />
+          <HelpTOCNode Title="Channels Property " Url="html/e7c5c7f3-5d1b-816a-1c14-f69092b870db.htm" />
+          <HelpTOCNode Title="DisabledChannels Property " Url="html/29ba2714-da04-507e-1459-0de4cb21e63f.htm" />
+          <HelpTOCNode Title="EnabledChannels Property " Url="html/88cca492-7fe5-6046-4452-ba7ce4a25a09.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a3e84469-a4ca-4a10-a15d-25d6155f7d25" Title="Debug Events" Url="html/c300e2b1-4fc9-877f-6591-862f588587f7.htm">
+          <HelpTOCNode Title="ChannelsChanged Event" Url="html/f18dc6c4-4894-95df-2e69-25e47414e484.htm" />
+          <HelpTOCNode Title="DisabledChannelsChanged Event" Url="html/e543e274-0581-38ae-bb70-cb09c79e6e5d.htm" />
+          <HelpTOCNode Title="EnabledChannelsChanged Event" Url="html/3cbcb4a0-b533-f798-a099-0e15aa1d4668.htm" />
+          <HelpTOCNode Title="MessageListened Event" Url="html/ec94945b-a7a6-ef70-318f-d0b36b4001b6.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b96f715d-2337-49c7-9ca9-04b8c46a8fe4" Title="DisplayPlugin Class" Url="html/c6806655-8877-3a0b-6089-a7dba68457a0.htm">
+        <HelpTOCNode Title="DisplayPlugin Constructor " Url="html/252d7823-e6b8-cd5b-a550-c5db3bc4c9d9.htm" />
+        <HelpTOCNode Id="929c0f93-df89-4157-8313-0860404d71e0" Title="DisplayPlugin Methods" Url="html/62093f46-d8ae-a5b4-b7b2-14762465de55.htm">
+          <HelpTOCNode Title="OnControlInvisible Method " Url="html/9fb82702-9fcf-a4b8-e45c-93d5963c80bc.htm" />
+          <HelpTOCNode Title="OnControlLoad Method " Url="html/76ff45c1-4268-0669-362c-735f74cd0d6b.htm" />
+          <HelpTOCNode Title="OnControlUnload Method " Url="html/6662da5e-59e0-b313-bbf4-2109b55675fd.htm" />
+          <HelpTOCNode Title="OnControlVisible Method " Url="html/84e579e0-7d36-cbfc-9530-30cf75a51cef.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6ef76601-6b96-4fae-a768-95f84b50a9b5" Title="DisplayPlugin Properties" Url="html/a68fbe52-e056-3bfb-e7ac-aa40850eb8bd.htm">
+          <HelpTOCNode Title="Control Property " Url="html/497484ec-d1f0-515b-55ce-fd7df22689c3.htm" />
+          <HelpTOCNode Title="TabName Property " Url="html/85bfb387-7410-e406-4af2-2aa2ac1f05dd.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="EventDelegate Delegate" Url="html/2a03e65a-72cd-8706-87ac-49ff1596b8e4.htm" />
+      <HelpTOCNode Id="f93acf35-51dc-4702-9e0d-51abb289fb65" Title="FunctionInfo Class" Url="html/bfecf1c3-390f-2c2e-5ffe-215124eafb04.htm">
+        <HelpTOCNode Title="FunctionInfo Constructor " Url="html/479ae063-6c3c-1cc2-c51c-818bba6980a7.htm" />
+        <HelpTOCNode Id="3595c5e3-2c67-41f4-aff5-7f10084311fa" Title="FunctionInfo Methods" Url="html/c9fe9ed1-5a38-25da-43ff-f4693c64ecb4.htm">
+          <HelpTOCNode Title="GetParameterType Method " Url="html/85a3e1e3-bff4-ce8f-105a-497cb5ccc73f.htm" />
+          <HelpTOCNode Title="Invoke Method " Url="html/8163c168-bab2-13ea-cce7-283f227feeb6.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="79834b1f-98b4-4beb-b54f-c1fcb5246347" Title="FunctionInfo Properties" Url="html/2f119837-0576-5eba-6266-4d21aa3521ec.htm">
+          <HelpTOCNode Title="Instance Property " Url="html/23b57be8-72c4-f8e2-5bb1-39120505e7f3.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/fb7918d6-59df-4baf-b48d-b721b141fa03.htm" />
+          <HelpTOCNode Title="Parameters Property " Url="html/5a922d8f-0c3f-69c5-2338-98c810b091b5.htm" />
+          <HelpTOCNode Title="ReturnType Property " Url="html/7a94ff8b-303b-8f28-a8f6-6fde6ab95b96.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="MessageListenedDelegate Delegate" Url="html/f5449b35-514a-c034-c146-c1b67d769354.htm" />
+      <HelpTOCNode Id="035a0c25-a29a-4cbd-97c6-eebc8d7ffb7a" Title="NeedsPlugin Class" Url="html/60bc742c-c330-f708-0e5f-1c7925323397.htm">
+        <HelpTOCNode Title="NeedsPlugin Constructor " Url="html/e3726243-aa0e-f404-0586-624dccda33ed.htm" />
+        <HelpTOCNode Title="NeedsPlugin Methods" Url="html/7b433cc8-4165-6dab-f2c8-f1db4d1e5b28.htm" />
+        <HelpTOCNode Id="f30ef419-a568-4896-b4b6-d5766b66e37c" Title="NeedsPlugin Properties" Url="html/44f5a52b-5e7a-f522-0128-5877a16b306d.htm">
+          <HelpTOCNode Title="NeededPlugin Property " Url="html/13e28598-589e-2426-a795-4b983aafe6cd.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="08c6cf2b-6fba-44de-abda-b9ffeaeadd35" Title="NetworkFunction Class" Url="html/153d2d7f-825a-287c-7f3b-41d449696a07.htm">
+        <HelpTOCNode Title="NetworkFunction Constructor " Url="html/1a227010-c4c3-ef9e-feca-6ea719741f16.htm" />
+        <HelpTOCNode Title="NetworkFunction Methods" Url="html/72090893-efea-ceb7-e9e9-58979244253a.htm" />
+        <HelpTOCNode Id="f01c62f4-2a28-4272-992e-603cba98cfe0" Title="NetworkFunction Properties" Url="html/c7a0d1d8-d082-57a8-4c26-9085a06515bc.htm">
+          <HelpTOCNode Title="Name Property " Url="html/5225b2b2-65e9-404b-0b68-c6879399abee.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5e768c70-aaf6-41eb-9d36-6adb9ae81ecb" Title="NetworkManager Class" Url="html/179a5e12-145a-edc5-8e11-030fc476d093.htm">
+        <HelpTOCNode Id="51b4508b-a47e-425c-9165-9e6ac6318951" Title="NetworkManager Methods" Url="html/863cae11-e34a-26a4-3d37-6c714b6f807b.htm">
+          <HelpTOCNode Title="Close Method " Url="html/6f36e95c-6bac-1dc3-c2cb-4e63fbf96466.htm" />
+          <HelpTOCNode Title="GetNetworkFunction Method " Url="html/2c04c146-b11c-1fb7-e9b3-455839619fe4.htm" />
+          <HelpTOCNode Title="Init Method " Url="html/4fcb29ff-13ec-5247-0325-bff5ba4eb81f.htm" />
+          <HelpTOCNode Title="RegisterNetworkFunction Method " Url="html/dd4aa734-b6e9-354b-1d16-3d957548be24.htm" />
+          <HelpTOCNode Title="UnregisterNetworkFunction Method " Url="html/6f5c1c2d-16ea-752d-b00b-1e6ae54e12a8.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="802504de-6b29-4668-ad5c-a399d08db18f" Title="NetworkManager Properties" Url="html/8d8049e5-6e87-826d-1fc8-fc6e9ea929a9.htm">
+          <HelpTOCNode Title="NetworkFunctions Property " Url="html/ccc70389-b96e-763f-b9df-557442050abf.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a8639555-b39e-4479-bfa4-b6ecfc11e4c0" Title="NetworkManager Events" Url="html/77a54d30-cb6b-f172-3452-b0c8492721ba.htm">
+          <HelpTOCNode Title="NetworkFunctionsChanged Event" Url="html/8099165f-a180-858e-b87f-ef2eb9e5ca2e.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1b3619c7-5ebd-4093-8b3d-7fd2482ae729" Title="Plugin Class" Url="html/339aa476-5559-ae6e-ce4a-04f199cf025a.htm">
+        <HelpTOCNode Title="Plugin Constructor " Url="html/1b7cf24b-9b63-ed15-0888-2872f9cce6dc.htm" />
+        <HelpTOCNode Id="437c43f9-43bf-4a84-8c6c-e20679a7673c" Title="Plugin Methods" Url="html/e2b37c60-4d4d-e89f-a363-f7f9b904c550.htm">
+          <HelpTOCNode Title="OnPluginLoad Method " Url="html/6d3c4adb-f051-a1fb-e9b0-80ff8ee26fb9.htm" />
+          <HelpTOCNode Title="OnPluginsLoad Method " Url="html/de9a963d-86e1-9b87-d6af-d6cd1175f64b.htm" />
+          <HelpTOCNode Title="OnPluginsUnload Method " Url="html/5899eaff-c104-c6f2-8273-f6eba96d1bd9.htm" />
+          <HelpTOCNode Title="OnPluginUnload Method " Url="html/e7e4fae7-9078-889b-98c7-aba6bbe767a1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d6e6b10e-061a-48a7-8b1f-8e8e4e7d9668" Title="Plugin Properties" Url="html/6870f250-04d5-c3b6-9f56-ee785f830f21.htm">
+          <HelpTOCNode Title="DataDir Property " Url="html/102f6db1-050d-8453-4712-740c597fe3a8.htm" />
+          <HelpTOCNode Title="GetDatabaseConnection Property " Url="html/d2a87a11-8c9c-0913-7c01-4e9def5f8130.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/f56c446f-81d7-44d8-cddb-485ea0982903.htm" />
+          <HelpTOCNode Title="Version Property " Url="html/27224f5b-6d98-f41e-07de-d3e230b2a6f8.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="992d2daa-e8dc-4dca-83ec-6cd7d38f97f6" Title="PluginManager Class" Url="html/bae1daca-7bfe-aabd-67f2-289145a2773e.htm">
+        <HelpTOCNode Id="74f51a54-26af-475e-9bda-6d2a43fdb83b" Title="PluginManager Methods" Url="html/ff5e1b67-7e76-3f80-4bc9-e4c5cdd8aef7.htm">
+          <HelpTOCNode Title="GetPlugin Method " Url="html/16a5c374-4678-90dd-90a3-2a58b3535dbb.htm" />
+          <HelpTOCNode Title="LoadFromDir Method " Url="html/d63e7fcd-958e-fa94-e76b-6140a5236658.htm" />
+          <HelpTOCNode Title="UnloadAll Method " Url="html/554b13bf-fb4f-e65d-1f03-17f026190924.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2bcc9381-ed32-4820-9a05-cc1e535e58e5" Title="PluginManager Properties" Url="html/f699cee7-021b-9ab2-9dd6-b506be8c0a08.htm">
+          <HelpTOCNode Title="DisplayPlugins Property " Url="html/95130e67-9c99-b748-ee4b-b1e17c33aa8e.htm" />
+          <HelpTOCNode Title="Plugins Property " Url="html/152c9e90-e8d0-455e-d0b1-b04bed329c7d.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="06cbfa70-4ddc-43ae-8fd9-d91bc3b34322" Title="PluginManager Events" Url="html/1ebb5160-6465-80d9-8ff5-51ede2cac5c5.htm">
+          <HelpTOCNode Title="PluginsChanged Event" Url="html/cc871e08-3bf5-4ecf-f783-ead9959fb126.htm" />
+          <HelpTOCNode Title="PluginUnload Event" Url="html/b1d45d56-4331-a465-3967-9cc3925064d4.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="PluginUnloadDelegate Delegate" Url="html/9c53719b-1829-d8c7-2d89-50ba97de32e9.htm" />
+      <HelpTOCNode Id="5386f307-a364-4956-a798-d76b3d9193fb" Title="Semaphore Class" Url="html/542c7b5c-18ac-9ca5-41ef-1e9d661fc8f5.htm">
+        <HelpTOCNode Title="Semaphore Constructor " Url="html/e082e1d3-ef25-4dd9-f4a5-f75afdb32cc6.htm" />
+        <HelpTOCNode Id="8d96a6bb-e067-4744-bf7d-6fc9d83ee12a" Title="Semaphore Methods" Url="html/72e4e51b-b565-67d3-9e57-a36a73e2530d.htm">
+          <HelpTOCNode Title="Dequeue Method " Url="html/a8dbb095-6e5c-cf13-4645-11ac19c1af80.htm" />
+          <HelpTOCNode Title="Enqueue Method " Url="html/267dfe6c-5df2-5bb3-cf5b-3e5d5afa5537.htm" />
+          <HelpTOCNode Title="Wait Method " Url="html/bf6965d8-60a8-8656-cc26-c720b346bc39.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b1e07570-7268-4284-a17b-157b93c376d3" Title="Server" Url="html/01fb5fc4-553e-1341-981f-f7b97fb52f82.htm">
+      <HelpTOCNode Id="30c5c15f-ef4c-4f2d-8ade-e24971bfdb6e" Title="FormMain Class" Url="html/4572b616-c0ae-0e75-81d9-cbf0c392b08a.htm">
+        <HelpTOCNode Title="FormMain Constructor " Url="html/6c4f16af-32c0-8f2a-1ba3-845dffc290e9.htm" />
+        <HelpTOCNode Id="11e2ea88-af8f-412b-bd55-d4b96798cdd5" Title="FormMain Methods" Url="html/9b716fd2-c93f-e65f-a11d-ae000bc37e11.htm">
+          <HelpTOCNode Id="66884b26-47ed-4db3-9ac7-567cd84e12d8" Title="Dispose Method " Url="html/773be8bc-fc40-8a94-0e6e-0acb8ee35b9f.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/6f05c04a-e8a1-cc43-8df7-f5ad9d37e0cd.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="FormMain Properties" Url="html/9436ddef-c170-1a7f-2a30-0536419f015d.htm" />
+        <HelpTOCNode Title="FormMain Events" Url="html/aa598ffa-94ac-4c09-8db8-bca80df897bb.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

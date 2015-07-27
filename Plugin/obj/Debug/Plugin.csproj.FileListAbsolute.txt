@@ -1,0 +1,13 @@
+D:\Projects\IntelligentHome\Plugin\bin\Debug\Plugin.XML
+D:\Projects\IntelligentHome\Plugin\bin\Debug\Plugin.dll
+D:\Projects\IntelligentHome\Plugin\bin\Debug\Plugin.pdb
+D:\Projects\IntelligentHome\Plugin\bin\Debug\IXP.dll
+D:\Projects\IntelligentHome\Plugin\bin\Debug\MySql.Data.dll
+D:\Projects\IntelligentHome\Plugin\bin\Debug\Networking.dll
+D:\Projects\IntelligentHome\Plugin\bin\Debug\IXP.pdb
+D:\Projects\IntelligentHome\Plugin\bin\Debug\IXP.xml
+D:\Projects\IntelligentHome\Plugin\bin\Debug\Networking.pdb
+D:\Projects\IntelligentHome\Plugin\bin\Debug\Networking.xml
+D:\Projects\IntelligentHome\Plugin\obj\Debug\Plugin.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome\Plugin\obj\Debug\Plugin.dll
+D:\Projects\IntelligentHome\Plugin\obj\Debug\Plugin.pdb

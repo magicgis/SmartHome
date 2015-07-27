@@ -1,0 +1,40 @@
+============ Libraries ============ 
+com.companyname.productname.dll
+
+Libraries that contain plugin classes are put in the "Plugins" subfolder of the "Server.exe" location
+Libraries that contain no plugin classes should be put in the main directory as this increases performance significantly at startup.
+Big Libraries with plugin classes should be split up
+
+============ Plugins ============ 
+com.companyname.productname.pluginname
+
+Plugin Classes should have the Prefix "P"
+Display Plugin Classes should have the Prefix "DP"
+Display Plugin Controls should have the Prefix "C"
+
+
+============ Debug Channels ============ 
+com.companyname.productname.channelname_type
+
+Default type is _default (Default enabled)
+Type for more detailed information is _advanced (Default disabled)
+_default and _advanced should only be used if there are multiple channels
+
+============ Network Functions ============ 
+com.companyname.productname.pluginname.functionname
+
+Function implementations should have the Prefix "Network" (NetworkFunctionName)
+
+============ IXP (Intelligent XML Protocol) ============ 
+<?xml version="1.0" encoding="UTF-8"?>
+<IXP>
+    <Target nfunction="com.companyname.productname.pluginname.functionname/>
+    <Header>
+        <Info name="hinfo1" value="value1"/>
+        <Info name="hinfo2" value="value2"/>
+    </Header>
+    <Body>
+        <Info name="binfo1">value1</Info>
+        <Info name="binfo2">value2</Info>
+    </Body>
+</IXP>

@@ -1,0 +1,5 @@
+D:\Projects\IntelligentHome\Networking\bin\Debug\Networking.XML
+D:\Projects\IntelligentHome\Networking\bin\Debug\Networking.dll
+D:\Projects\IntelligentHome\Networking\bin\Debug\Networking.pdb
+D:\Projects\IntelligentHome\Networking\obj\Debug\Networking.dll
+D:\Projects\IntelligentHome\Networking\obj\Debug\Networking.pdb

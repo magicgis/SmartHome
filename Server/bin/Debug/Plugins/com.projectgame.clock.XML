@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>com.projectgame.clock</name>
+    </assembly>
+    <members>
+        <member name="T:Clock.AlarmService">
+            <summary>
+            Handles all active alarms
+            </summary>
+        </member>
+        <member name="M:Clock.AlarmService.Start">
+            <summary>
+            Starts the service
+            </summary>
+        </member>
+        <member name="M:Clock.AlarmService.Stop">
+            <summary>
+            Stops the service
+            </summary>
+        </member>
+        <member name="M:Clock.AlarmService.RegisterClient(Networking.ServerInstance,System.String)">
+            <summary>
+            Registers a client
+            </summary>
+            <param name="instance">The client</param>
+            <param name="function">The clients function to call</param>
+        </member>
+        <member name="M:Clock.AlarmService.UnregisterClient(Networking.ServerInstance)">
+            <summary>
+            Unregisters a client
+            </summary>
+            <param name="instance">The client</param>
+        </member>
+        <member name="T:Clock.PAlarm">
+            <summary>
+            Manages all functions for alarms
+            </summary>
+        </member>
+        <member name="P:Clock.PAlarm.Name">
+            <summary>
+            <see cref="P:Plugin.Plugin.Name"/>
+            </summary>
+        </member>
+        <member name="P:Clock.PAlarm.Version">
+            <summary>
+            <see cref="P:Plugin.Plugin.Version"/>
+            </summary>
+        </member>
+        <member name="M:Clock.PAlarm.OnPluginLoad">
+            <summary>
+            <see cref="M:Plugin.Plugin.OnPluginLoad"/>
+            </summary>
+        </member>
+        <member name="M:Clock.PAlarm.OnPluginUnload">
+            <summary>
+            <see cref="M:Plugin.Plugin.OnPluginUnload"/>
+            </summary>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkRegisterAlarm(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Registers an new alarm
+            </summary>
+            <param name="name">The name or the alarm</param>
+            <param name="hours">The hours of the time</param>
+            <param name="minutes">The minutes of the time</param>
+            <param name="seconds">The seconds of the time</param>
+            <param name="mon">If alarm is enabled on mon</param>
+            <param name="tue">If alarm is enabled on tue</param>
+            <param name="wed">If alarm is enabled on wed</param>
+            <param name="thu">If alarm is enabled on thu</param>
+            <param name="fri">If alarm is enabled on fri</param>
+            <param name="sat">If alarm is enabled on sat</param>
+            <param name="sun">If alarm is enabled on sun</param>
+            <param name="enabled">If alarm is enabled</param>
+            <returns>The id of the alarm. -1 if fails</returns>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkUnregisterAlarm(System.Int32)">
+            <summary>
+            Unregisters an alarm
+            </summary>
+            <param name="alarm_id">The alarms id</param>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkSetAlarmName(System.Int32,System.String)">
+            <summary>
+            Changes the name of an existing alarm
+            </summary>
+            <param name="alarm_id">The alarm to change</param>
+            <param name="name">The new name</param>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkSetAlarmTime(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Changes the time of an existing alarm
+            </summary>
+            <param name="alarm_id">The alarm to change</param>
+            <param name="hours">The hours of the time</param>
+            <param name="minutes">The minutes of the time</param>
+            <param name="seconds">The seconds of the time</param>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkSetAlarmWeekdays(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Changes the weekdays of an existing alarm
+            </summary>
+            <param name="alarm_id">The alarm to change</param>
+            <param name="mon">If alarm is enabled on mon</param>
+            <param name="tue">If alarm is enabled on tue</param>
+            <param name="wed">If alarm is enabled on wed</param>
+            <param name="thu">If alarm is enabled on thu</param>
+            <param name="fri">If alarm is enabled on fri</param>
+            <param name="sat">If alarm is enabled on sat</param>
+            <param name="sun">If alarm is enabled on sun</param>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkSetAlarmEnabled(System.Int32,System.Boolean)">
+            <summary>
+            Enables or disables an existing alarm
+            </summary>
+            <param name="alarm_id">The alarm to change</param>
+            <param name="enabled">Enabled or disabled</param>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkGetAlarms">
+            <summary>
+            Returns all registered alarms
+            </summary>                                        
+            <returns>A IXP File containing all information</returns>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkGetAlarm(System.Int32)">
+            <summary>
+            Returns all important information about a alarm
+            </summary>
+            <param name="alarm_id">The alarms is</param>
+            <returns>A IXP File containing all information</returns>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkRegisterToAlarmService(Networking.ServerInstance,System.String)">
+            <summary>
+            Registers a client to the alarm service
+            </summary>
+            <param name="instance">The instance</param>
+            <param name="function">The instances function</param>
+        </member>
+        <member name="M:Clock.PAlarm.NetworkUnregisterFromAlarmService(Networking.ServerInstance)">
+            <summary>
+            Unregisters a client from the alarm service
+            </summary>
+            <param name="instance">The instance</param>
+        </member>
+        <member name="T:Clock.PClock">
+            <summary>
+            Provides network functions for time based operations
+            </summary>
+        </member>
+        <member name="P:Clock.PClock.Name">
+            <summary>
+            <see cref="P:Plugin.Plugin.Name"/>
+            </summary>
+        </member>
+        <member name="P:Clock.PClock.Version">
+            <summary>
+            <see cref="P:Plugin.Plugin.Version"/>
+            </summary>
+        </member>
+        <member name="M:Clock.PClock.OnPluginLoad">
+            <summary>
+            <see cref="M:Plugin.Plugin.OnPluginLoad"/>
+            </summary>
+        </member>
+        <member name="M:Clock.PClock.OnPluginUnload">
+            <summary>
+            <see cref="M:Plugin.Plugin.OnPluginUnload"/>
+            </summary>
+        </member>
+        <member name="M:Clock.PClock.NetworkGetTime">
+            <summary>
+            Returns the current time string
+            </summary>
+            <returns>Current time in String format</returns>     
+        </member>
+        <member name="M:Clock.PClock.NetworkGetDate">
+            <summary>
+            Returns the current date string
+            </summary>
+            <returns>Current date in String format</returns>
+        </member>
+        <member name="M:Clock.PClock.NetworkRegisterToTimeService(Networking.ServerInstance,System.String)">
+            <summary>
+            Registers the sending client to the time service
+            </summary>
+            <param name="instance">The sending client</param>
+            <param name="functionName">The clients function name</param>
+        </member>
+        <member name="M:Clock.PClock.NetworkUnregisterFromTimeService(Networking.ServerInstance)">
+            <summary>
+            Unregisters the sending client from the time service
+            </summary>
+            <param name="instance">The sending client</param>
+        </member>
+        <member name="T:Clock.TimeService">
+            <summary>
+            Handles automatic updating of time on clients
+            </summary>
+        </member>
+        <member name="M:Clock.TimeService.Start">
+            <summary>
+            Starts the service
+            </summary>
+        </member>
+        <member name="M:Clock.TimeService.Stop">
+            <summary>
+            Stops the service
+            </summary>
+        </member>
+        <member name="M:Clock.TimeService.Register(Networking.ServerInstance,System.String)">
+            <summary>
+            Registers a new client
+            </summary>
+            <param name="instance">The client</param>
+            <param name="function">The clients function</param>
+        </member>
+        <member name="M:Clock.TimeService.Unregister(Networking.ServerInstance)">
+            <summary>
+            Unregisters a client
+            </summary>
+            <param name="instance">The client</param>
+        </member>
+    </members>
+</doc>

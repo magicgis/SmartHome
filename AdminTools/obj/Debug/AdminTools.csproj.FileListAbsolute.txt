@@ -1,0 +1,10 @@
+D:\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.admintools.xml
+D:\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.admintools.dll
+D:\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.admintools.pdb
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.CLog.resources
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.CNetworkFunctions.resources
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.CPluginOverview.resources
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.csproj.GenerateResource.Cache
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\com.projectgame.admintools.dll
+D:\Projects\IntelligentHome\AdminTools\obj\Debug\com.projectgame.admintools.pdb
