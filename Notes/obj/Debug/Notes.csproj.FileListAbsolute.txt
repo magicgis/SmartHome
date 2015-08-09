@@ -1,0 +1,6 @@
+D:\Projects\IntelligentHome2\Notes\obj\Debug\Notes.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.notes.xml
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.notes.dll
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.notes.pdb
+D:\Projects\IntelligentHome2\Notes\obj\Debug\com.projectgame.notes.dll
+D:\Projects\IntelligentHome2\Notes\obj\Debug\com.projectgame.notes.pdb

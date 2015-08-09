@@ -4,3 +4,9 @@ D:\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.clock.pdb
 D:\Projects\IntelligentHome\Clock\obj\Debug\Clock.csprojResolveAssemblyReference.cache
 D:\Projects\IntelligentHome\Clock\obj\Debug\com.projectgame.clock.dll
 D:\Projects\IntelligentHome\Clock\obj\Debug\com.projectgame.clock.pdb
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.clock.XML
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.clock.dll
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.clock.pdb
+D:\Projects\IntelligentHome2\Clock\obj\Debug\Clock.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome2\Clock\obj\Debug\com.projectgame.clock.dll
+D:\Projects\IntelligentHome2\Clock\obj\Debug\com.projectgame.clock.pdb

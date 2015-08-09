@@ -1,0 +1,6 @@
+D:\Projects\IntelligentHome2\HueLightning\obj\Debug\HueLightning.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.huelightning.xml
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.huelightning.dll
+D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.huelightning.pdb
+D:\Projects\IntelligentHome2\HueLightning\obj\Debug\com.projectgame.huelightning.dll
+D:\Projects\IntelligentHome2\HueLightning\obj\Debug\com.projectgame.huelightning.pdb

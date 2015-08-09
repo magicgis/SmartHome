@@ -41,7 +41,7 @@ namespace Alarm {
             }
 
             _client.RegisterToAlarmService(ALARM_SERVICE_FUNCTION);
-            _client.RegisterToTimeService(TIME_SERVICE_FUNCTION);
+            //_client.RegisterToTimeService(TIME_SERVICE_FUNCTION);
             RefreshAlarms();
         }
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e) {

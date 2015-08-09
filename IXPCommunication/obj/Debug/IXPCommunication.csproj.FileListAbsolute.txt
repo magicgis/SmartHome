@@ -10,3 +10,15 @@ D:\Projects\IntelligentHome\IXPCommunication\bin\Debug\Networking.xml
 D:\Projects\IntelligentHome\IXPCommunication\obj\Debug\IXPCommunication.csprojResolveAssemblyReference.cache
 D:\Projects\IntelligentHome\IXPCommunication\obj\Debug\IXPCommunication.dll
 D:\Projects\IntelligentHome\IXPCommunication\obj\Debug\IXPCommunication.pdb
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\IXPCommunication.XML
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\IXPCommunication.dll
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\IXPCommunication.pdb
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\IXP.dll
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\Networking.dll
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\IXP.pdb
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\IXP.xml
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\Networking.pdb
+D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\Networking.xml
+D:\Projects\IntelligentHome2\IXPCommunication\obj\Debug\IXPCommunication.csprojResolveAssemblyReference.cache
+D:\Projects\IntelligentHome2\IXPCommunication\obj\Debug\IXPCommunication.dll
+D:\Projects\IntelligentHome2\IXPCommunication\obj\Debug\IXPCommunication.pdb
