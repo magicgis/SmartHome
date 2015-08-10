@@ -8,3 +8,9 @@ D:\Projects\IntelligentHome2\IXP\bin\Debug\IXP.dll
 D:\Projects\IntelligentHome2\IXP\bin\Debug\IXP.pdb
 D:\Projects\IntelligentHome2\IXP\obj\Debug\IXP.dll
 D:\Projects\IntelligentHome2\IXP\obj\Debug\IXP.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXP\bin\Debug\IXP.XML
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXP\bin\Debug\IXP.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXP\bin\Debug\IXP.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXP\obj\Debug\IXP.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXP\obj\Debug\IXP.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXP\obj\Debug\IXP.pdb

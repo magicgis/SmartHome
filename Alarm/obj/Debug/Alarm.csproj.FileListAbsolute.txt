@@ -34,3 +34,21 @@ D:\Projects\IntelligentHome2\Alarm\obj\Debug\Alarm.csprojResolveAssemblyReferenc
 D:\Projects\IntelligentHome2\Alarm\obj\Debug\Alarm.FormMain.resources
 D:\Projects\IntelligentHome2\Alarm\obj\Debug\Alarm.Properties.Resources.resources
 D:\Projects\IntelligentHome2\Alarm\obj\Debug\Alarm.csproj.GenerateResource.Cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\Alarm.exe.config
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\Alarm.exe
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\Alarm.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\IXP.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\IXPCommunication.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\Networking.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\IXPCommunication.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\IXPCommunication.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\IXP.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\IXP.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\Networking.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\bin\Debug\Networking.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\obj\Debug\Alarm.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\obj\Debug\Alarm.FormMain.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\obj\Debug\Alarm.Properties.Resources.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\obj\Debug\Alarm.csproj.GenerateResource.Cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\obj\Debug\Alarm.exe
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Alarm\obj\Debug\Alarm.pdb

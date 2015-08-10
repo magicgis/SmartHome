@@ -22,3 +22,15 @@ D:\Projects\IntelligentHome2\IXPCommunication\bin\Debug\Networking.xml
 D:\Projects\IntelligentHome2\IXPCommunication\obj\Debug\IXPCommunication.csprojResolveAssemblyReference.cache
 D:\Projects\IntelligentHome2\IXPCommunication\obj\Debug\IXPCommunication.dll
 D:\Projects\IntelligentHome2\IXPCommunication\obj\Debug\IXPCommunication.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\IXPCommunication.XML
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\IXPCommunication.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\IXPCommunication.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\IXP.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\Networking.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\IXP.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\IXP.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\Networking.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\bin\Debug\Networking.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\obj\Debug\IXPCommunication.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\obj\Debug\IXPCommunication.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\IXPCommunication\obj\Debug\IXPCommunication.pdb

@@ -35,8 +35,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.8.3\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Q42.HueApi">
+      <HintPath>..\Server\bin\Debug\Q42.HueApi.dll</HintPath>
+    </Reference>
     <Reference Include="Q42.HueApi.NET">
-      <HintPath>..\..\..\Libraries\Q42_HueAPI\src\Q42.HueApi.NET\bin\Debug\Q42.HueApi.NET.dll</HintPath>
+      <HintPath>..\Server\bin\Debug\Q42.HueApi.NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,7 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="HueHub.cs" />
+    <Compile Include="PHue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

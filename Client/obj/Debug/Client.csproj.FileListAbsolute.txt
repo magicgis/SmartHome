@@ -28,3 +28,18 @@ D:\Projects\IntelligentHome2\Client\obj\Debug\Client.Properties.Resources.resour
 D:\Projects\IntelligentHome2\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 D:\Projects\IntelligentHome2\Client\obj\Debug\Client.exe
 D:\Projects\IntelligentHome2\Client\obj\Debug\Client.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\Client.exe.config
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\Client.exe
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\Client.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\IXP.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\Networking.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\IXP.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\IXP.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\Networking.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\bin\Debug\Networking.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\obj\Debug\Client.Form1.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\obj\Debug\Client.exe
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Client\obj\Debug\Client.pdb

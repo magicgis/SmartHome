@@ -39,7 +39,7 @@ namespace AdminTools {
             _debugChannel = Plugin.Debug.AddChannel("com.projectgame.admintools.logging");
             Plugin.Debug.Log(_debugChannel, "Initialized Logging");
 
-            string filePath = DataDir + "/" + DateTime.Now.ToShortDateString() + "_" + DateTime.Now.ToLongTimeString().Replace(':', '_') + ".txt";
+            string filePath = DataDir + "/" + DateTime.Now.ToShortDateString().Replace('/', '_').Replace('.', '_') + "_" + DateTime.Now.ToLongTimeString().Replace(':', '_') + ".txt";
             _stream = new FileStream(filePath, FileMode.Create);
             _writer = new StreamWriter(_stream);   
 

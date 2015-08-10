@@ -18,3 +18,13 @@ D:\Projects\IntelligentHome2\AdminTools\obj\Debug\AdminTools.csproj.GenerateReso
 D:\Projects\IntelligentHome2\AdminTools\obj\Debug\com.projectgame.admintools.dll
 D:\Projects\IntelligentHome2\AdminTools\obj\Debug\com.projectgame.admintools.pdb
 D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.admintools.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.admintools.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.admintools.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.admintools.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.CLog.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.CNetworkFunctions.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.CPluginOverview.resources
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\AdminTools.csproj.GenerateResource.Cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\com.projectgame.admintools.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\AdminTools\obj\Debug\com.projectgame.admintools.pdb

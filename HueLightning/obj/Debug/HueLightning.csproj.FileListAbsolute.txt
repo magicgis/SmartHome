@@ -4,3 +4,9 @@ D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.huelightni
 D:\Projects\IntelligentHome2\Server\bin\Debug\Plugins\com.projectgame.huelightning.pdb
 D:\Projects\IntelligentHome2\HueLightning\obj\Debug\com.projectgame.huelightning.dll
 D:\Projects\IntelligentHome2\HueLightning\obj\Debug\com.projectgame.huelightning.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.huelightning.xml
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.huelightning.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\Server\bin\Debug\Plugins\com.projectgame.huelightning.pdb
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\HueLightning\obj\Debug\HueLightning.csprojResolveAssemblyReference.cache
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\HueLightning\obj\Debug\com.projectgame.huelightning.dll
+C:\Users\Sebi\Documents\Visual Studio 2015\Projects\IntelligentHome\HueLightning\obj\Debug\com.projectgame.huelightning.pdb
