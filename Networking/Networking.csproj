@@ -43,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="HttpGETRequest.cs" />
+    <Compile Include="HttpPOSTRequest.cs" />
+    <Compile Include="HttpPUTRequest.cs" />
+    <Compile Include="HttpRESTRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="ServerInstance.cs" />
