@@ -39,7 +39,7 @@ namespace HueLightning.API {
             set {
                 try {
                     string body = $"{{\"name\":\"{value}\"}}";
-                    HttpPUTRequest req = new HttpPUTRequest($"{Bridge.BaseUrl}/lights/{Id}/state", body);
+                    HttpPUTRequest req = new HttpPUTRequest($"{Bridge.BaseUrl}/lights/{Id}", body);
                     req.Send();
                     req.Read();   
                 }catch(Exception e) {
