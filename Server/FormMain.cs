@@ -28,7 +28,7 @@ namespace Server {
                 dpp.OnControlUnload();
                 TabPage tp = _tabMap.FirstOrDefault(p => p.Value == dpp).Key;
                 _tabMap.Remove(tp);    
-            }
+            }                             
         }
 
         private void DisplayPlugin(DisplayPlugin plugin) {
@@ -68,6 +68,6 @@ namespace Server {
 
         private void tcTabs_Selecting(object sender, TabControlCancelEventArgs e) {
             _tabMap[tcTabs.SelectedTab].OnControlVisible();
-        }
+        }        
     }
 }

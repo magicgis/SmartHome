@@ -38,8 +38,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.8.3\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Libraries\C#\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +54,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\HueBridge.cs" />
+    <Compile Include="API\HueLight.cs" />
+    <Compile Include="CHueOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CHueOverview.Designer.cs">
+      <DependentUpon>CHueOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DHueOverview.cs" />
     <Compile Include="HueHub.cs" />
     <Compile Include="PHue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +80,11 @@
       <Project>{e3957c03-ba27-4948-a0b5-9fb33f88b39d}</Project>
       <Name>Plugin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CHueOverview.resx">
+      <DependentUpon>CHueOverview.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -20,7 +20,7 @@ namespace HueLightning {
         }
 
         public override void OnPluginLoad() {
-            HueHub.Init();
+            HueHub.Init(DataDir);
         }
     }
 }
