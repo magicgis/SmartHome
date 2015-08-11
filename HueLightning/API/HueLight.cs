@@ -8,12 +8,26 @@ using Newtonsoft.Json.Linq;
 using Plugin;
 
 namespace HueLightning.API {
+    /// <summary>
+    /// Represents a wrapper for Lights connected to the hue bridge
+    /// </summary>
     public class HueLight {
         private static int _debugChannel = -1;
 
+        /// <summary>
+        /// The public ID of the Light. Will not change
+        /// </summary>
         public string Id { get; private set; }
+        /// <summary>
+        /// The Bridge this light is connected to
+        /// </summary>
         public HueBridge Bridge { get; private set; }
 
+        /// <summary>
+        /// Creates a new instance
+        /// </summary>
+        /// <param name="id">The lights unique id</param>
+        /// <param name="bridge">The parent bridge</param>
         public HueLight(string id, HueBridge bridge) { 
             Id = id;
             Bridge = bridge;
@@ -21,6 +35,9 @@ namespace HueLightning.API {
                 _debugChannel = Debug.AddChannel("com.projectgame.huelightning.huelight");
         }
 
+        /// <summary>
+        /// The lights (display) name
+        /// </summary>
         public string Name {
             get {
                 try {
@@ -48,6 +65,9 @@ namespace HueLightning.API {
             }
         }
 
+        /// <summary>
+        /// Is the light on or off?
+        /// </summary>
         public bool On {
             get {
                 try {
@@ -75,6 +95,9 @@ namespace HueLightning.API {
             }
         }
 
+        /// <summary>
+        /// The brightness
+        /// </summary>
         public byte Brightness {
             get {
                 try {
@@ -102,6 +125,9 @@ namespace HueLightning.API {
             }
         }
 
+        /// <summary>
+        /// The lights hue. Not supported by Lux Lights
+        /// </summary>
         public ushort Hue {
             get {
                 try {
@@ -129,6 +155,9 @@ namespace HueLightning.API {
             }
         }
 
+        /// <summary>
+        /// The lights saturation. Not supported by Lux Lights
+        /// </summary>
         public byte Saturation {
             get {
                 try {
@@ -156,6 +185,10 @@ namespace HueLightning.API {
             }
         }
 
+        /// <summary>
+        /// <see cref="object.ToString"/>
+        /// </summary>
+        /// <returns><see cref="object.ToString"/></returns>
         public override string ToString() {
             return $"{Id} - {Name}";
         }

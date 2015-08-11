@@ -12,6 +12,9 @@ using System.Collections.ObjectModel;
 
 namespace HueLightning {
     public partial class CHueOverview : UserControl {
+        /// <summary>
+        /// Creates a new instance of the object
+        /// </summary>
         public CHueOverview() {
             InitializeComponent();
         }

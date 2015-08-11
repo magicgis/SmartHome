@@ -10,9 +10,32 @@
   <HelpKINode Title="AdminTools.DPNetworkFunctions class" Url="html/60543cc8-08a1-6be9-3563-a28dc28ccfd8.htm" />
   <HelpKINode Title="AdminTools.DPPluginOverview class" Url="html/eae46643-edd9-0b08-be9c-d99e670e65f9.htm" />
   <HelpKINode Title="AdminTools.PLog class" Url="html/dc1f9224-eb6c-799f-e618-c754af89c3fd.htm" />
+  <HelpKINode Title="AlarmService class">
+    <HelpKINode Title="AlarmService Class" Url="html/e11c2959-6495-bdb1-8422-e5824ed9ae8f.htm" />
+    <HelpKINode Title="about AlarmService class" Url="html/e11c2959-6495-bdb1-8422-e5824ed9ae8f.htm" />
+    <HelpKINode Title="methods" Url="html/e4ba3cd5-6f9d-37b3-d1fa-76bfeb0723a6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AlarmService.RegisterClient method" Url="html/8864367f-5684-23d7-d9e4-29651f41fac5.htm" />
+  <HelpKINode Title="AlarmService.Start method" Url="html/75caac82-87d7-0674-8ac9-2927bcae0d2a.htm" />
+  <HelpKINode Title="AlarmService.Stop method" Url="html/c7d6019b-c70a-4758-ad89-b787045dea70.htm" />
+  <HelpKINode Title="AlarmService.UnregisterClient method" Url="html/efc4a7f4-aadb-2d4a-295d-7767898afd91.htm" />
+  <HelpKINode Title="BaseUrl field" Url="html/3e388b0a-e960-7dbd-62ff-a4d0f8eaf88d.htm" />
+  <HelpKINode Title="Bridge property" Url="html/18844954-e0fb-f4c0-2dde-52198a587be4.htm" />
+  <HelpKINode Title="Brightness property" Url="html/cb67bd42-59a3-b01f-c7ae-bc1e9c759624.htm" />
   <HelpKINode Title="Cache property" Url="html/ebd9b153-0d78-3ed6-4f1b-42a5f5eba098.htm" />
   <HelpKINode Title="Channels property" Url="html/e7c5c7f3-5d1b-816a-1c14-f69092b870db.htm" />
   <HelpKINode Title="ChannelsChanged event" Url="html/f18dc6c4-4894-95df-2e69-25e47414e484.htm" />
+  <HelpKINode Title="CheckConnection method" Url="html/7d223cb4-c8e3-197b-f4b7-a6d47cc32958.htm" />
+  <HelpKINode Title="CHueOverview class">
+    <HelpKINode Title="CHueOverview Class" Url="html/040af56e-c908-332f-c5f0-35669f815733.htm" />
+    <HelpKINode Title="about CHueOverview class" Url="html/040af56e-c908-332f-c5f0-35669f815733.htm" />
+    <HelpKINode Title="constructor" Url="html/72cfd01d-6311-7cbd-613a-2fa11429ae2b.htm" />
+    <HelpKINode Title="events" Url="html/106cd2a2-91c4-ba19-04f4-9cdbf288cf77.htm" />
+    <HelpKINode Title="methods" Url="html/69cddaf5-54db-395c-0f92-d0e63b391918.htm" />
+    <HelpKINode Title="properties" Url="html/a65dc2fd-a262-bce9-eae4-5297e5fd50c0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CHueOverview.CHueOverview constructor" Url="html/72cfd01d-6311-7cbd-613a-2fa11429ae2b.htm" />
+  <HelpKINode Title="CHueOverview.Dispose method" Url="html/25759915-3953-bcda-81e1-531d8d5a566a.htm" />
   <HelpKINode Title="Client class">
     <HelpKINode Title="Client Class" Url="html/dbadaac3-ca34-f2ca-29f4-10e2d5f92f3f.htm" />
     <HelpKINode Title="about Client class" Url="html/dbadaac3-ca34-f2ca-29f4-10e2d5f92f3f.htm" />
@@ -29,6 +52,7 @@
   <HelpKINode Title="ClientConnected event" Url="html/b2765e3a-08f9-1943-645d-df6c356b1a10.htm" />
   <HelpKINode Title="ClientDisconnected event" Url="html/57e60d9d-1b70-4d51-4863-05298109452d.htm" />
   <HelpKINode Title="Clock namespace" Url="html/7f3109c7-3f63-4657-668f-3501ac8768d8.htm" />
+  <HelpKINode Title="Clock.AlarmService class" Url="html/e11c2959-6495-bdb1-8422-e5824ed9ae8f.htm" />
   <HelpKINode Title="Clock.PAlarm class" Url="html/085bf69f-40bd-4e92-6147-a68014b5f4ad.htm" />
   <HelpKINode Title="Clock.PClock class" Url="html/c1a0df3c-9808-2a72-fe8c-914e2f9063b7.htm" />
   <HelpKINode Title="Clock.TimeService class" Url="html/b50d9ba6-5abc-93bf-9ed0-506f76744025.htm" />
@@ -65,6 +89,7 @@
   <HelpKINode Title="Connect method" Url="html/58bf07e0-de46-8221-1caf-49f54932e803.htm" />
   <HelpKINode Title="Connected property" Url="html/3c934f0b-d62f-648b-4f7d-475ab4db2f3e.htm" />
   <HelpKINode Title="Control property">
+    <HelpKINode Title="DHueOverview.Control Property " Url="html/9703771c-e9cc-ea9f-1316-260284aeec4a.htm" />
     <HelpKINode Title="DisplayPlugin.Control Property " Url="html/497484ec-d1f0-515b-55ce-fd7df22689c3.htm" />
     <HelpKINode Title="DPLog.Control Property " Url="html/613bf109-5682-7ba3-77f7-9f52b7164c96.htm" />
     <HelpKINode Title="DPNetworkFunctions.Control Property " Url="html/348fa417-829f-28eb-9171-b5944ed48f6a.htm" />
@@ -81,6 +106,12 @@
   <HelpKINode Title="CPluginOverview.CPluginOverview constructor" Url="html/b32127d6-9afb-c17d-c795-74b09db413db.htm" />
   <HelpKINode Title="CPluginOverview.Dispose method" Url="html/2f5b3dc8-49ff-d89e-ac51-339d62fe79c3.htm" />
   <HelpKINode Title="CPluginOverview.RefreshPlugins method" Url="html/73dc29ad-0620-0e07-3176-189b92359a24.htm" />
+  <HelpKINode Title="CreateRequest method">
+    <HelpKINode Title="HttpGETRequest.CreateRequest Method " Url="html/b4ddf3ae-b70a-6061-235a-d6d67dffff80.htm" />
+    <HelpKINode Title="HttpPOSTRequest.CreateRequest Method " Url="html/818e5271-b1d1-71a7-868a-b319749f865a.htm" />
+    <HelpKINode Title="HttpPUTRequest.CreateRequest Method " Url="html/f87470fc-15dc-1f1c-54e2-d4c8eaf2004d.htm" />
+    <HelpKINode Title="HttpRESTRequest.CreateRequest Method " Url="html/3b4ce926-f32c-1a23-00a3-c84fc12f7927.htm" />
+  </HelpKINode>
   <HelpKINode Title="DataDir property" Url="html/102f6db1-050d-8453-4712-740c597fe3a8.htm" />
   <HelpKINode Title="Debug class">
     <HelpKINode Title="Debug Class" Url="html/c75a3418-4b63-2f9c-b3a8-0c96493ac336.htm" />
@@ -108,6 +139,18 @@
   <HelpKINode Title="Debug.MessageListened event" Url="html/ec94945b-a7a6-ef70-318f-d0b36b4001b6.htm" />
   <HelpKINode Title="DeleteChannel method" Url="html/a44ddabc-d0ae-0998-700c-dcf2657dc83d.htm" />
   <HelpKINode Title="Dequeue method" Url="html/a8dbb095-6e5c-cf13-4645-11ac19c1af80.htm" />
+  <HelpKINode Title="DHueOverview class">
+    <HelpKINode Title="DHueOverview Class" Url="html/eed2eb94-bc8e-4ee1-a038-ffd731ffed92.htm" />
+    <HelpKINode Title="about DHueOverview class" Url="html/eed2eb94-bc8e-4ee1-a038-ffd731ffed92.htm" />
+    <HelpKINode Title="constructor" Url="html/de98acd2-23bf-7860-f864-49ec837bbf57.htm" />
+    <HelpKINode Title="methods" Url="html/0b21d00f-dd90-9d48-a767-cc36db67dddb.htm" />
+    <HelpKINode Title="properties" Url="html/926c4c72-4a27-1bbf-c66b-bc142e486bfa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DHueOverview.Control property" Url="html/9703771c-e9cc-ea9f-1316-260284aeec4a.htm" />
+  <HelpKINode Title="DHueOverview.DHueOverview constructor" Url="html/de98acd2-23bf-7860-f864-49ec837bbf57.htm" />
+  <HelpKINode Title="DHueOverview.Name property" Url="html/30815f65-5f33-eae4-3505-7f49ccddccaf.htm" />
+  <HelpKINode Title="DHueOverview.TabName property" Url="html/1dc82f9e-635c-68d9-095b-671a8a31b5ef.htm" />
+  <HelpKINode Title="DHueOverview.Version property" Url="html/302e5b7c-a65a-403e-e8f6-ac79c28da769.htm" />
   <HelpKINode Title="DisableCaching method" Url="html/be9b1f0e-9a92-7bb9-c016-d6f592ab5c07.htm" />
   <HelpKINode Title="DisableChannel method" Url="html/794a0296-4741-abec-a4f4-30d470b61ff0.htm" />
   <HelpKINode Title="DisabledChannels property" Url="html/29ba2714-da04-507e-1459-0de4cb21e63f.htm" />
@@ -130,6 +173,7 @@
   <HelpKINode Title="DisplayPlugin.TabName property" Url="html/85bfb387-7410-e406-4af2-2aa2ac1f05dd.htm" />
   <HelpKINode Title="DisplayPlugins property" Url="html/95130e67-9c99-b748-ee4b-b1e17c33aa8e.htm" />
   <HelpKINode Title="Dispose method">
+    <HelpKINode Title="CHueOverview.Dispose Method " Url="html/25759915-3953-bcda-81e1-531d8d5a566a.htm" />
     <HelpKINode Title="CLog.Dispose Method " Url="html/4c7a442c-2779-346e-2636-43c56901dc70.htm" />
     <HelpKINode Title="CNetworkFunctions.Dispose Method " Url="html/95e33e12-5b68-c89b-c830-a5beff5d61fa.htm" />
     <HelpKINode Title="CPluginOverview.Dispose Method " Url="html/2f5b3dc8-49ff-d89e-ac51-339d62fe79c3.htm" />
@@ -217,6 +261,83 @@
   <HelpKINode Title="GetParameterType method" Url="html/85a3e1e3-bff4-ce8f-105a-497cb5ccc73f.htm" />
   <HelpKINode Title="GetPlugin method" Url="html/16a5c374-4678-90dd-90a3-2a58b3535dbb.htm" />
   <HelpKINode Title="Headers property" Url="html/a6e6a235-0cb5-8f38-e943-0dd7e28a9489.htm" />
+  <HelpKINode Title="HttpGETRequest class">
+    <HelpKINode Title="HttpGETRequest Class" Url="html/a5c5465f-e612-d20e-2801-226d64af93b8.htm" />
+    <HelpKINode Title="about HttpGETRequest class" Url="html/a5c5465f-e612-d20e-2801-226d64af93b8.htm" />
+    <HelpKINode Title="constructor" Url="html/2c4322f2-e3bd-55b7-c463-3e19c03ac95d.htm" />
+    <HelpKINode Title="methods" Url="html/959ba3c0-4a10-487b-f879-48d937cc30b0.htm" />
+    <HelpKINode Title="properties" Url="html/c0452120-c478-90b3-5ec2-05bb3426c7b7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpGETRequest.CreateRequest method" Url="html/b4ddf3ae-b70a-6061-235a-d6d67dffff80.htm" />
+  <HelpKINode Title="HttpGETRequest.HttpGETRequest constructor" Url="html/2c4322f2-e3bd-55b7-c463-3e19c03ac95d.htm" />
+  <HelpKINode Title="HttpPOSTRequest class">
+    <HelpKINode Title="HttpPOSTRequest Class" Url="html/0531196a-de1d-24bf-dbac-d2eb8b8972d8.htm" />
+    <HelpKINode Title="about HttpPOSTRequest class" Url="html/0531196a-de1d-24bf-dbac-d2eb8b8972d8.htm" />
+    <HelpKINode Title="constructor" Url="html/e713bb95-8538-8ed8-41b9-713ebd9ebb5d.htm" />
+    <HelpKINode Title="methods" Url="html/9e730a46-b20d-440b-056f-71fe6df3a0fe.htm" />
+    <HelpKINode Title="properties" Url="html/29c006d7-8d5e-a78c-7a26-b5819afe9827.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpPOSTRequest.CreateRequest method" Url="html/818e5271-b1d1-71a7-868a-b319749f865a.htm" />
+  <HelpKINode Title="HttpPOSTRequest.HttpPOSTRequest constructor" Url="html/e713bb95-8538-8ed8-41b9-713ebd9ebb5d.htm" />
+  <HelpKINode Title="HttpPUTRequest class">
+    <HelpKINode Title="HttpPUTRequest Class" Url="html/6edf5af3-0ea4-e945-5800-a4057247a5f2.htm" />
+    <HelpKINode Title="about HttpPUTRequest class" Url="html/6edf5af3-0ea4-e945-5800-a4057247a5f2.htm" />
+    <HelpKINode Title="constructor" Url="html/8a1c76c3-97e0-9938-9412-9617949ed9d7.htm" />
+    <HelpKINode Title="methods" Url="html/25739bf2-b011-d120-4078-f85c9940166d.htm" />
+    <HelpKINode Title="properties" Url="html/1a8409bb-e582-8924-a692-be2f2572a292.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpPUTRequest.CreateRequest method" Url="html/f87470fc-15dc-1f1c-54e2-d4c8eaf2004d.htm" />
+  <HelpKINode Title="HttpPUTRequest.HttpPUTRequest constructor" Url="html/8a1c76c3-97e0-9938-9412-9617949ed9d7.htm" />
+  <HelpKINode Title="HttpRESTRequest class">
+    <HelpKINode Title="HttpRESTRequest Class" Url="html/0ebbf28e-bed8-d84b-4de4-d3a40d6e34ba.htm" />
+    <HelpKINode Title="about HttpRESTRequest class" Url="html/0ebbf28e-bed8-d84b-4de4-d3a40d6e34ba.htm" />
+    <HelpKINode Title="constructor" Url="html/6ee08066-c67f-309d-300d-fdbacbdd69f0.htm" />
+    <HelpKINode Title="methods" Url="html/eebc0f96-236e-6e91-2e86-131e25909a5f.htm" />
+    <HelpKINode Title="properties" Url="html/ba99bbbb-5af0-260e-5591-f829fb7e7deb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpRESTRequest.CreateRequest method" Url="html/3b4ce926-f32c-1a23-00a3-c84fc12f7927.htm" />
+  <HelpKINode Title="HttpRESTRequest.HttpRESTRequest constructor" Url="html/6ee08066-c67f-309d-300d-fdbacbdd69f0.htm" />
+  <HelpKINode Title="HttpRESTRequest.Read method" Url="html/91748258-1039-ea4c-3b4d-988d9fdfd77d.htm" />
+  <HelpKINode Title="HttpRESTRequest.Send method" Url="html/4954b472-ca3f-27da-b9e9-f7a57e835d98.htm" />
+  <HelpKINode Title="HttpRESTRequest._url property" Url="html/6d4916ca-f77c-c364-631b-a753bca7685c.htm" />
+  <HelpKINode Title="Hue property" Url="html/fe77c954-2f73-6933-3b93-7b0e0e347766.htm" />
+  <HelpKINode Title="HueBridge class">
+    <HelpKINode Title="HueBridge Class" Url="html/b198508f-d7d2-a26d-20a7-f38fdba1b4ff.htm" />
+    <HelpKINode Title="about HueBridge class" Url="html/b198508f-d7d2-a26d-20a7-f38fdba1b4ff.htm" />
+    <HelpKINode Title="constructor" Url="html/8abe9c4c-4414-86ac-d8f2-bae536b66331.htm" />
+    <HelpKINode Title="fields" Url="html/e417fbb9-8eac-a441-d9a3-65b57f209460.htm" />
+    <HelpKINode Title="methods" Url="html/cfd21c2e-8b78-4cea-bdda-5eb9b19eeba8.htm" />
+    <HelpKINode Title="properties" Url="html/935f91b4-6a80-d07e-b1c2-f1efd963c473.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HueBridge.BaseUrl field" Url="html/3e388b0a-e960-7dbd-62ff-a4d0f8eaf88d.htm" />
+  <HelpKINode Title="HueBridge.CheckConnection method" Url="html/7d223cb4-c8e3-197b-f4b7-a6d47cc32958.htm" />
+  <HelpKINode Title="HueBridge.HueBridge constructor" Url="html/8abe9c4c-4414-86ac-d8f2-bae536b66331.htm" />
+  <HelpKINode Title="HueBridge.HueLights property" Url="html/650a333a-f01c-5b4f-7e10-7c5aa88b361e.htm" />
+  <HelpKINode Title="HueLight class">
+    <HelpKINode Title="HueLight Class" Url="html/987348b9-6a56-f4f7-f906-cf937f0544be.htm" />
+    <HelpKINode Title="about HueLight class" Url="html/987348b9-6a56-f4f7-f906-cf937f0544be.htm" />
+    <HelpKINode Title="constructor" Url="html/b9f92cd8-c6b8-a4ac-c69d-363541156082.htm" />
+    <HelpKINode Title="methods" Url="html/7f00d641-bde4-8049-42a1-cff2c5033a18.htm" />
+    <HelpKINode Title="properties" Url="html/01f05bf6-1807-b25c-18e2-2d29a45f89ee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HueLight.Bridge property" Url="html/18844954-e0fb-f4c0-2dde-52198a587be4.htm" />
+  <HelpKINode Title="HueLight.Brightness property" Url="html/cb67bd42-59a3-b01f-c7ae-bc1e9c759624.htm" />
+  <HelpKINode Title="HueLight.Hue property" Url="html/fe77c954-2f73-6933-3b93-7b0e0e347766.htm" />
+  <HelpKINode Title="HueLight.HueLight constructor" Url="html/b9f92cd8-c6b8-a4ac-c69d-363541156082.htm" />
+  <HelpKINode Title="HueLight.Id property" Url="html/4ccf08a2-3ee7-4752-a721-13d9cf2447f5.htm" />
+  <HelpKINode Title="HueLight.Name property" Url="html/de8d255c-9287-73c6-8e47-0dad7dd6b161.htm" />
+  <HelpKINode Title="HueLight.On property" Url="html/eec23247-dac7-7ea3-2f75-873510401f8c.htm" />
+  <HelpKINode Title="HueLight.Saturation property" Url="html/d36855fe-703e-61e7-853d-93ffec7d02e9.htm" />
+  <HelpKINode Title="HueLight.ToString method" Url="html/87114372-94e8-d9f4-eff8-74c39a089e2b.htm" />
+  <HelpKINode Title="HueLightning namespace" Url="html/81f5fd43-6d04-a68b-8f53-c8e03ee15f43.htm" />
+  <HelpKINode Title="HueLightning.API namespace" Url="html/304e47d9-b28b-fc78-6dea-fc87c44f5091.htm" />
+  <HelpKINode Title="HueLightning.API.HueBridge class" Url="html/b198508f-d7d2-a26d-20a7-f38fdba1b4ff.htm" />
+  <HelpKINode Title="HueLightning.API.HueLight class" Url="html/987348b9-6a56-f4f7-f906-cf937f0544be.htm" />
+  <HelpKINode Title="HueLightning.CHueOverview class" Url="html/040af56e-c908-332f-c5f0-35669f815733.htm" />
+  <HelpKINode Title="HueLightning.DHueOverview class" Url="html/eed2eb94-bc8e-4ee1-a038-ffd731ffed92.htm" />
+  <HelpKINode Title="HueLightning.PHue class" Url="html/d0a00895-7ceb-80f8-1035-daca13bd1254.htm" />
+  <HelpKINode Title="HueLights property" Url="html/650a333a-f01c-5b4f-7e10-7c5aa88b361e.htm" />
+  <HelpKINode Title="Id property" Url="html/4ccf08a2-3ee7-4752-a721-13d9cf2447f5.htm" />
   <HelpKINode Title="Infos property" Url="html/83cf7202-68ca-4cb6-757d-3f092cdba089.htm" />
   <HelpKINode Title="Init method" Url="html/4fcb29ff-13ec-5247-0325-bff5ba4eb81f.htm" />
   <HelpKINode Title="Instance property" Url="html/23b57be8-72c4-f8e2-5bb1-39120505e7f3.htm" />
@@ -225,6 +346,8 @@
   <HelpKINode Title="IP property" Url="html/c2dfaedc-1b65-10fb-cf71-c4a46b9047e1.htm" />
   <HelpKINode Title="IXP namespace" Url="html/d4dfb9c3-f8f3-e9be-21a2-df6de4922c8d.htm" />
   <HelpKINode Title="IXP.IXPFile class" Url="html/78cc1c8e-f152-e39e-572f-f5eab8b17d9b.htm" />
+  <HelpKINode Title="IXPCommunication namespace" Url="html/34967eab-2f5f-5e4a-9696-2c0a15617997.htm" />
+  <HelpKINode Title="IXPCommunication.Request class" Url="html/e98691f0-4077-88a6-5781-bc2a27fb6ce4.htm" />
   <HelpKINode Title="IXPFile class">
     <HelpKINode Title="IXPFile Class" Url="html/78cc1c8e-f152-e39e-572f-f5eab8b17d9b.htm" />
     <HelpKINode Title="about IXPFile class" Url="html/78cc1c8e-f152-e39e-572f-f5eab8b17d9b.htm" />
@@ -241,6 +364,7 @@
   <HelpKINode Title="IXPFile.PutHeader method" Url="html/5e102be9-ce74-4121-0487-882e2af1fe07.htm" />
   <HelpKINode Title="IXPFile.PutInfo method" Url="html/fb398dc3-a595-1a12-dac0-17cac390215f.htm" />
   <HelpKINode Title="IXPFile.XML property" Url="html/d77694cb-7dc9-8f2a-60aa-5e8a6d7160e4.htm" />
+  <HelpKINode Title="IXPRequest method" Url="html/f6d16971-b256-d899-8351-4d2779d189af.htm" />
   <HelpKINode Title="LoadFromDir method" Url="html/d63e7fcd-958e-fa94-e76b-6140a5236658.htm" />
   <HelpKINode Title="Log method" Url="html/338145a8-c0ee-e9d6-8e97-ffd4742122b7.htm" />
   <HelpKINode Title="MessageListened event" Url="html/ec94945b-a7a6-ef70-318f-d0b36b4001b6.htm" />
@@ -251,15 +375,19 @@
     <HelpKINode Title="ServerInstance.MessageReceived Event" Url="html/10c88e62-8d8f-590e-8bb3-d385ba59faf3.htm" />
   </HelpKINode>
   <HelpKINode Title="Name property">
+    <HelpKINode Title="DHueOverview.Name Property " Url="html/30815f65-5f33-eae4-3505-7f49ccddccaf.htm" />
     <HelpKINode Title="DPLog.Name Property " Url="html/4d773657-30c8-a5e4-76e3-301ffaf8b8df.htm" />
     <HelpKINode Title="DPNetworkFunctions.Name Property " Url="html/1822d138-5ca4-0382-4fef-cd249fc399ac.htm" />
     <HelpKINode Title="DPPluginOverview.Name Property " Url="html/1177a4f3-09e6-f55f-62b1-97a788a32767.htm" />
     <HelpKINode Title="FunctionInfo.Name Property " Url="html/fb7918d6-59df-4baf-b48d-b721b141fa03.htm" />
+    <HelpKINode Title="HueLight.Name Property " Url="html/de8d255c-9287-73c6-8e47-0dad7dd6b161.htm" />
     <HelpKINode Title="NetworkFunction.Name Property " Url="html/5225b2b2-65e9-404b-0b68-c6879399abee.htm" />
     <HelpKINode Title="PAlarm.Name Property " Url="html/8bd008bd-ec5f-434b-70cc-f32b1e2944bd.htm" />
     <HelpKINode Title="PClock.Name Property " Url="html/c4781042-910a-245c-b76c-88da847d342e.htm" />
+    <HelpKINode Title="PHue.Name Property " Url="html/5d9500f4-55ee-0418-01a8-f865200c1008.htm" />
     <HelpKINode Title="PLog.Name Property " Url="html/9b036a2f-fd35-f866-f355-ef87438181af.htm" />
     <HelpKINode Title="Plugin.Name Property " Url="html/f56c446f-81d7-44d8-cddb-485ea0982903.htm" />
+    <HelpKINode Title="PNotes.Name Property " Url="html/b09999b5-515d-a3b5-fa89-3a4822084aaf.htm" />
   </HelpKINode>
   <HelpKINode Title="NeededPlugin property" Url="html/13e28598-589e-2426-a795-4b983aafe6cd.htm" />
   <HelpKINode Title="NeedsPlugin class">
@@ -285,10 +413,18 @@
   <HelpKINode Title="NetworkFunctionsChanged event" Url="html/8099165f-a180-858e-b87f-ef2eb9e5ca2e.htm" />
   <HelpKINode Title="NetworkGetAlarm method" Url="html/ba4cdada-42bc-7f5e-f169-00d5fae8283e.htm" />
   <HelpKINode Title="NetworkGetAlarms method" Url="html/c4083304-3ae6-eeea-e5dd-4a19babf94d7.htm" />
+  <HelpKINode Title="NetworkGetColor method" Url="html/eac876d8-1257-ef40-fd1c-a49e61f6e5ac.htm" />
   <HelpKINode Title="NetworkGetDate method" Url="html/9f42cdfd-c72f-f5ac-7f64-2931f5999267.htm" />
+  <HelpKINode Title="NetworkGetEnabled method" Url="html/1486bf27-8c60-0eec-acca-8b398ab6f5d1.htm" />
+  <HelpKINode Title="NetworkGetLightName method" Url="html/33260375-6a77-990e-165f-dfd41a172d01.htm" />
+  <HelpKINode Title="NetworkGetLights method" Url="html/919e54ba-a9c3-94df-247e-8c0edcc33e9f.htm" />
   <HelpKINode Title="NetworkGetTime method" Url="html/595858b4-a3e2-af90-d8b0-0205c4864f07.htm" />
   <HelpKINode Title="Networking namespace" Url="html/c09cd9e7-3a47-b71d-4f95-c64ab632e4d7.htm" />
   <HelpKINode Title="Networking.Client class" Url="html/dbadaac3-ca34-f2ca-29f4-10e2d5f92f3f.htm" />
+  <HelpKINode Title="Networking.HttpGETRequest class" Url="html/a5c5465f-e612-d20e-2801-226d64af93b8.htm" />
+  <HelpKINode Title="Networking.HttpPOSTRequest class" Url="html/0531196a-de1d-24bf-dbac-d2eb8b8972d8.htm" />
+  <HelpKINode Title="Networking.HttpPUTRequest class" Url="html/6edf5af3-0ea4-e945-5800-a4057247a5f2.htm" />
+  <HelpKINode Title="Networking.HttpRESTRequest class" Url="html/0ebbf28e-bed8-d84b-4de4-d3a40d6e34ba.htm" />
   <HelpKINode Title="Networking.Server class" Url="html/dd605b63-7287-5593-178a-3efac3749537.htm" />
   <HelpKINode Title="Networking.ServerInstance class" Url="html/73178f72-7075-a9ec-79b3-87dd762f4f91.htm" />
   <HelpKINode Title="NetworkManager class">
@@ -306,13 +442,21 @@
   <HelpKINode Title="NetworkManager.RegisterNetworkFunction method" Url="html/dd4aa734-b6e9-354b-1d16-3d957548be24.htm" />
   <HelpKINode Title="NetworkManager.UnregisterNetworkFunction method" Url="html/6f5c1c2d-16ea-752d-b00b-1e6ae54e12a8.htm" />
   <HelpKINode Title="NetworkRegisterAlarm method" Url="html/bb2bf22a-62ae-61c9-c0d6-895bbfce2e2b.htm" />
+  <HelpKINode Title="NetworkRegisterToAlarmService method" Url="html/caac4380-2149-6d58-352d-e5f3b9845785.htm" />
   <HelpKINode Title="NetworkRegisterToTimeService method" Url="html/6f560911-99db-92f0-096d-bf5eeb010f9a.htm" />
   <HelpKINode Title="NetworkSetAlarmEnabled method" Url="html/499c21ab-342b-f0c1-7c32-5f0bfb01d14b.htm" />
   <HelpKINode Title="NetworkSetAlarmName method" Url="html/19099aa7-545f-6412-bc82-450d6b1b591e.htm" />
   <HelpKINode Title="NetworkSetAlarmTime method" Url="html/0582c4e5-fcf9-402c-d02d-c80491ddc8a5.htm" />
   <HelpKINode Title="NetworkSetAlarmWeekdays method" Url="html/0019522b-3bd8-debf-80cb-541f9ff32f93.htm" />
+  <HelpKINode Title="NetworkSetColor method" Url="html/8bb5a77c-e787-5d15-3bf7-ce204eff6413.htm" />
+  <HelpKINode Title="NetworkSetEnabled method" Url="html/ec92e006-be58-ba4c-eac0-d11b65a14fa7.htm" />
   <HelpKINode Title="NetworkUnregisterAlarm method" Url="html/02490537-7a53-ddb2-2ed2-4a9d0b667bfa.htm" />
+  <HelpKINode Title="NetworkUnregisterFromAlarmService method" Url="html/78b8fcc1-8f01-1657-3821-0362f7f8fd3f.htm" />
   <HelpKINode Title="NetworkUnregisterFromTimeService method" Url="html/7c7ef2b4-9d54-d666-c832-6aba4bbe7b07.htm" />
+  <HelpKINode Title="NoResponseRequest method" Url="html/8635e6d1-17e0-c316-21f4-f0a4967788b2.htm" />
+  <HelpKINode Title="Notes namespace" Url="html/fafd28e2-2ef7-34cb-91d1-e1c2d59954c2.htm" />
+  <HelpKINode Title="Notes.PNotes class" Url="html/5f8cbb81-2354-30c6-8e22-965bd4b49225.htm" />
+  <HelpKINode Title="On property" Url="html/eec23247-dac7-7ea3-2f75-873510401f8c.htm" />
   <HelpKINode Title="OnControlInvisible method" Url="html/9fb82702-9fcf-a4b8-e45c-93d5963c80bc.htm" />
   <HelpKINode Title="OnControlLoad method">
     <HelpKINode Title="DisplayPlugin.OnControlLoad Method " Url="html/76ff45c1-4268-0669-362c-735f74cd0d6b.htm" />
@@ -330,6 +474,7 @@
     <HelpKINode Title="DPLog.OnPluginLoad Method " Url="html/7eb06c4c-3024-d532-d1bc-78f8d6a0c3b4.htm" />
     <HelpKINode Title="PAlarm.OnPluginLoad Method " Url="html/433673d4-5739-1c20-b5e8-bfad7952b6a6.htm" />
     <HelpKINode Title="PClock.OnPluginLoad Method " Url="html/a5b1e872-20c5-aa83-ce4d-6b88a48375cf.htm" />
+    <HelpKINode Title="PHue.OnPluginLoad Method " Url="html/b4970f75-8ddd-978e-d8d1-3073396881c4.htm" />
     <HelpKINode Title="PLog.OnPluginLoad Method " Url="html/49292e32-a823-e80f-4b9b-b25d080f7b27.htm" />
     <HelpKINode Title="Plugin.OnPluginLoad Method " Url="html/6d3c4adb-f051-a1fb-e9b0-80ff8ee26fb9.htm" />
   </HelpKINode>
@@ -337,6 +482,7 @@
   <HelpKINode Title="OnPluginsUnload method" Url="html/5899eaff-c104-c6f2-8273-f6eba96d1bd9.htm" />
   <HelpKINode Title="OnPluginUnload method">
     <HelpKINode Title="DPLog.OnPluginUnload Method " Url="html/6f083059-3e8d-fce2-eebb-93ad3f768342.htm" />
+    <HelpKINode Title="PAlarm.OnPluginUnload Method " Url="html/1d8406cc-83f1-a493-9062-b50e60b5b1c5.htm" />
     <HelpKINode Title="PClock.OnPluginUnload Method " Url="html/419c076a-8806-fd70-de32-0d61a099c5e8.htm" />
     <HelpKINode Title="PLog.OnPluginUnload Method " Url="html/e4f7aec5-1084-9dbd-9a80-1cf1e2b4e009.htm" />
     <HelpKINode Title="Plugin.OnPluginUnload Method " Url="html/e7e4fae7-9078-889b-98c7-aba6bbe767a1.htm" />
@@ -352,12 +498,15 @@
   <HelpKINode Title="PAlarm.NetworkGetAlarm method" Url="html/ba4cdada-42bc-7f5e-f169-00d5fae8283e.htm" />
   <HelpKINode Title="PAlarm.NetworkGetAlarms method" Url="html/c4083304-3ae6-eeea-e5dd-4a19babf94d7.htm" />
   <HelpKINode Title="PAlarm.NetworkRegisterAlarm method" Url="html/bb2bf22a-62ae-61c9-c0d6-895bbfce2e2b.htm" />
+  <HelpKINode Title="PAlarm.NetworkRegisterToAlarmService method" Url="html/caac4380-2149-6d58-352d-e5f3b9845785.htm" />
   <HelpKINode Title="PAlarm.NetworkSetAlarmEnabled method" Url="html/499c21ab-342b-f0c1-7c32-5f0bfb01d14b.htm" />
   <HelpKINode Title="PAlarm.NetworkSetAlarmName method" Url="html/19099aa7-545f-6412-bc82-450d6b1b591e.htm" />
   <HelpKINode Title="PAlarm.NetworkSetAlarmTime method" Url="html/0582c4e5-fcf9-402c-d02d-c80491ddc8a5.htm" />
   <HelpKINode Title="PAlarm.NetworkSetAlarmWeekdays method" Url="html/0019522b-3bd8-debf-80cb-541f9ff32f93.htm" />
   <HelpKINode Title="PAlarm.NetworkUnregisterAlarm method" Url="html/02490537-7a53-ddb2-2ed2-4a9d0b667bfa.htm" />
+  <HelpKINode Title="PAlarm.NetworkUnregisterFromAlarmService method" Url="html/78b8fcc1-8f01-1657-3821-0362f7f8fd3f.htm" />
   <HelpKINode Title="PAlarm.OnPluginLoad method" Url="html/433673d4-5739-1c20-b5e8-bfad7952b6a6.htm" />
+  <HelpKINode Title="PAlarm.OnPluginUnload method" Url="html/1d8406cc-83f1-a493-9062-b50e60b5b1c5.htm" />
   <HelpKINode Title="PAlarm.PAlarm constructor" Url="html/145d2f80-6149-6366-9ea9-971db819b5eb.htm" />
   <HelpKINode Title="PAlarm.Version property" Url="html/f8aaf77d-8f7a-1f0f-09b8-15a5b53c87c6.htm" />
   <HelpKINode Title="Parameters property" Url="html/5a922d8f-0c3f-69c5-2338-98c810b091b5.htm" />
@@ -377,6 +526,23 @@
   <HelpKINode Title="PClock.OnPluginUnload method" Url="html/419c076a-8806-fd70-de32-0d61a099c5e8.htm" />
   <HelpKINode Title="PClock.PClock constructor" Url="html/dcdb2943-a020-e280-a999-93e55cd4d5b4.htm" />
   <HelpKINode Title="PClock.Version property" Url="html/72923108-1d34-8549-d88f-6f23fa945da0.htm" />
+  <HelpKINode Title="PHue class">
+    <HelpKINode Title="PHue Class" Url="html/d0a00895-7ceb-80f8-1035-daca13bd1254.htm" />
+    <HelpKINode Title="about PHue class" Url="html/d0a00895-7ceb-80f8-1035-daca13bd1254.htm" />
+    <HelpKINode Title="constructor" Url="html/7acf31e3-d319-681b-7f62-40ac90c19fec.htm" />
+    <HelpKINode Title="methods" Url="html/172a97bd-068d-250d-44d6-791470463de3.htm" />
+    <HelpKINode Title="properties" Url="html/9b5cd4c0-6b30-b279-b42c-ded49d15e065.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PHue.Name property" Url="html/5d9500f4-55ee-0418-01a8-f865200c1008.htm" />
+  <HelpKINode Title="PHue.NetworkGetColor method" Url="html/eac876d8-1257-ef40-fd1c-a49e61f6e5ac.htm" />
+  <HelpKINode Title="PHue.NetworkGetEnabled method" Url="html/1486bf27-8c60-0eec-acca-8b398ab6f5d1.htm" />
+  <HelpKINode Title="PHue.NetworkGetLightName method" Url="html/33260375-6a77-990e-165f-dfd41a172d01.htm" />
+  <HelpKINode Title="PHue.NetworkGetLights method" Url="html/919e54ba-a9c3-94df-247e-8c0edcc33e9f.htm" />
+  <HelpKINode Title="PHue.NetworkSetColor method" Url="html/8bb5a77c-e787-5d15-3bf7-ce204eff6413.htm" />
+  <HelpKINode Title="PHue.NetworkSetEnabled method" Url="html/ec92e006-be58-ba4c-eac0-d11b65a14fa7.htm" />
+  <HelpKINode Title="PHue.OnPluginLoad method" Url="html/b4970f75-8ddd-978e-d8d1-3073396881c4.htm" />
+  <HelpKINode Title="PHue.PHue constructor" Url="html/7acf31e3-d319-681b-7f62-40ac90c19fec.htm" />
+  <HelpKINode Title="PHue.Version property" Url="html/caa11333-b9c6-ac06-43d7-01b70d2ed5c4.htm" />
   <HelpKINode Title="PLog class">
     <HelpKINode Title="PLog Class" Url="html/dc1f9224-eb6c-799f-e618-c754af89c3fd.htm" />
     <HelpKINode Title="about PLog class" Url="html/dc1f9224-eb6c-799f-e618-c754af89c3fd.htm" />
@@ -414,10 +580,12 @@
   <HelpKINode Title="Plugin.OnPluginUnload method" Url="html/e7e4fae7-9078-889b-98c7-aba6bbe767a1.htm" />
   <HelpKINode Title="Plugin.Plugin class" Url="html/339aa476-5559-ae6e-ce4a-04f199cf025a.htm" />
   <HelpKINode Title="Plugin.Plugin constructor" Url="html/1b7cf24b-9b63-ed15-0888-2872f9cce6dc.htm" />
+  <HelpKINode Title="Plugin.PluginChangeDelegate delegate" Url="html/5ceda5d8-4e60-97bf-1534-860ec0ec66bd.htm" />
   <HelpKINode Title="Plugin.PluginManager class" Url="html/bae1daca-7bfe-aabd-67f2-289145a2773e.htm" />
-  <HelpKINode Title="Plugin.PluginUnloadDelegate delegate" Url="html/9c53719b-1829-d8c7-2d89-50ba97de32e9.htm" />
   <HelpKINode Title="Plugin.Semaphore class" Url="html/542c7b5c-18ac-9ca5-41ef-1e9d661fc8f5.htm" />
   <HelpKINode Title="Plugin.Version property" Url="html/27224f5b-6d98-f41e-07de-d3e230b2a6f8.htm" />
+  <HelpKINode Title="PluginChangeDelegate delegate" Url="html/5ceda5d8-4e60-97bf-1534-860ec0ec66bd.htm" />
+  <HelpKINode Title="PluginLoad event" Url="html/6a78b082-45de-5be9-96ed-6289d774a119.htm" />
   <HelpKINode Title="PluginManager class">
     <HelpKINode Title="PluginManager Class" Url="html/bae1daca-7bfe-aabd-67f2-289145a2773e.htm" />
     <HelpKINode Title="about PluginManager class" Url="html/bae1daca-7bfe-aabd-67f2-289145a2773e.htm" />
@@ -428,23 +596,42 @@
   <HelpKINode Title="PluginManager.DisplayPlugins property" Url="html/95130e67-9c99-b748-ee4b-b1e17c33aa8e.htm" />
   <HelpKINode Title="PluginManager.GetPlugin method" Url="html/16a5c374-4678-90dd-90a3-2a58b3535dbb.htm" />
   <HelpKINode Title="PluginManager.LoadFromDir method" Url="html/d63e7fcd-958e-fa94-e76b-6140a5236658.htm" />
+  <HelpKINode Title="PluginManager.PluginLoad event" Url="html/6a78b082-45de-5be9-96ed-6289d774a119.htm" />
   <HelpKINode Title="PluginManager.Plugins property" Url="html/152c9e90-e8d0-455e-d0b1-b04bed329c7d.htm" />
-  <HelpKINode Title="PluginManager.PluginsChanged event" Url="html/cc871e08-3bf5-4ecf-f783-ead9959fb126.htm" />
   <HelpKINode Title="PluginManager.PluginUnload event" Url="html/b1d45d56-4331-a465-3967-9cc3925064d4.htm" />
   <HelpKINode Title="PluginManager.UnloadAll method" Url="html/554b13bf-fb4f-e65d-1f03-17f026190924.htm" />
   <HelpKINode Title="Plugins property" Url="html/152c9e90-e8d0-455e-d0b1-b04bed329c7d.htm" />
-  <HelpKINode Title="PluginsChanged event" Url="html/cc871e08-3bf5-4ecf-f783-ead9959fb126.htm" />
   <HelpKINode Title="PluginUnload event" Url="html/b1d45d56-4331-a465-3967-9cc3925064d4.htm" />
-  <HelpKINode Title="PluginUnloadDelegate delegate" Url="html/9c53719b-1829-d8c7-2d89-50ba97de32e9.htm" />
+  <HelpKINode Title="PNotes class">
+    <HelpKINode Title="PNotes Class" Url="html/5f8cbb81-2354-30c6-8e22-965bd4b49225.htm" />
+    <HelpKINode Title="about PNotes class" Url="html/5f8cbb81-2354-30c6-8e22-965bd4b49225.htm" />
+    <HelpKINode Title="constructor" Url="html/c530bdc2-90e6-3bad-dd52-f82a0604ea70.htm" />
+    <HelpKINode Title="methods" Url="html/ebb34b2f-ce06-c44b-16d8-40c5a6364501.htm" />
+    <HelpKINode Title="properties" Url="html/c09a2b91-f3b2-f527-3a93-3a2548efdc06.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PNotes.Name property" Url="html/b09999b5-515d-a3b5-fa89-3a4822084aaf.htm" />
+  <HelpKINode Title="PNotes.PNotes constructor" Url="html/c530bdc2-90e6-3bad-dd52-f82a0604ea70.htm" />
+  <HelpKINode Title="PNotes.Version property" Url="html/4add3c32-f528-6d24-1ee0-03bc61afca1c.htm" />
   <HelpKINode Title="PutHeader method" Url="html/5e102be9-ce74-4121-0487-882e2af1fe07.htm" />
   <HelpKINode Title="PutInfo method" Url="html/fb398dc3-a595-1a12-dac0-17cac390215f.htm" />
+  <HelpKINode Title="Read method" Url="html/91748258-1039-ea4c-3b4d-988d9fdfd77d.htm" />
   <HelpKINode Title="RefreshDisabledChannels method" Url="html/7ba2180f-1a4a-4ec9-81a7-6acdc40f9de0.htm" />
   <HelpKINode Title="RefreshEnabledChannels method" Url="html/a1d2ec65-ccd6-04f6-2e17-4a2c9d224818.htm" />
   <HelpKINode Title="RefreshFunctions method" Url="html/c8f1ce34-b7be-e1ed-4022-c4e16b693792.htm" />
   <HelpKINode Title="RefreshPlugins method" Url="html/73dc29ad-0620-0e07-3176-189b92359a24.htm" />
   <HelpKINode Title="Register method" Url="html/d5f9f3e5-afb5-0ba5-ad82-c16ef8becaac.htm" />
+  <HelpKINode Title="RegisterClient method" Url="html/8864367f-5684-23d7-d9e4-29651f41fac5.htm" />
   <HelpKINode Title="RegisterNetworkFunction method" Url="html/dd4aa734-b6e9-354b-1d16-3d957548be24.htm" />
+  <HelpKINode Title="Request class">
+    <HelpKINode Title="Request Class" Url="html/e98691f0-4077-88a6-5781-bc2a27fb6ce4.htm" />
+    <HelpKINode Title="about Request class" Url="html/e98691f0-4077-88a6-5781-bc2a27fb6ce4.htm" />
+    <HelpKINode Title="methods" Url="html/5aa1635d-53c3-7a11-0dc4-d1b7188ef4af.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Request.IXPRequest method" Url="html/f6d16971-b256-d899-8351-4d2779d189af.htm" />
+  <HelpKINode Title="Request.NoResponseRequest method" Url="html/8635e6d1-17e0-c316-21f4-f0a4967788b2.htm" />
+  <HelpKINode Title="Request.SimpleRequest method" Url="html/81c2a464-7d62-7b94-97aa-3a320d4fc6a3.htm" />
   <HelpKINode Title="ReturnType property" Url="html/7a94ff8b-303b-8f28-a8f6-6fde6ab95b96.htm" />
+  <HelpKINode Title="Saturation property" Url="html/d36855fe-703e-61e7-853d-93ffec7d02e9.htm" />
   <HelpKINode Title="Semaphore class">
     <HelpKINode Title="Semaphore Class" Url="html/542c7b5c-18ac-9ca5-41ef-1e9d661fc8f5.htm" />
     <HelpKINode Title="about Semaphore class" Url="html/542c7b5c-18ac-9ca5-41ef-1e9d661fc8f5.htm" />
@@ -457,6 +644,7 @@
   <HelpKINode Title="Semaphore.Wait method" Url="html/bf6965d8-60a8-8656-cc26-c720b346bc39.htm" />
   <HelpKINode Title="Send method">
     <HelpKINode Title="Client.Send Method " Url="html/327b121c-de1c-e0ce-493e-6e33b960f4ee.htm" />
+    <HelpKINode Title="HttpRESTRequest.Send Method " Url="html/4954b472-ca3f-27da-b9e9-f7a57e835d98.htm" />
     <HelpKINode Title="ServerInstance.Send Method " Url="html/b8fe305f-bdf8-4473-7862-8b5378f0513b.htm" />
   </HelpKINode>
   <HelpKINode Title="Server class">
@@ -490,15 +678,19 @@
   <HelpKINode Title="ServerInstance.MessageReceived event" Url="html/10c88e62-8d8f-590e-8bb3-d385ba59faf3.htm" />
   <HelpKINode Title="ServerInstance.Send method" Url="html/b8fe305f-bdf8-4473-7862-8b5378f0513b.htm" />
   <HelpKINode Title="ServerInstance.ServerInstance constructor" Url="html/584e42b9-5b96-8bd5-4fae-dc6b8396dc13.htm" />
+  <HelpKINode Title="SimpleRequest method" Url="html/81c2a464-7d62-7b94-97aa-3a320d4fc6a3.htm" />
   <HelpKINode Title="Start method">
+    <HelpKINode Title="AlarmService.Start Method " Url="html/75caac82-87d7-0674-8ac9-2927bcae0d2a.htm" />
     <HelpKINode Title="Server.Start Method " Url="html/e2361e71-7339-14ea-f761-2174a00ee06a.htm" />
     <HelpKINode Title="TimeService.Start Method " Url="html/6e907baa-ad6e-a62e-f9d1-918f3aefc575.htm" />
   </HelpKINode>
   <HelpKINode Title="Stop method">
+    <HelpKINode Title="AlarmService.Stop Method " Url="html/c7d6019b-c70a-4758-ad89-b787045dea70.htm" />
     <HelpKINode Title="Server.Stop Method " Url="html/d37f0f5b-ad7b-286c-a308-0a6b26fa0da9.htm" />
     <HelpKINode Title="TimeService.Stop Method " Url="html/48b9543f-1fa2-47ac-2907-6ae85a02423f.htm" />
   </HelpKINode>
   <HelpKINode Title="TabName property">
+    <HelpKINode Title="DHueOverview.TabName Property " Url="html/1dc82f9e-635c-68d9-095b-671a8a31b5ef.htm" />
     <HelpKINode Title="DisplayPlugin.TabName Property " Url="html/85bfb387-7410-e406-4af2-2aa2ac1f05dd.htm" />
     <HelpKINode Title="DPLog.TabName Property " Url="html/778df663-89d5-bc2d-d9e2-c97a49197e58.htm" />
     <HelpKINode Title="DPNetworkFunctions.TabName Property " Url="html/eb98894f-a30c-3107-5b2f-4feea1fdd723.htm" />
@@ -513,19 +705,25 @@
   <HelpKINode Title="TimeService.Start method" Url="html/6e907baa-ad6e-a62e-f9d1-918f3aefc575.htm" />
   <HelpKINode Title="TimeService.Stop method" Url="html/48b9543f-1fa2-47ac-2907-6ae85a02423f.htm" />
   <HelpKINode Title="TimeService.Unregister method" Url="html/f484a2ab-ade2-746a-460a-1c9a798e2d1d.htm" />
+  <HelpKINode Title="ToString method" Url="html/87114372-94e8-d9f4-eff8-74c39a089e2b.htm" />
   <HelpKINode Title="UnloadAll method" Url="html/554b13bf-fb4f-e65d-1f03-17f026190924.htm" />
   <HelpKINode Title="Unregister method" Url="html/f484a2ab-ade2-746a-460a-1c9a798e2d1d.htm" />
+  <HelpKINode Title="UnregisterClient method" Url="html/efc4a7f4-aadb-2d4a-295d-7767898afd91.htm" />
   <HelpKINode Title="UnregisterNetworkFunction method" Url="html/6f5c1c2d-16ea-752d-b00b-1e6ae54e12a8.htm" />
   <HelpKINode Title="Version property">
+    <HelpKINode Title="DHueOverview.Version Property " Url="html/302e5b7c-a65a-403e-e8f6-ac79c28da769.htm" />
     <HelpKINode Title="DPLog.Version Property " Url="html/86aca196-cf21-0a82-975c-eadb4ca83c37.htm" />
     <HelpKINode Title="DPNetworkFunctions.Version Property " Url="html/80c89154-3b78-ff22-0d54-c41e2a8e4565.htm" />
     <HelpKINode Title="DPPluginOverview.Version Property " Url="html/54264969-7dfb-2163-7909-4ff014126886.htm" />
     <HelpKINode Title="PAlarm.Version Property " Url="html/f8aaf77d-8f7a-1f0f-09b8-15a5b53c87c6.htm" />
     <HelpKINode Title="PClock.Version Property " Url="html/72923108-1d34-8549-d88f-6f23fa945da0.htm" />
+    <HelpKINode Title="PHue.Version Property " Url="html/caa11333-b9c6-ac06-43d7-01b70d2ed5c4.htm" />
     <HelpKINode Title="PLog.Version Property " Url="html/935253c9-4943-bdbf-e679-b02837d4e150.htm" />
     <HelpKINode Title="Plugin.Version Property " Url="html/27224f5b-6d98-f41e-07de-d3e230b2a6f8.htm" />
+    <HelpKINode Title="PNotes.Version Property " Url="html/4add3c32-f528-6d24-1ee0-03bc61afca1c.htm" />
   </HelpKINode>
   <HelpKINode Title="Wait method" Url="html/bf6965d8-60a8-8656-cc26-c720b346bc39.htm" />
   <HelpKINode Title="WriteCache method" Url="html/b852c39c-5d7b-4e2c-6152-058b340d0be8.htm" />
   <HelpKINode Title="XML property" Url="html/d77694cb-7dc9-8f2a-60aa-5e8a6d7160e4.htm" />
+  <HelpKINode Title="_url property" Url="html/6d4916ca-f77c-c364-631b-a753bca7685c.htm" />
 </HelpKI>

@@ -1,4 +1,7 @@
 ﻿namespace HueLightning {
+    /// <summary>
+    /// A component for the <see cref="DHueOverview"/> plugin
+    /// </summary>
     partial class CHueOverview {
         /// <summary> 
         /// Required designer variable.

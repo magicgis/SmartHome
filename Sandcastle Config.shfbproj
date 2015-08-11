@@ -29,18 +29,23 @@
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <DocumentationSources>
       <DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.admintools.dll" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.admintools.xml" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.clock.dll" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.clock.xml" />
-      <DocumentationSource sourceFile="Server\bin\Debug\IXP.dll" />
-      <DocumentationSource sourceFile="Server\bin\Debug\IXP.xml" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Networking.dll" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Networking.xml" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Plugin.dll" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Plugin.xml" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Server.exe" />
-      <DocumentationSource sourceFile="Server\bin\Debug\Server.xml" />
-    </DocumentationSources>
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.admintools.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.clock.dll" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.clock.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.huelightning.dll" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.huelightning.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.notes.dll" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugins\com.projectgame.notes.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\IXP.dll" />
+<DocumentationSource sourceFile="Server\bin\Debug\IXP.xml" />
+<DocumentationSource sourceFile="IXPCommunication\bin\Debug\IXPCommunication.dll" />
+<DocumentationSource sourceFile="IXPCommunication\bin\Debug\IXPCommunication.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\Networking.dll" />
+<DocumentationSource sourceFile="Server\bin\Debug\Networking.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugin.dll" />
+<DocumentationSource sourceFile="Server\bin\Debug\Plugin.xml" />
+<DocumentationSource sourceFile="Server\bin\Debug\Server.exe" />
+<DocumentationSource sourceFile="Server\bin\Debug\Server.xml" /></DocumentationSources>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
     <IndentHtml>False</IndentHtml>

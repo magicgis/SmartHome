@@ -7,13 +7,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Networking {
+    /// <summary>
+    /// Creates and manages a restful PUT Request
+    /// </summary>
     public class HttpPUTRequest : HttpRESTRequest {
         private string _body;
 
+        /// <summary>
+        /// Creates a new instance of the object
+        /// </summary>
+        /// <param name="url">The requests url</param>
+        /// <param name="body">The requests body</param>
         public HttpPUTRequest(string url, string body) : base(url) {
             _body = body;
         }
 
+        /// <summary>
+        /// Creates the request
+        /// </summary>
+        /// <returns>A httpwebrequest</returns>
         protected override HttpWebRequest CreateRequest() {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_url);
             request.Method = "PUT";
