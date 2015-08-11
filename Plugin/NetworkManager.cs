@@ -111,6 +111,16 @@ namespace Plugin {
                         bool s = int.TryParse(strVal, out i);
                         if (s)
                             paramVal = i;
+                    } else if(t == typeof(byte)) {
+                        byte b = 0;
+                        bool s = byte.TryParse(strVal, out b);
+                        if (s)
+                            paramVal = b; 
+                    } else if(t == typeof(ushort)){
+                        ushort us = 0;
+                        bool s = ushort.TryParse(strVal, out us);
+                        if (s)
+                            paramVal = us;
                     } else if (t == typeof(bool)) {
                         if (strVal.Equals("TRUE"))
                             paramVal = true;
