@@ -9,6 +9,7 @@ Besides custom systems like a clock or music streaming this project is also capa
 To bring everything together a permanently running server manages communication of all devices, saving of all data and directing all clients in the network. 
 Through a lightweight API it is possible to write plugins in a very intuitive way to add more and more functionality.
 The server exposes a network interface based on sockets which enabled platform independent communication to smart client applications running on PCs, mobile phones or tiny devices like Raspberry PI and Arduino.
+If you need a guide how to set up the server and how plugins are written take a look at the wiki :)
 
 ## Embedded System
 
