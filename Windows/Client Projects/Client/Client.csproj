@@ -4,27 +4,28 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28533C95-EE36-434E-BCDC-F87C6B924822}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{6F3B3E6C-48B2-4B3A-B729-0B8AC83FC85E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AdminTools</RootNamespace>
-    <AssemblyName>com.projectgame.admintools</AssemblyName>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Server\bin\Debug\Plugins\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Server\bin\Debug\Plugins\com.projectgame.admintools.xml</DocumentationFile>
-    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,72 +36,59 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CLog.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CLog.Designer.cs">
-      <DependentUpon>CLog.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CNetworkFunctions.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CNetworkFunctions.Designer.cs">
-      <DependentUpon>CNetworkFunctions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CPluginOverview.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CPluginOverview.Designer.cs">
-      <DependentUpon>CPluginOverview.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DPLog.cs" />
-    <Compile Include="DPNetworkFunctions.cs" />
-    <Compile Include="DPPluginOverview.cs" />
-    <Compile Include="PLog.cs" />
+    <Compile Include="IXPRequest.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Plugin\Plugin.csproj">
-      <Project>{e3957c03-ba27-4948-a0b5-9fb33f88b39d}</Project>
-      <Name>Plugin</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Networking\Networking.csproj">
+      <Project>{869edf48-7873-4342-99b3-db2b9fa39c65}</Project>
+      <Name>Networking</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="CLog.resx">
-      <DependentUpon>CLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CNetworkFunctions.resx">
-      <DependentUpon>CNetworkFunctions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CPluginOverview.resx">
-      <DependentUpon>CPluginOverview.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>cd $(TargetDir)
-cd Plugins
-del IXP.dll
-del IXP.pdb
-del IXP.xml
-del MySql.Data.dll
-del Networking.dll
-del Networking.pdb
-del Networking.xml
-del Plugin.dll
-del Plugin.pdb
-del Plugin.xml</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

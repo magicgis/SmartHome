@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{479F3CBA-F727-4B01-8853-689A343C188C}</ProjectGuid>
+    <ProjectGuid>{28533C95-EE36-434E-BCDC-F87C6B924822}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Notes</RootNamespace>
-    <AssemblyName>com.projectgame.notes</AssemblyName>
+    <RootNamespace>AdminTools</RootNamespace>
+    <AssemblyName>com.projectgame.admintools</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,7 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Server\bin\Debug\Plugins\com.projectgame.notes.xml</DocumentationFile>
+    <DocumentationFile>..\Server\bin\Debug\Plugins\com.projectgame.admintools.xml</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,18 +45,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PNotes.cs" />
+    <Compile Include="CLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CLog.Designer.cs">
+      <DependentUpon>CLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CNetworkFunctions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CNetworkFunctions.Designer.cs">
+      <DependentUpon>CNetworkFunctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CPluginOverview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CPluginOverview.Designer.cs">
+      <DependentUpon>CPluginOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPLog.cs" />
+    <Compile Include="DPNetworkFunctions.cs" />
+    <Compile Include="DPPluginOverview.cs" />
+    <Compile Include="PLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Networking\Networking.csproj">
-      <Project>{869edf48-7873-4342-99b3-db2b9fa39c65}</Project>
-      <Name>Networking</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Plugin\Plugin.csproj">
+    <ProjectReference Include="..\..\Plugin\Plugin.csproj">
       <Project>{e3957c03-ba27-4948-a0b5-9fb33f88b39d}</Project>
       <Name>Plugin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CLog.resx">
+      <DependentUpon>CLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CNetworkFunctions.resx">
+      <DependentUpon>CNetworkFunctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPluginOverview.resx">
+      <DependentUpon>CPluginOverview.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
