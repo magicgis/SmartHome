@@ -1,6 +1,6 @@
 # SmartHome
 
-The SmartHome project consists of multiple projects/platforms that form an intuitive and extendible system.
+The SmartHome project consists of multiple projects/platforms that form an intuitive and extendable system.
 SmartHome tries to take different szenarios in daily life and packages them in one clean way of communication.
 Besides custom systems like a clock or music streaming this project is also capable of communicating with a wide range of smart IoT devices like the Phillips Hue series of smart lights.
 
