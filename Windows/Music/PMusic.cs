@@ -28,7 +28,7 @@ namespace Music {
 
         [NetworkFunction("com.projectgame.music.music.addsong")]
         public int NetworkAddSong(String name, String album, String artist, String file) {
-            int id = MusicDbConnector.AddSong(artist, album, name, Encoding.UTF8.GetBytes(file));
+            int id = MusicDbConnector.AddSong(artist, album, name, Convert.FromBase64String(file));
             return id;
         }
 

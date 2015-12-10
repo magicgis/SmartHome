@@ -28,13 +28,17 @@ namespace Music {
 
         private static int _debugChannel;
         private static MySqlConnection _connection;
+        private static bool _connectionOpen;
 
         public static void Init(MySqlConnection connection) {
             _debugChannel = Debug.AddChannel("com.projectgame.music.musicdbconnector");
             Debug.Log(_debugChannel, "Initializing...");
             _connection = connection;
 
-            _connection.Open();
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             MySqlCommand cmd = new MySqlCommand("CREATE TABLE IF NOT EXISTS `com_projectgame_music_music`.`albums` (" +
                                                 "`ID` int(11) NOT NULL AUTO_INCREMENT," +
@@ -58,10 +62,15 @@ namespace Music {
             cmd.ExecuteNonQuery();
 
             _connection.Close();
+            _connectionOpen = false;
         }
 
         public static List<int> GetInterpreters() {
-            _connection.Open();      
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             List<int> interpreters = new List<int>();
 
@@ -77,10 +86,15 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return interpreters;
         }
         public static List<int> GetAlbums(int interpreter) {
-            _connection.Open();
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             List<int> albums = new List<int>();
 
@@ -97,10 +111,15 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return albums;
         }
         public static List<int> GetSongs(int album) {
-            _connection.Open();
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             List<int> songs = new List<int>();
 
@@ -117,11 +136,16 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return songs;
         }
 
         public static string GetInterpreterName(int interpreter) {
-            _connection.Open();
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             String name = null;
 
@@ -136,11 +160,16 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return name;
         }
 
         public static string GetAlbumName(int album) {
-            _connection.Open();
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             String name = null;
 
@@ -155,11 +184,16 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return name;
         }
 
         public static string GetSongName(int song) {
-            _connection.Open();
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             String name = null;
 
@@ -174,10 +208,15 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return name;
         }
         public static byte[] GetSongFile(int song) {
-            _connection.Open();
+
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
 
             byte[] file = null;
 
@@ -192,6 +231,7 @@ namespace Music {
             }
 
             _connection.Close();
+            _connectionOpen = false;
             return file;
         }
 
@@ -199,9 +239,7 @@ namespace Music {
             int i = -1;
             int a = -1;
             int s = -1;
-
-            _connection.Open();
-
+            
             foreach (int ci in GetInterpreters()) {
                 if (GetInterpreterName(ci).Equals(interpreter)) {
                     i = ci;
@@ -209,7 +247,12 @@ namespace Music {
                 }
             }
 
-            if(i == -1) {
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
+
+            if (i == -1) {
                 MySqlCommand cmd1 = new MySqlCommand(
                     "INSERT INTO " + TABLE_INTERPRETERS + " (" + 
                     COLOUMN_INTERPRETERS_NAME + ") VALUES('" +
@@ -226,7 +269,12 @@ namespace Music {
                 }
             }
 
-            if(a == -1) {
+            if (!_connectionOpen) {
+                _connectionOpen = true;
+                _connection.Open();
+            }
+
+            if (a == -1) {
                 MySqlCommand cmd1 = new MySqlCommand(
                     "INSERT INTO " + TABLE_ALBUMS + " (" +
                     COLOUMN_ALBUMS_NAME + ") VALUES('" +
@@ -243,7 +291,8 @@ namespace Music {
                 "SELECT LAST_INSERT_ID();"
                 , _connection);
             s = Convert.ToInt32(cmd.ExecuteScalar());
-               
+
+            _connectionOpen = false;  
             _connection.Close();
             return s;
         }

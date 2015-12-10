@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "Plugin\Plugin.csproj", "{E3957C03-BA27-4948-A0B5-9FB33F88B39D}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HueLightning", "HueLightning\HueLightning.csproj", "{7DF62D59-23EA-486D-9024-44D9FFE05ACF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Music", "Music\Music.csproj", "{7FA36CB8-8BE7-4DAB-806F-098DD6F88735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicPlayer", "MusicPlayer\MusicPlayer.csproj", "{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,6 +191,18 @@ Global
 		{7FA36CB8-8BE7-4DAB-806F-098DD6F88735}.Release|x64.Build.0 = Release|Any CPU
 		{7FA36CB8-8BE7-4DAB-806F-098DD6F88735}.Release|x86.ActiveCfg = Release|Any CPU
 		{7FA36CB8-8BE7-4DAB-806F-098DD6F88735}.Release|x86.Build.0 = Release|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Debug|x64.Build.0 = Debug|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Debug|x86.Build.0 = Debug|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Release|x64.ActiveCfg = Release|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Release|x64.Build.0 = Release|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -207,5 +221,6 @@ Global
 		{479F3CBA-F727-4B01-8853-689A343C188C} = {290CB5EF-31CC-4F5B-9396-B3109747F488}
 		{7DF62D59-23EA-486D-9024-44D9FFE05ACF} = {290CB5EF-31CC-4F5B-9396-B3109747F488}
 		{7FA36CB8-8BE7-4DAB-806F-098DD6F88735} = {290CB5EF-31CC-4F5B-9396-B3109747F488}
+		{FD94C88F-DF3F-4F67-809E-AB9F6D938F33} = {F8BC29BB-7BD4-4406-BB46-F2D3D7D39670}
 	EndGlobalSection
 EndGlobal
