@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using IXP;
-using Networking;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace IXPCommunication {
+namespace Networking {
     /// <summary>
     /// Handles communication with the server over ixp files
     /// </summary>
-    public static class Request {   
+    public static class Request {
 
         /// <summary>
         /// A Request that will give no response
         /// </summary>
         /// <param name="file">The file to send</param>
         public static void NoResponseRequest(this Client client, IXPFile file) {
-            client.Send(Encoding.UTF8.GetBytes(file.XML));   
+            client.Send(Encoding.UTF8.GetBytes(file.XML));
         }
 
         #region Simple Request
@@ -52,7 +50,7 @@ namespace IXPCommunication {
             if (!response.NetworkFunction.Equals(_simpleRequestRequest))
                 return;
 
-            _simpleRequestResponse = response.GetInfoValue("Response");       
+            _simpleRequestResponse = response.GetInfoValue("Response");
         }
 
         #endregion
@@ -66,7 +64,7 @@ namespace IXPCommunication {
         /// <param name="file">The file to send</param>
         /// <returns>The servers response</returns>
         public static IXPFile IXPRequest(this Client client, IXPFile file) {
-            _ixpRequestRequest = file.NetworkFunction;     
+            _ixpRequestRequest = file.NetworkFunction;
             client.MessageReceived += IXPRequest_Client_MessageReceived;
             client.Send(Encoding.UTF8.GetBytes(file.XML));
 

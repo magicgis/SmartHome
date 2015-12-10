@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Networking;
-using IXP;
-using IXPCommunication;
 
 namespace MusicPlayer {
     internal static class ExtentionMethods {

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Plugin;
 using Networking;
 using System.Threading;
-using IXP;
 
 namespace Clock {
     /// <summary>

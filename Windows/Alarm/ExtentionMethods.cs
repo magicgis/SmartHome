@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Networking;
-using IXP;
-using IXPCommunication;
+using Networking;                     
 
 namespace Alarm {
     internal static class ExtentionMethods {

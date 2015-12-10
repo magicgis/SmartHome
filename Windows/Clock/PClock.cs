@@ -56,8 +56,8 @@ namespace Clock {
         /// </summary>
         /// <returns>Current date in IXP Format</returns>
         [Plugin.NetworkFunction("com.projectgame.clock.clock.gettime")]
-        public IXP.IXPFile NetworkGetTime() {
-            IXP.IXPFile file = new IXP.IXPFile();
+        public IXPFile NetworkGetTime() {
+            IXPFile file = new IXPFile();
             file.NetworkFunction = "com.projectgame.clock.clock.gettime";
 
             file.PutInfo("hour", DateTime.Now.Hour.ToString());
@@ -81,8 +81,8 @@ namespace Clock {
         /// </summary>
         /// <returns>IXP File containing the current date</returns>
         [Plugin.NetworkFunction("com.projectgame.clock.clock.getdate")]
-        public IXP.IXPFile NetworkGetDate(){
-            IXP.IXPFile file = new IXP.IXPFile();
+        public IXPFile NetworkGetDate(){
+            IXPFile file = new IXPFile();
             file.NetworkFunction = "com.projectgame.clock.clock.getdate";
 
             file.PutInfo("day", DateTime.Now.Day.ToString());

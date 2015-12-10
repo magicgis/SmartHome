@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Plugin;
 using MySql.Data.MySqlClient;
-using IXP;
+using Networking;
 
 namespace Music {
     class PMusic : Plugin.Plugin {

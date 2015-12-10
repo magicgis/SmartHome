@@ -8,9 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Networking;
-using IXP;
-using IXPCommunication;
+using Networking;                    
 
 namespace Alarm {
     public partial class FormMain : Form {

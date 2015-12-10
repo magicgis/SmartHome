@@ -4,8 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using Networking;
-using IXP;
+using Networking;                
 
 namespace Plugin {
     /// <summary>

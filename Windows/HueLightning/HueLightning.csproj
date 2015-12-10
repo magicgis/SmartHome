@@ -68,10 +68,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IXP\IXP.csproj">
-      <Project>{efbc147b-2255-4f45-80cb-5eb5ac842758}</Project>
-      <Name>IXP</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Networking\Networking.csproj">
       <Project>{869edf48-7873-4342-99b3-db2b9fa39c65}</Project>
       <Name>Networking</Name>
