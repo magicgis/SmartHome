@@ -2,15 +2,14 @@ package com.projectgame.intelligenthome.embeddedsystem.view;
 
 import com.projectgame.intelligenthome.core.FontCache;
 import com.projectgame.intelligenthome.core.FontType;
+import com.projectgame.intelligenthome.core.ui.*;
 import com.projectgame.intelligenthome.embeddedsystem.model.Application;
 import com.projectgame.intelligenthome.embeddedsystem.model.ApplicationManager;
 import com.projectgame.intelligenthome.embeddedsystem.model.Main;
-import com.projectgame.uisystem.*;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.text.TextAlignment;
 
-import java.awt.*;
 import java.util.ArrayList;
 
 /**

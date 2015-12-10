@@ -1,4 +1,4 @@
-package com.projectgame.networking;
+package com.projectgame.intelligenthome.core;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

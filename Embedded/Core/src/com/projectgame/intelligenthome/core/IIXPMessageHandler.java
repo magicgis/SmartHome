@@ -1,6 +1,4 @@
-package com.projectgame.networking;
-
-import com.projectgame.networking.IXPFile;
+package com.projectgame.intelligenthome.core;
 
 /**
  * Created by Beppo-Laptop on 10/9/2015.

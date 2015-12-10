@@ -1,7 +1,5 @@
 package com.projectgame.intelligenthome.core;
 
-import com.projectgame.networking.IXPClient;
-
 import java.io.IOException;
 
 /**

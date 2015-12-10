@@ -1,9 +1,8 @@
-package com.projectgame.uisystem;
+package com.projectgame.intelligenthome.core.ui;
 
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.*;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 

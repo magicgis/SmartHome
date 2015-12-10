@@ -1,9 +1,6 @@
 package com.projectgame.intelligenthome.core;
 
-import com.projectgame.uisystem.CanvasDrawable;
-import com.projectgame.uisystem.ColorDrawable;
-import com.projectgame.uisystem.Drawable;
-import javafx.scene.image.Image;
+import com.projectgame.intelligenthome.core.ui.Drawable;
 import javafx.scene.paint.Color;
 
 import java.util.Hashtable;

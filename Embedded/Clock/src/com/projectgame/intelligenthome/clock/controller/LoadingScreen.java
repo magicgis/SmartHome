@@ -1,7 +1,7 @@
 package com.projectgame.intelligenthome.clock.controller;
 
 import com.projectgame.intelligenthome.core.*;
-import com.projectgame.uisystem.Display;
+import com.projectgame.intelligenthome.core.ui.Display;
 
 /**
  * Created by Beppo-Laptop on 10/9/2015.

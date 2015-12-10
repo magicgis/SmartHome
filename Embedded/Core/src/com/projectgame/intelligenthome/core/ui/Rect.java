@@ -1,4 +1,4 @@
-package com.projectgame.uisystem;
+package com.projectgame.intelligenthome.core.ui;
 
 /**
  * Created by Beppo on 06.10.2015.

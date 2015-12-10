@@ -1,9 +1,8 @@
 package com.projectgame.intelligenthome.core;
 
-import com.projectgame.uisystem.*;
-import javafx.scene.image.Image;
+import com.projectgame.intelligenthome.core.ui.ButtonDrawable;
+import com.projectgame.intelligenthome.core.ui.Display;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 
 /**
  * Created by Beppo-Laptop on 10/8/2015.

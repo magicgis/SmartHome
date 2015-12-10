@@ -1,4 +1,4 @@
-package com.projectgame.uisystem;
+package com.projectgame.intelligenthome.core.ui;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -9,7 +9,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 /**
  * Created by Beppo on 06.10.2015.

@@ -1,9 +1,8 @@
 package com.projectgame.intelligenthome.clock.view;
 
-import com.projectgame.intelligenthome.clock.controller.*;
 import com.projectgame.intelligenthome.clock.model.TimeManager;
 import com.projectgame.intelligenthome.core.*;
-import com.projectgame.uisystem.*;
+import com.projectgame.intelligenthome.core.ui.*;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;

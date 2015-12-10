@@ -1,4 +1,4 @@
-package com.projectgame.networking;
+package com.projectgame.intelligenthome.core;
 
 import javax.xml.transform.TransformerException;
 import java.io.IOException;

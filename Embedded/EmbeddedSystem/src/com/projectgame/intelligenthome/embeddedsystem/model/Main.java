@@ -4,10 +4,10 @@ import com.projectgame.intelligenthome.core.*;
 import com.projectgame.intelligenthome.embeddedsystem.view.AppLauncher;
 import com.projectgame.intelligenthome.embeddedsystem.view.BootScreen;
 import com.projectgame.intelligenthome.embeddedsystem.view.SingleApplicationDrawable;
-import com.projectgame.uisystem.CanvasDrawable;
-import com.projectgame.uisystem.Display;
-import com.projectgame.uisystem.Drawable;
-import com.projectgame.uisystem.IDrawableProvider;
+import com.projectgame.intelligenthome.core.ui.CanvasDrawable;
+import com.projectgame.intelligenthome.core.ui.Display;
+import com.projectgame.intelligenthome.core.ui.Drawable;
+import com.projectgame.intelligenthome.core.ui.IDrawableProvider;
 
 /**
  * Created by Beppo-Laptop on 11/10/2015.

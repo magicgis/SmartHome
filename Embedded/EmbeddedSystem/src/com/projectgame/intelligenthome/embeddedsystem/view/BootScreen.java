@@ -1,13 +1,13 @@
 package com.projectgame.intelligenthome.embeddedsystem.view;
 
-import com.projectgame.uisystem.*;
+import com.projectgame.intelligenthome.core.ui.*;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 /**
  * Created by Beppo-Laptop on 11/10/2015.
  */
-public class BootScreen extends Drawable{
+public class BootScreen extends Drawable {
     private GifDrawable gifDrawable;
 
     public BootScreen(){

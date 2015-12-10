@@ -2,10 +2,9 @@ package com.projectgame.intelligenthome.clock.view;
 
 import com.projectgame.intelligenthome.core.AppScreen;
 import com.projectgame.intelligenthome.core.IAppScreenBarButtonHandler;
-import com.projectgame.uisystem.ColorDrawable;
-import com.projectgame.uisystem.Drawable;
-import com.projectgame.uisystem.LabelDrawable;
-import com.projectgame.uisystem.Vector2;
+import com.projectgame.intelligenthome.core.ui.Drawable;
+import com.projectgame.intelligenthome.core.ui.LabelDrawable;
+import com.projectgame.intelligenthome.core.ui.Vector2;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;

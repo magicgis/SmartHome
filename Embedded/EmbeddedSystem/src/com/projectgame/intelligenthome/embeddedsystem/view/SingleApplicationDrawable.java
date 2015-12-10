@@ -1,15 +1,14 @@
 package com.projectgame.intelligenthome.embeddedsystem.view;
 
 import com.projectgame.intelligenthome.core.*;
+import com.projectgame.intelligenthome.core.ui.*;
 import com.projectgame.intelligenthome.embeddedsystem.model.Main;
-import com.projectgame.uisystem.*;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
-import javafx.stage.Screen;
 
 import java.util.ArrayList;
 import java.util.Hashtable;

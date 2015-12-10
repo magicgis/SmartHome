@@ -1,4 +1,4 @@
-package com.projectgame.uisystem;
+package com.projectgame.intelligenthome.core.ui;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;

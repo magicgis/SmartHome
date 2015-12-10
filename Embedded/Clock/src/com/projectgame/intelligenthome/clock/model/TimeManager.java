@@ -2,8 +2,8 @@ package com.projectgame.intelligenthome.clock.model;
 
 import com.projectgame.intelligenthome.core.BackgroundProcess;
 import com.projectgame.intelligenthome.core.Networking;
-import com.projectgame.networking.IXPFile;
-import com.projectgame.networking.IIXPMessageHandler;
+import com.projectgame.intelligenthome.core.IXPFile;
+import com.projectgame.intelligenthome.core.IIXPMessageHandler;
 
 /**
  * Created by Beppo-Laptop on 11/11/2015.

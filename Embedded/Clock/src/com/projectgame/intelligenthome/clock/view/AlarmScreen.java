@@ -4,7 +4,7 @@ import com.projectgame.intelligenthome.core.AppScreen;
 import com.projectgame.intelligenthome.core.FontCache;
 import com.projectgame.intelligenthome.core.FontType;
 import com.projectgame.intelligenthome.core.IAppScreenBarButtonHandler;
-import com.projectgame.uisystem.*;
+import com.projectgame.intelligenthome.core.ui.*;
 import javafx.geometry.VPos;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;

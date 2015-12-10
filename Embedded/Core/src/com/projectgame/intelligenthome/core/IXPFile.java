@@ -1,4 +1,4 @@
-package com.projectgame.networking;
+package com.projectgame.intelligenthome.core;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
