@@ -3,9 +3,8 @@ package com.projectgame.intelligenthome.clock.controller;
 import com.projectgame.intelligenthome.clock.model.Main;
 import com.projectgame.intelligenthome.core.AppScreen;
 import com.projectgame.intelligenthome.core.Networking;
-import com.projectgame.ixp.IXPFile;
-import com.projectgame.ixpcommunication.IIXPMessageHandler;
-import com.projectgame.uisystem.IButtonHandler;
+import com.projectgame.networking.IXPFile;
+import com.projectgame.networking.IIXPMessageHandler;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;

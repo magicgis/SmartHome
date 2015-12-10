@@ -1,6 +1,6 @@
-package com.projectgame.ixpcommunication;
+package com.projectgame.networking;
 
-import com.projectgame.ixp.IXPFile;
+import com.projectgame.networking.IXPFile;
 
 /**
  * Created by Beppo-Laptop on 10/9/2015.

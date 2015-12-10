@@ -1,8 +1,4 @@
-package com.projectgame.ixpcommunication;
-
-import com.projectgame.ixp.IXPFile;
-import com.projectgame.networking.Client;
-import com.projectgame.networking.IMessageHandler;
+package com.projectgame.networking;
 
 import javax.xml.transform.TransformerException;
 import java.io.IOException;

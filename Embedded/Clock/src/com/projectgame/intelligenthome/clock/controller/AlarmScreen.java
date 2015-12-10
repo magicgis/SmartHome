@@ -1,10 +1,7 @@
 package com.projectgame.intelligenthome.clock.controller;
 
 
-import com.projectgame.intelligenthome.clock.model.Main;
 import com.projectgame.intelligenthome.clock.model.TimeManager;
-import com.projectgame.intelligenthome.core.Networking;
-import com.projectgame.ixp.IXPFile;
 
 /**
  * Created by Beppo-Laptop on 11/10/2015.

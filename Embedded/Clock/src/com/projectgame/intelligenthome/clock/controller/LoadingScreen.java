@@ -1,16 +1,7 @@
 package com.projectgame.intelligenthome.clock.controller;
 
-import com.projectgame.intelligenthome.clock.model.*;
-import com.projectgame.intelligenthome.clock.view.*;
-import com.projectgame.intelligenthome.clock.view.MainScreen;
 import com.projectgame.intelligenthome.core.*;
-import com.projectgame.ixp.IXPFile;
-import com.projectgame.ixpcommunication.IIXPMessageHandler;
-import com.projectgame.ixpcommunication.IXPClient;
 import com.projectgame.uisystem.Display;
-import com.projectgame.uisystem.Drawable;
-
-import java.io.IOException;
 
 /**
  * Created by Beppo-Laptop on 10/9/2015.
