@@ -17,11 +17,11 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Server\bin\Debug\Plugins\</OutputPath>
+    <OutputPath>..\..\Server\bin\Debug\Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\Server\bin\Debug\Plugins\com.projectgame.clock.XML</DocumentationFile>
+    <DocumentationFile>D:\Projects\Intelligent Home\Windows\Server\bin\Debug\Plugins\com.projectgame.clock.XML</DocumentationFile>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
