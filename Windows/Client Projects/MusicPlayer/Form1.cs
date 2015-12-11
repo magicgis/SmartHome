@@ -86,5 +86,14 @@ namespace MusicPlayer {
             byte[] data = File.ReadAllBytes(tbFile.Text);
             _client.AddSong(tbSong.Text, tbArtist.Text, tbAlbum.Text, data);
         }
+
+        private void btnReconnect_Click(object sender, EventArgs e) {
+            _client = new Client("127.0.0.1", 10250);
+            if(_client.Connect()) {
+                MessageBox.Show("Connected");
+            } else {
+                MessageBox.Show("Failed");
+            }
+        }
     }
 }
