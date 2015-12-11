@@ -277,8 +277,8 @@ namespace Music {
             if (a == -1) {
                 MySqlCommand cmd1 = new MySqlCommand(
                     "INSERT INTO " + TABLE_ALBUMS + " (" +
-                    COLOUMN_ALBUMS_NAME + ") VALUES('" +
-                    album + "'); " +
+                    COLOUMN_ALBUMS_INTERPRETER_ID + ", " + COLOUMN_ALBUMS_NAME + ") VALUES('" +
+                    i + "', '" + album + "'); " +
                     "SELECT LAST_INSERT_ID();"
                     , _connection);
                 a = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -286,11 +286,12 @@ namespace Music {
                                            
             MySqlCommand cmd = new MySqlCommand(
                 "INSERT INTO " + TABLE_SONGS + " (" +
-                COLOUMN_SONGS_NAME + ", " + COLOUMN_SONGS_FILE + ") VALUES('" +
-                interpreter + "', " + Encoding.UTF8.GetString(data) + "); " +
+                COLOUMN_SONGS_NAME + ", " + COLOUMN_SONGS_FILE + ", " + COLOUMN_SONGS_ALBUM_ID + ") VALUES('" +
+                song + "', '" + Convert.ToBase64String(data) + "', '" + a + "'); " +
                 "SELECT LAST_INSERT_ID();"
                 , _connection);
-            s = Convert.ToInt32(cmd.ExecuteScalar());
+            object sId = cmd.ExecuteScalar();
+            s = Convert.ToInt32(sId);
 
             _connectionOpen = false;  
             _connection.Close();
