@@ -42,21 +42,17 @@ namespace Music {
             string fileName = dir + "/" + name + "_" + album + "_" + artist;
             System.IO.File.WriteAllBytes(fileName, Convert.FromBase64String(file));
             NAudio.Wave.MediaFoundationReader reader = new NAudio.Wave.MediaFoundationReader(fileName);
-            NAudio.Wave.ResamplerDmoStream resampledReader = new NAudio.Wave.ResamplerDmoStream(reader,
-                new NAudio.Wave.WaveFormat(reader.WaveFormat.SampleRate, reader.WaveFormat.BitsPerSample, reader.WaveFormat.Channels));
-            NAudio.Wave.WaveFileWriter writer = new NAudio.Wave.WaveFileWriter(fileName + "_new", resampledReader.WaveFormat);
-
-            resampledReader.CopyTo(writer);
-
-            writer.Dispose();
-            resampledReader.Dispose();
+            NAudio.Wave.MediaFoundationEncoder.EncodeToMp3(reader, fileName + "_new.mp3");
+                                                                 
             reader.Dispose();
 
-            System.IO.File.Delete(fileName);
-            System.IO.File.Delete(fileName + "_new");
+            byte[] data = System.IO.File.ReadAllBytes(fileName + "_new.mp3");
+
+            //System.IO.File.Delete(fileName);
+            //System.IO.File.Delete(fileName + "_new");   
 
             Debug.Log(_debugChannel, "Adding to database...");
-            int id = MusicDbConnector.AddSong(artist, album, name, Convert.FromBase64String(file));
+            int id = MusicDbConnector.AddSong(artist, album, name, data);
 
             Debug.Log(_debugChannel, "Finished");
             return id;
@@ -99,6 +95,15 @@ namespace Music {
             }
 
             return file;
+        }
+
+        [NetworkFunction("com.projectgame.music.music.getsongdata")]
+        public string NetworkGetSongData(int song_id) {
+            byte[] data = MusicDbConnector.GetSongFile(song_id);
+
+            System.IO.File.WriteAllBytes(DataDir + "/song.wav", data);
+
+            return Convert.ToBase64String(data);
         }
     }
 }

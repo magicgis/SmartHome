@@ -64,5 +64,13 @@ namespace MusicPlayer {
 
             return musicCollection;
         }
+
+        public static byte[] GetSongData(this Client client, int songId) {
+            IXPFile request = new IXPFile();
+            request.NetworkFunction = "com.projectgame.music.music.getsongdata";
+            request.PutInfo("song_id", "" + songId);
+            String response = client.SimpleRequest(request);
+            return Convert.FromBase64String(response);
+        }
     }
 }

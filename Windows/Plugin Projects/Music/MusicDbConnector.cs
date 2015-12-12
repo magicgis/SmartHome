@@ -225,7 +225,7 @@ namespace Music {
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
-                    file = Encoding.UTF8.GetBytes(reader.GetString(COLOUMN_SONGS_FILE));
+                    file = Convert.FromBase64String(reader.GetString(COLOUMN_SONGS_FILE));
             } catch (Exception e) {
                 file = null;
             }

@@ -37,19 +37,20 @@
             this.btnReconnect = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbArtists = new System.Windows.Forms.ListBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lbAlbums = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lbSongs = new System.Windows.Forms.ListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbAlbums = new System.Windows.Forms.ListBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbArtists = new System.Windows.Forms.ListBox();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -185,6 +186,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnRefresh, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnPlay, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -194,26 +196,25 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 251);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // groupBox3
+            // groupBox5
             // 
-            this.groupBox3.Controls.Add(this.lbArtists);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(269, 219);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Artists";
+            this.groupBox5.Controls.Add(this.lbSongs);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(553, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(270, 219);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Songs";
             // 
-            // lbArtists
+            // lbSongs
             // 
-            this.lbArtists.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbArtists.FormattingEnabled = true;
-            this.lbArtists.Location = new System.Drawing.Point(3, 16);
-            this.lbArtists.Name = "lbArtists";
-            this.lbArtists.Size = new System.Drawing.Size(263, 200);
-            this.lbArtists.TabIndex = 0;
-            this.lbArtists.SelectedIndexChanged += new System.EventHandler(this.lbArtists_SelectedIndexChanged);
+            this.lbSongs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbSongs.FormattingEnabled = true;
+            this.lbSongs.Location = new System.Drawing.Point(3, 16);
+            this.lbSongs.Name = "lbSongs";
+            this.lbSongs.Size = new System.Drawing.Size(264, 200);
+            this.lbSongs.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -236,25 +237,26 @@
             this.lbAlbums.TabIndex = 0;
             this.lbAlbums.SelectedIndexChanged += new System.EventHandler(this.lbAlbums_SelectedIndexChanged);
             // 
-            // groupBox5
+            // groupBox3
             // 
-            this.groupBox5.Controls.Add(this.lbSongs);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(553, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(270, 219);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Songs";
+            this.groupBox3.Controls.Add(this.lbArtists);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(269, 219);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Artists";
             // 
-            // lbSongs
+            // lbArtists
             // 
-            this.lbSongs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbSongs.FormattingEnabled = true;
-            this.lbSongs.Location = new System.Drawing.Point(3, 16);
-            this.lbSongs.Name = "lbSongs";
-            this.lbSongs.Size = new System.Drawing.Size(264, 200);
-            this.lbSongs.TabIndex = 0;
+            this.lbArtists.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbArtists.FormattingEnabled = true;
+            this.lbArtists.Location = new System.Drawing.Point(3, 16);
+            this.lbArtists.Name = "lbArtists";
+            this.lbArtists.Size = new System.Drawing.Size(263, 200);
+            this.lbArtists.TabIndex = 0;
+            this.lbArtists.SelectedIndexChanged += new System.EventHandler(this.lbArtists_SelectedIndexChanged);
             // 
             // btnRefresh
             // 
@@ -266,6 +268,17 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPlay.Location = new System.Drawing.Point(472, 228);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(75, 20);
+            this.btnPlay.TabIndex = 4;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // Form1
             // 
@@ -281,9 +294,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -311,6 +324,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListBox lbArtists;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnPlay;
     }
 }
 

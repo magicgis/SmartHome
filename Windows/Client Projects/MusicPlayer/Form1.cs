@@ -132,5 +132,20 @@ namespace MusicPlayer {
                 lbSongs.Items.Add(_musicCollection.Artists[lbArtists.SelectedIndex].Albums[lbAlbums.SelectedIndex].Songs[i].Name);
             }
         }
+
+        private void btnPlay_Click(object sender, EventArgs e) {
+            if(lbArtists.SelectedIndex == -1 || lbAlbums.SelectedIndex == -1 || lbSongs.SelectedIndex == -1) {
+                MessageBox.Show("Noting selected");
+                return;
+            }
+
+            byte[] data = _client.GetSongData(_musicCollection.Artists[lbArtists.SelectedIndex].Albums[lbAlbums.SelectedIndex].Songs[lbSongs.SelectedIndex].ID);
+            MemoryStream ms = new MemoryStream(data);
+
+            NAudio.Wave.Mp3FileReader reader = new NAudio.Wave.Mp3FileReader(ms);
+            NAudio.Wave.WaveOut waveOut = new NAudio.Wave.WaveOut();
+            waveOut.Init(reader);
+            waveOut.Play();
+        }
     }
 }
