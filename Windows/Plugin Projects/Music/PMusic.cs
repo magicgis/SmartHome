@@ -9,6 +9,8 @@ using Networking;
 
 namespace Music {
     class PMusic : Plugin.Plugin {
+        private int _debugChannel;
+
         public override string Name {
             get {
                 return "com.projectgame.music.music";
@@ -22,13 +24,41 @@ namespace Music {
         }
 
         public override void OnPluginLoad() {
+            _debugChannel = Debug.AddChannel("com.projectgame.music.music");
+                                                                  
             MySqlConnection con = GetDatabaseConnection;
             MusicDbConnector.Init(con);
         }
 
         [NetworkFunction("com.projectgame.music.music.addsong")]
         public int NetworkAddSong(String name, String album, String artist, String file) {
+            Debug.Log(_debugChannel, "Received a new song");
+            Debug.Log(_debugChannel, "Song: " + name);
+            Debug.Log(_debugChannel, "Album: " + album);
+            Debug.Log(_debugChannel, "Artist: " + artist);
+
+            Debug.Log(_debugChannel, "Converting...");
+            string dir = DataDir;
+            string fileName = dir + "/" + name + "_" + album + "_" + artist;
+            System.IO.File.WriteAllBytes(fileName, Convert.FromBase64String(file));
+            NAudio.Wave.MediaFoundationReader reader = new NAudio.Wave.MediaFoundationReader(fileName);
+            NAudio.Wave.ResamplerDmoStream resampledReader = new NAudio.Wave.ResamplerDmoStream(reader,
+                new NAudio.Wave.WaveFormat(reader.WaveFormat.SampleRate, reader.WaveFormat.BitsPerSample, reader.WaveFormat.Channels));
+            NAudio.Wave.WaveFileWriter writer = new NAudio.Wave.WaveFileWriter(fileName + "_new", resampledReader.WaveFormat);
+
+            resampledReader.CopyTo(writer);
+
+            writer.Dispose();
+            resampledReader.Dispose();
+            reader.Dispose();
+
+            System.IO.File.Delete(fileName);
+            System.IO.File.Delete(fileName + "_new");
+
+            Debug.Log(_debugChannel, "Adding to database...");
             int id = MusicDbConnector.AddSong(artist, album, name, Convert.FromBase64String(file));
+
+            Debug.Log(_debugChannel, "Finished");
             return id;
         }
 

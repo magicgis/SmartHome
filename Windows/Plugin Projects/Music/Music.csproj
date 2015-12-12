@@ -35,6 +35,15 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\3rd Party\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="NAudio">
+      <HintPath>..\..\3rd Party\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat">
+      <HintPath>..\..\3rd Party\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.VideoConverter">
+      <HintPath>..\..\3rd Party\NReco.VideoConverter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,27 +71,15 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>cd $(TargetDir)
-
-cd Plugins
-del IXP.dll
-
-del IXP.pdb
-
-del IXP.xml
-
-del MySql.Data.dll
-
-del Networking.dll
-
-del Networking.pdb
-
-del Networking.xml
-
-del Plugin.dll
-
-del Plugin.pdb
-
-del Plugin.xml</PostBuildEvent>
+IF EXIST MySql.Data.dll del /F MySql.Data.dll
+IF EXIST Networking.dll del /F Networking.dll
+IF EXIST Networking.pdb del /F Networking.pdb
+IF EXIST Networking.xml del /F Networking.xml
+IF EXIST Plugin.dll del /F Plugin.dll
+IF EXIST Plugin.pdb del /F Plugin.pdb
+IF EXIST Plugin.xml del /F Plugin.xml
+IF EXIST NAudio.dll del /F NAudio.dll
+IF EXIST NAudio.WindowsMediaFormat.dll del /F NAudio.WindowsMediaFormat.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

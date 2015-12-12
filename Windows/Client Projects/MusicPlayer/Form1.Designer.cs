@@ -35,7 +35,21 @@
             this.tbSong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReconnect = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbArtists = new System.Windows.Forms.ListBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lbAlbums = new System.Windows.Forms.ListBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lbSongs = new System.Windows.Forms.ListBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -50,7 +64,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbSong);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(12, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(397, 195);
             this.groupBox1.TabIndex = 0;
@@ -143,7 +157,7 @@
             // 
             // btnReconnect
             // 
-            this.btnReconnect.Location = new System.Drawing.Point(659, 12);
+            this.btnReconnect.Location = new System.Drawing.Point(12, 7);
             this.btnReconnect.Name = "btnReconnect";
             this.btnReconnect.Size = new System.Drawing.Size(75, 23);
             this.btnReconnect.TabIndex = 1;
@@ -151,17 +165,125 @@
             this.btnReconnect.UseVisualStyleBackColor = true;
             this.btnReconnect.Click += new System.EventHandler(this.btnReconnect_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 237);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(832, 270);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Songs";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBox5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnRefresh, 2, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 251);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lbArtists);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(269, 219);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Artists";
+            // 
+            // lbArtists
+            // 
+            this.lbArtists.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbArtists.FormattingEnabled = true;
+            this.lbArtists.Location = new System.Drawing.Point(3, 16);
+            this.lbArtists.Name = "lbArtists";
+            this.lbArtists.Size = new System.Drawing.Size(263, 200);
+            this.lbArtists.TabIndex = 0;
+            this.lbArtists.SelectedIndexChanged += new System.EventHandler(this.lbArtists_SelectedIndexChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lbAlbums);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Location = new System.Drawing.Point(278, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(269, 219);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Albums";
+            // 
+            // lbAlbums
+            // 
+            this.lbAlbums.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAlbums.FormattingEnabled = true;
+            this.lbAlbums.Location = new System.Drawing.Point(3, 16);
+            this.lbAlbums.Name = "lbAlbums";
+            this.lbAlbums.Size = new System.Drawing.Size(263, 200);
+            this.lbAlbums.TabIndex = 0;
+            this.lbAlbums.SelectedIndexChanged += new System.EventHandler(this.lbAlbums_SelectedIndexChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.lbSongs);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Location = new System.Drawing.Point(553, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(270, 219);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Songs";
+            // 
+            // lbSongs
+            // 
+            this.lbSongs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbSongs.FormattingEnabled = true;
+            this.lbSongs.Location = new System.Drawing.Point(3, 16);
+            this.lbSongs.Name = "lbSongs";
+            this.lbSongs.Size = new System.Drawing.Size(264, 200);
+            this.lbSongs.TabIndex = 0;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRefresh.Location = new System.Drawing.Point(748, 228);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 20);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 393);
+            this.ClientSize = new System.Drawing.Size(856, 519);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnReconnect);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -180,6 +302,15 @@
         private System.Windows.Forms.TextBox tbSong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReconnect;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ListBox lbSongs;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ListBox lbAlbums;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ListBox lbArtists;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

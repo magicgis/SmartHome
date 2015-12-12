@@ -14,6 +14,7 @@ using System.Windows.Forms;
 namespace MusicPlayer {
     public partial class Form1 : Form {
         private Client _client;
+        private MusicCollection _musicCollection;
 
         public Form1() {
             InitializeComponent();
@@ -93,6 +94,42 @@ namespace MusicPlayer {
                 MessageBox.Show("Connected");
             } else {
                 MessageBox.Show("Failed");
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e) {
+            _musicCollection = _client.GetSongs();
+            _musicCollection.Sort();
+
+            lbArtists.Items.Clear();
+            lbAlbums.Items.Clear();
+            lbSongs.Items.Clear();
+
+            for(int i = 0; i < _musicCollection.Artists.Count; i++) {
+                lbArtists.Items.Add(_musicCollection.Artists[i].Name);
+            }
+        }
+
+        private void lbArtists_SelectedIndexChanged(object sender, EventArgs e) {
+            lbAlbums.Items.Clear();
+            lbSongs.Items.Clear();
+
+            if (lbArtists.SelectedIndex == -1)
+                return;
+
+            for(int i = 0; i < _musicCollection.Artists[lbArtists.SelectedIndex].Albums.Count; i++) {
+                lbAlbums.Items.Add(_musicCollection.Artists[lbArtists.SelectedIndex].Albums[i].Name);
+            }
+        }
+
+        private void lbAlbums_SelectedIndexChanged(object sender, EventArgs e) {
+            lbSongs.Items.Clear();
+
+            if (lbAlbums.SelectedIndex == -1 || lbArtists.SelectedIndex == -1)
+                return;
+
+            for(int i = 0; i < _musicCollection.Artists[lbArtists.SelectedIndex].Albums[lbAlbums.SelectedIndex].Songs.Count; i++) {
+                lbSongs.Items.Add(_musicCollection.Artists[lbArtists.SelectedIndex].Albums[lbAlbums.SelectedIndex].Songs[i].Name);
             }
         }
     }
