@@ -8,6 +8,7 @@ import com.projectgame.intelligenthome.core.ui.CanvasDrawable;
 import com.projectgame.intelligenthome.core.ui.Display;
 import com.projectgame.intelligenthome.core.ui.Drawable;
 import com.projectgame.intelligenthome.core.ui.IDrawableProvider;
+import com.sun.media.jfxmediaimpl.platform.Platform;
 
 /**
  * Created by Beppo-Laptop on 11/10/2015.
@@ -41,6 +42,12 @@ public class Main {
     }
 
     private static void boot(){
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         BootScreen bootScreen = new BootScreen();
         canvas.addDrawable(bootScreen);
 
