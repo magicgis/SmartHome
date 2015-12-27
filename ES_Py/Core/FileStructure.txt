@@ -1,0 +1,17 @@
+- Root
+    - Core
+        - ESApi
+        - ESCore
+    - Apps
+        - MySampleApp1
+            - Icon.png
+            - src
+                - MySampleApp1.py #Contains Application class
+                - CustomFile1.py
+                - CustomFile2.py
+    - Data
+        - SysData
+        - AppData
+            - MySampleApp1
+                - CustomData1
+                - CustomData2

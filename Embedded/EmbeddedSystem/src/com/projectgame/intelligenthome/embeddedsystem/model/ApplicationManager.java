@@ -1,6 +1,6 @@
 package com.projectgame.intelligenthome.embeddedsystem.model;
 
-import com.projectgame.intelligenthome.core.*;
+import com.projectgame.intelligenthome.core.FileSystem;
 import javafx.scene.image.Image;
 
 import java.io.File;

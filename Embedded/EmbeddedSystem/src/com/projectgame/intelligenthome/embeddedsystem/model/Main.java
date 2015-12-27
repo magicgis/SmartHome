@@ -51,6 +51,12 @@ public class Main {
         BootScreen bootScreen = new BootScreen();
         canvas.addDrawable(bootScreen);
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         Settings.getInstance();
 
         Networking.getInstance();
