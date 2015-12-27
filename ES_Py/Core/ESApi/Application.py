@@ -1,3 +1,3 @@
 class Application (object):
-    def foo(self):
-        raise NotImplementedError()
+    def on_system_boot(self):
+        pass

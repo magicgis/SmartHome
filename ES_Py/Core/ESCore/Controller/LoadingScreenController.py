@@ -16,10 +16,9 @@ class LoadingScreenController(Controller):
         self.thread = BootThread()
         self.thread.set_callback(self.__on_boot_finished)
         self.thread.start()
-        return
 
     def on_unset(self):
-        return
+        self.widget.stop()
 
     def __on_boot_finished(self):
         print("BOOT FINISHED")
