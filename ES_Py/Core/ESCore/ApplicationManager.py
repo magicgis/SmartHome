@@ -8,8 +8,14 @@ from ESApi.Application import Application
 class ApplicationManager:
     __applications = [] # type: List[CoreApplication]
 
-    def applications(self):
-        return self.__applications
+    def application_count(self) -> int:
+        return len(self.__applications)
+
+    def application_at(self, index: int) -> CoreApplication:
+        if index < 0 or index >= self.application_count():
+            raise IndexError()
+
+        return self.__applications[index]
 
     def load_applications(self, apps_dir: str):
 
@@ -35,3 +41,5 @@ class ApplicationManager:
         iconPath = app_dir + "/Icon.png"
         icon = Image.open(iconPath)
         return icon
+
+instance = ApplicationManager() #type: ApplicationManager

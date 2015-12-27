@@ -1,6 +1,5 @@
 import os
 
-
 def root_directory() -> str:
     filePath = os.path.realpath(__file__)
     fileDir = os.path.dirname(filePath)

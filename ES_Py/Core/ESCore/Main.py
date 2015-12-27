@@ -2,17 +2,14 @@
 #Main file containing startup code
 
 import sys
-import FileIO as FileIO
 
-sys.path.append(FileIO.core_directory())
+import CoreFileIO as CoreFileIO
 
-from ESCore.ApplicationManager import ApplicationManager
-from ESCore.KivyMain import KivyMain
+sys.path.append(CoreFileIO.core_directory())
 
-appManager = ApplicationManager()
+from ESCore.UI.KivyMain import KivyMain
 
-FileIO.create_directories()
-appManager.load_applications(FileIO.apps_directory())
+CoreFileIO.create_directories()
 
 app = KivyMain()
 app.run()
