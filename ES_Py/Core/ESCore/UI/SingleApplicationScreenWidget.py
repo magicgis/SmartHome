@@ -2,10 +2,11 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.app import Widget
 from kivy.uix.image import Image
 from kivy.core.window import Window
+from ESCore.UI.SingleAppWidget import SingleAppWidget
 
 
 class SingleApplicationScreenWidget(GridLayout):
-    __childWidget = None  # type: Widget
+    __childWidget = None  # type: SingleAppWidget
     __bottomBar = None  # type: Widget
     __topBar = None  # type: Widget
 
@@ -15,7 +16,7 @@ class SingleApplicationScreenWidget(GridLayout):
     __bottomBarHeight = 50  # type: int
     __topBarHeight = 100  # type: int
 
-    def __init__(self, child: Widget, useTopBar: bool = True, useBottomBar: bool = True, **kwargs):
+    def __init__(self, child: SingleAppWidget, useTopBar: bool = True, useBottomBar: bool = True, **kwargs):
         super(SingleApplicationScreenWidget, self).__init__(**kwargs)
         self.cols = 1
         self.__useBottomBar = useBottomBar
@@ -26,11 +27,9 @@ class SingleApplicationScreenWidget(GridLayout):
 
     def __create_bars(self):
         self.__bottomBar = Image()
-        self.__bottomBar.color = [0, 0, 0, 0]
-        self.__bottomBar.allow_stretch = True
+        self.__bottomBar.color = [0, 0, 0, 1]
         self.__topBar = Image()
-        self.__topBar.color = [0, 0, 0, 0]
-        self.__bottomBar.allow_stretch = True
+        self.__topBar.color = [0, 0, 0, 1]
         self.col_default_width = Window.size[0]
         self.col_force_default = True
         self.row_force_default = True
@@ -47,22 +46,29 @@ class SingleApplicationScreenWidget(GridLayout):
             self.add_widget(self.__topBar)
             self.add_widget(self.__childWidget)
             self.add_widget(self.__bottomBar)
+            self.__childWidget.change_size(Window.size[0], self.rows_minimum[1])
         elif self.__useBottomBar and not self.__useTopBar:
             self.rows = 2
             self.rows_minimum[0] = Window.size[1] - self.__bottomBarHeight
             self.rows_minimum[1] = self.__bottomBarHeight
             self.add_widget(self.__childWidget)
             self.add_widget(self.__bottomBar)
+            self.__childWidget.change_size(Window.size[0], self.rows_minimum[0])
         elif self.__useTopBar and not self.__useBottomBar:
             self.rows = 2
             self.rows_minimum[0] = self.__topBarHeight
             self.rows_minimum[1] = Window.size[1] - self.__topBarHeight
             self.add_widget(self.__topBar)
             self.add_widget(self.__childWidget)
+            self.__childWidget.change_size(Window.size[0], self.rows_minimum[1])
         else:
             self.rows = 1
             self.rows_minimum[0] = Window.size[1]
             self.add_widget(self.__childWidget)
+
+    def set_widget(self, widget: SingleAppWidget):
+        self.__childWidget = widget
+        self.__update_layout()
 
     def toggle_bars(self, topBar: bool = True, bottomBar: bool = True):
         updateLayout = (topBar is not self.__useTopBar) or (bottomBar is not self.__useBottomBar)

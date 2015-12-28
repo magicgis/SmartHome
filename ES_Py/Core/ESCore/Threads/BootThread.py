@@ -1,5 +1,7 @@
 import time
 
+import kivy.clock as clock
+
 from ESApi.Thread import Thread
 
 import ESCore.Controller.AppLauncherController as AppLauncherController
@@ -11,11 +13,10 @@ from ESApi.IXPFile import IXPFile
 
 class BootThread(Thread):
     def _run(self):
-        AppLauncherController.instance.initialize()
-
-        ApplicationManager.instance.load_applications(CoreFileIO.apps_directory())
+        clock.ClockBase.schedule_once(clock.Clock, self._init_app_launcher)
 
         for index in range(0, ApplicationManager.instance.application_count()):
             ApplicationManager.instance.application_at(index).app().on_system_boot()
 
-        time.sleep(5)
+    def _init_app_launcher(self, dt: int = 0):
+        AppLauncherController.instance.initialize()
