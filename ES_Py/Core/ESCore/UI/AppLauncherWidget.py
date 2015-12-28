@@ -1,21 +1,26 @@
-from kivy.app import Widget
-from kivy.core.window import Window
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.graphics import Color, Rectangle
-from kivy.core.image import Image
 
 from ESCore.UI.SingleAppWidget import SingleAppWidget
+from ESCore.UI.AppIconWidget import AppIconWidget
 
+import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as FileIO
 
 
-class AppLauncherWidget(SingleAppWidget, BoxLayout):
+class AppLauncherWidget(SingleAppWidget, GridLayout):
     def __init__(self, **kwargs):
         super(AppLauncherWidget, self).__init__(**kwargs)
+
+        self.cols = 4
+        self.rows = 2
+
+        self.col_force_default = True
+        self.row_force_default = True
+
         with self.canvas.before:
             Color(1, 1, 1, 1)
             self.rect = Rectangle(size=self.size, pos=self.pos, source=FileIO.sysdata_directory() + "/launcher/background.png")
-
         self.bind(size=self._update_rect, pos=self._update_rect)
 
     def _update_rect(self, instance, value):
@@ -23,4 +28,14 @@ class AppLauncherWidget(SingleAppWidget, BoxLayout):
         self.rect.size = instance.size
 
     def _on_resize(self):
-        pass#self.__backgroundImage.size = self.size
+        self.col_default_width = self.size[0] / self.cols
+        self.row_default_height = self.size[1] / self.rows
+
+        for widget in self.children:
+            self.remove_widget(widget)
+
+        for index in range(0, ApplicationManager.instance.application_count()):
+            app = ApplicationManager.instance.application_at(index)
+            widget = AppIconWidget(app.icon(), app.name(), self.row_default_height)
+            widget.set_image_size(self.row_default_height, 0.7)
+            self.add_widget(widget)

@@ -15,6 +15,8 @@ class BootThread(Thread):
     def _run(self):
         clock.ClockBase.schedule_once(clock.Clock, self._init_app_launcher)
 
+        ApplicationManager.instance.load_applications(CoreFileIO.apps_directory())
+
         for index in range(0, ApplicationManager.instance.application_count()):
             ApplicationManager.instance.application_at(index).app().on_system_boot()
 

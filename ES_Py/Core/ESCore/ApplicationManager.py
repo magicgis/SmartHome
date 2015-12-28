@@ -1,12 +1,13 @@
 import os
 import sys
-import PIL.Image as Image
+from kivy.core.image import Image
 
 from ESCore.CoreApplication import CoreApplication
 from ESApi.Application import Application
 
+
 class ApplicationManager:
-    __applications = [] # type: List[CoreApplication]
+    __applications = []  # type: List[CoreApplication]
 
     def application_count(self) -> int:
         return len(self.__applications)
@@ -39,7 +40,7 @@ class ApplicationManager:
 
     def load_icon(self, app_dir: str) -> Image:
         iconPath = app_dir + "/Icon.png"
-        icon = Image.open(iconPath)
+        icon = Image.load(iconPath)
         return icon
 
 instance = ApplicationManager() #type: ApplicationManager

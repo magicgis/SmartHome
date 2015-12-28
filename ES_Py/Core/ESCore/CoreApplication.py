@@ -1,10 +1,10 @@
-import PIL.Image as Image
+from kivy.core.image import Image
 import ESApi.Application as Application
 
 class CoreApplication:
-    __name = None #type: str
-    __icon = None #type: Image
-    __app = None #type: Application
+    __name = None  # type: str
+    __icon = None  # type: Image
+    __app = None  # type: Application
 
     def __init__(self, name: str, icon: Image, app: Application):
         self.__name = name
