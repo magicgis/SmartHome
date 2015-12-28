@@ -7,7 +7,9 @@ class LoadingScreenWidget(Video):
         super(LoadingScreenWidget, self).__init__(**kwargs)
         self.volume = 0
         self.state = 'pause'
-        self.options = {'eos': 'loop', 'allow_stretch': 'True'}
+        self.options = {'eos': 'loop', 'allow_stretch': 'True', 'keep_ratio': 'False'}
+        self.keep_ratio = False
+        self.allow_stretch = True
         self.source = source=FileIO.sysdata_directory() + "/media/boot/boot_anim.mp4"
 
     def play(self):

@@ -1,3 +1,5 @@
+import time
+
 from ESApi.Thread import Thread
 
 import ESCore.Controller.AppLauncherController as AppLauncherController
@@ -15,3 +17,5 @@ class BootThread(Thread):
 
         for index in range(0, ApplicationManager.instance.application_count()):
             ApplicationManager.instance.application_at(index).app().on_system_boot()
+
+        time.sleep(2)

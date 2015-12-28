@@ -25,6 +25,6 @@ class LoadingScreenController(Controller):
 
     def __on_boot_finished(self):
         self.thread = None
-        MainWidget.instance.set_controller(AppLauncherController.instance)
+        #MainWidget.instance.set_controller(AppLauncherController.instance)
 
 instance = LoadingScreenController()
