@@ -17,6 +17,7 @@ class AppLauncherController(Controller):
         self.__image_widget = childWidget
         kivy.clock.ClockBase.schedule_once(kivy.clock.Clock, self._load_image)
         childWidget.allow_stretch = True
+        childWidget.keep_ratio = False
         self.__widget = SingleApplicationScreenWidget(childWidget, useBottomBar = True, useTopBar = False)
 
     def _load_image(self, dt: int = 0):
