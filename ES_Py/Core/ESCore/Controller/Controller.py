@@ -5,7 +5,7 @@ class Controller:
         raise NotImplementedError()
 
     def on_set(self):
-        raise NotImplementedError()
+        pass
 
     def on_unset(self):
-        raise NotImplementedError()
+        pass

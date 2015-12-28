@@ -8,13 +8,15 @@ class MainWidget(BoxLayout):
     def __init__(self, **kwargs):
         super(MainWidget, self).__init__(**kwargs)
 
-    def set_widget(self, controller: Controller):
+    def set_controller(self, controller: Controller):
         if not self.activeController is None:
             self.activeController.on_unset()
-            self.remove_widget(self.activeWidget)
+            self.remove_widget(self.activeController.get_widget())
 
         self.add_widget(controller.get_widget())
         self.activeController = controller
         self.activeController.get_widget().width = self.width
         self.activeController.get_widget().height = self.height
         self.activeController.on_set()
+
+instance = MainWidget()

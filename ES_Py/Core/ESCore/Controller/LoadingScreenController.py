@@ -4,6 +4,9 @@ from ESCore.UI.LoadingScreenWidget import LoadingScreenWidget
 from ESCore.Controller.Controller import Controller
 from ESCore.Threads.BootThread import BootThread
 
+import ESCore.UI.MainWidget as MainWidget
+import ESCore.Controller.AppLauncherController as AppLauncherController
+
 
 class LoadingScreenController(Controller):
     widget = LoadingScreenWidget()  # type: LoadingScreenWidget
@@ -21,6 +24,7 @@ class LoadingScreenController(Controller):
         self.widget.stop()
 
     def __on_boot_finished(self):
-        print("BOOT FINISHED")
+        self.thread = None
+        MainWidget.instance.set_controller(AppLauncherController.instance)
 
 instance = LoadingScreenController()
