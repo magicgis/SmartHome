@@ -5,14 +5,21 @@ from kivy.uix.label import Label
 from kivy.core.image import Image
 from kivy.graphics import Color, Rectangle
 
-
 class AppIconWidget(GridLayout):
     __imageParent = None  # type: AnchorLayout
     __imageWidget = None  # type: ImageWidget
     __nameWidget = None  # type: Label
 
-    def __init__(self, image: Image, name: str, height: int, **kwargs):
+    __callback = None  # type: classmethod
+
+    __paddingTmp = -1  # type: int
+    __touched = False  # type: int
+
+    def __init__(self, image: Image, name: str, callback: classmethod, height: int, **kwargs):
         super(AppIconWidget, self).__init__(**kwargs)
+
+        self.__callback = callback
+
         self.cols = 1
         self.rows = 2
 
@@ -39,4 +46,23 @@ class AppIconWidget(GridLayout):
         self.add_widget(self.__nameWidget)
 
     def set_image_size(self, size: int, percentage: float):
-        self.__imageParent.padding = [(size - (size * percentage)) / 2, (size - (size * percentage)) / 2, (size - (size * percentage)) / 2, (size - (size * percentage)) / 2]
+        if self.__paddingTmp is -1:
+            self.__imageParent.padding = [(size - (size * percentage)) / 2, (size - (size * percentage)) / 2, (size - (size * percentage)) / 2, (size - (size * percentage)) / 2]
+        else:
+            self.__paddingTmp = (size - (size * percentage)) / 2
+
+    def on_touch_down(self, touch):
+        if self.__imageWidget.collide_point(*touch.pos):
+            self.__touched = True
+            self.__paddingTmp = self.__imageParent.padding[0]
+            self.__imageParent.padding = [self.__paddingTmp * 1 / 0.8, self.__paddingTmp * 1 / 0.8, self.__paddingTmp * 1 / 0.8, self.__paddingTmp * 1 / 0.8]
+        else:
+            self.__touched = False
+
+    def on_touch_up(self, touch):
+        if self.__imageParent.collide_point(*touch.pos):
+            self.__callback()
+
+        self.__imageParent.padding = [self.__paddingTmp, self.__paddingTmp, self.__paddingTmp, self.__paddingTmp]
+        self.__paddingTmp = -1
+        self.__touched = False

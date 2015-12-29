@@ -4,6 +4,8 @@ from kivy.uix.image import Image
 from ESCore.UI.SingleApplicationScreenWidget import SingleApplicationScreenWidget
 from ESCore.Controller.Controller import Controller
 from ESCore.UI.AppLauncherWidget import AppLauncherWidget
+from ESCore.CoreApplication import CoreApplication
+
 
 class AppLauncherController(Controller):
     __widget = None  # type: SingleApplicationWidget

@@ -36,6 +36,6 @@ class AppLauncherWidget(SingleAppWidget, GridLayout):
 
         for index in range(0, ApplicationManager.instance.application_count()):
             app = ApplicationManager.instance.application_at(index)
-            widget = AppIconWidget(app.icon(), app.name(), self.row_default_height)
+            widget = AppIconWidget(app.icon(), app.name(), lambda: ApplicationManager.instance.start_app(app), self.row_default_height)
             widget.set_image_size(self.row_default_height, 0.7)
             self.add_widget(widget)
