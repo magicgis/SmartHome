@@ -6,6 +6,10 @@ from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSu
 
 
 class SingleApplicationScreenWidget(GridLayout):
+    """
+        Displays a single screen with the possibility to toggle a top and a bottom bar
+    """
+
     __childWidget = None  # type: SingleApplicationScreenSubWidget
     __bottomBar = None  # type: Widget
     __topBar = None  # type: Widget

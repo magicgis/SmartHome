@@ -5,6 +5,10 @@ from ESApi.AppScreen import AppScreen
 
 
 class AppScreenWidget(SingleApplicationScreenSubWidget, BoxLayout):
+    """
+        Displays a single screen of an active application
+    """
+
     __appScreen = None  # type: AppScreen
 
     def __init__(self, screen: AppScreen, **kwargs):

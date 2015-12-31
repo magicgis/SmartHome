@@ -2,6 +2,10 @@ from kivy.app import Widget
 
 
 class SingleApplicationScreenSubWidget(Widget):
+    """
+        Base class for widgets displayed by a SingleApplicationScreenWidget
+    """
+
     def __init__(self, **kwargs):
         super(SingleApplicationScreenSubWidget, self).__init__(**kwargs)
 

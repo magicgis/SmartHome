@@ -4,6 +4,11 @@ from ESCore.Controller.Controller import Controller
 
 
 class MainWidget(BoxLayout):
+    """
+        The main widget is a wrapper to use the kivy system with the mvc controller and
+        is the view part
+    """
+
     activeController = None  # type: Controller
 
     def __init__(self, **kwargs):

@@ -8,9 +8,13 @@ import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as FileIO
 
 
-class ApplicationScreenSubLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
+class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
+    """
+        Displays a background and all installed apps so the user can select and start one
+    """
+
     def __init__(self, **kwargs):
-        super(ApplicationScreenSubLauncherWidget, self).__init__(**kwargs)
+        super(AppLauncherWidget, self).__init__(**kwargs)
 
         self.cols = 4
         self.rows = 2

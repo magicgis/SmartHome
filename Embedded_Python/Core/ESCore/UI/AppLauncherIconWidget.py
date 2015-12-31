@@ -3,10 +3,14 @@ from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.image import Image as ImageWidget
 from kivy.uix.label import Label
 from kivy.core.image import Image
-from kivy.graphics import Color, Rectangle
 
 
 class AppLauncherIconWidget(GridLayout):
+    """
+        Displays icon and name of a single application
+        Also handles input on the app icon
+    """
+
     __imageParent = None  # type: AnchorLayout
     __imageWidget = None  # type: ImageWidget
     __nameWidget = None  # type: Label

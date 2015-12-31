@@ -2,6 +2,10 @@ from kivy.core.image import Image
 import ESApi.Application as Application
 
 class CoreApplication:
+    """
+        A wrapper for the ESApis Application class providing some more information
+    """
+
     __name = None  # type: str
     __icon = None  # type: Image
     __app = None  # type: Application
