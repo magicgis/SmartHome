@@ -4,7 +4,8 @@ from kivy.core.image import Image
 
 from ESCore.CoreApplication import CoreApplication
 from ESApi.Application import Application
-
+import ESCore.UI.MainWidget as MainWidget
+from ESCore.Controller.AppController import AppController
 
 class ApplicationManager:
     __applications = []  # type: List[CoreApplication]
@@ -31,12 +32,13 @@ class ApplicationManager:
                self.__applications.append(cApp)
 
     def start_app(self, app: CoreApplication):
-        print("STARTING APP '" + app.name() + "'")
+        MainWidget.instance.set_controller(AppController(app))
 
     def __load_app(self, app_dir: str, app_name: str) -> Application:
-        sys.path.append(app_dir + "/src")
-        module = __import__(app_name)
-        type = getattr(module, app_name)
+        sys.path.append(app_dir + "/" + app_name + "/" + app_name + "Src")
+        module = __import__(app_name + "Src." + app_name + "App")
+        type = getattr(module, app_name + "App")
+        type = getattr(type, app_name + "App")
         instance = type()
         return instance
 

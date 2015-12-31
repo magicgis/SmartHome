@@ -1,9 +1,9 @@
 from kivy.app import Widget
 
 
-class SingleAppWidget(Widget):
+class SingleApplicationScreenSubWidget(Widget):
     def __init__(self, **kwargs):
-        super(SingleAppWidget, self).__init__(**kwargs)
+        super(SingleApplicationScreenSubWidget, self).__init__(**kwargs)
 
     def change_size(self, width: int, height: int):
         self.size[0] = width

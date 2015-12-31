@@ -5,7 +5,8 @@ from kivy.uix.label import Label
 from kivy.core.image import Image
 from kivy.graphics import Color, Rectangle
 
-class AppIconWidget(GridLayout):
+
+class AppLauncherIconWidget(GridLayout):
     __imageParent = None  # type: AnchorLayout
     __imageWidget = None  # type: ImageWidget
     __nameWidget = None  # type: Label
@@ -16,7 +17,7 @@ class AppIconWidget(GridLayout):
     __touched = False  # type: int
 
     def __init__(self, image: Image, name: str, callback: classmethod, height: int, **kwargs):
-        super(AppIconWidget, self).__init__(**kwargs)
+        super(AppLauncherIconWidget, self).__init__(**kwargs)
 
         self.__callback = callback
 
