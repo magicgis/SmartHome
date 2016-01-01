@@ -23,7 +23,7 @@ class AppController(Controller):
             override of superclass method
         """
 
-        self.__app.app().get_current_screen()
+        return self.__app.app().get_current_screen()
 
     def on_set(self):
         """
