@@ -2,7 +2,8 @@ from kivy.app import Widget
 
 from ESCore.Controller.Controller import Controller
 from ESCore.CoreApplication import CoreApplication
-
+from ESCore.UI.SingleApplicationScreenWidget import SingleApplicationScreenWidget
+from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 
 class AppController(Controller):
     """
@@ -10,6 +11,9 @@ class AppController(Controller):
     """
 
     __app = None  # type: CoreApplication
+    __widget = None  # type: SingleApplicationScreenWidget
+
+    __tmpCurrentScreen = None  # type: SingleApplicationScreenSubWidget
 
     def __init__(self, app: CoreApplication):
         """
@@ -23,7 +27,13 @@ class AppController(Controller):
             override of superclass method
         """
 
-        return self.__app.app().get_current_screen()
+        subWidget = self.__app.app().get_current_screen()
+
+        if subWidget is not self.__tmpCurrentScreen:
+            self.__widget = SingleApplicationScreenWidget(subWidget, useTopBar=True, useBottomBar=True)
+            self.__tmpCurrentScreen = subWidget
+
+        return self.__widget
 
     def on_set(self):
         """
