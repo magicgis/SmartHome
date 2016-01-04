@@ -114,6 +114,14 @@ class IXPFile:
 
         return self.__network_function
 
+    def set_network_function(self, networkFunction: str):
+        """
+            Sets the network function
+        :param networkFunction: The function name
+        """
+
+        self.__network_function = networkFunction
+
     def headers_count(self) -> int:
         """
         :return: Number of headers
@@ -175,6 +183,24 @@ class IXPFile:
             raise IndexError()
 
         return self.__info_values[index]
+
+    def get_header(self, name: str):
+        for index in range(0, self.headers_count()):
+            hName = self.header_name_at(index)
+
+            if hName is name:
+                return self.header_value_at(index)
+
+        return None
+
+    def get_info(self, name: str):
+        for index in range(0, self.infos_count()):
+            iName = self.info_name_at(index)
+
+            if iName is name:
+                return self.info_value_at(index)
+
+        return None
 
     def add_info(self, name: str, value: str):
         """

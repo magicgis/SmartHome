@@ -4,10 +4,12 @@ import kivy.clock as clock
 
 from ESApi.Thread import Thread
 
+from ESCore.ServerProvider import ServerProvider
+
 import ESCore.Controller.AppLauncherController as AppLauncherController
 import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as CoreFileIO
-
+import ESApi.Networking as Networking
 
 class BootThread(Thread):
     """
@@ -15,6 +17,9 @@ class BootThread(Thread):
     """
 
     def _run(self):
+        # init networking
+        Networking.instance.provide_server(ServerProvider())
+
         # init app launcher on main thread
         clock.ClockBase.schedule_once(clock.Clock, self._init_app_launcher)
 
