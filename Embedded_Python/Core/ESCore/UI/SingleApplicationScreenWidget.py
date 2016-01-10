@@ -2,11 +2,15 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.app import Widget
 from kivy.uix.image import Image
 from kivy.core.window import Window
-from ESCore.UI.SingleAppWidget import SingleAppWidget
+from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 
 
 class SingleApplicationScreenWidget(GridLayout):
-    __childWidget = None  # type: SingleAppWidget
+    """
+        Displays a single screen with the possibility to toggle a top and a bottom bar
+    """
+
+    __childWidget = None  # type: SingleApplicationScreenSubWidget
     __bottomBar = None  # type: Widget
     __topBar = None  # type: Widget
 
@@ -16,7 +20,7 @@ class SingleApplicationScreenWidget(GridLayout):
     __bottomBarHeight = 50  # type: int
     __topBarHeight = 100  # type: int
 
-    def __init__(self, child: SingleAppWidget, useTopBar: bool = True, useBottomBar: bool = True, **kwargs):
+    def __init__(self, child: SingleApplicationScreenSubWidget, useTopBar: bool = True, useBottomBar: bool = True, **kwargs):
         super(SingleApplicationScreenWidget, self).__init__(**kwargs)
         self.cols = 1
         self.__useBottomBar = useBottomBar
@@ -66,7 +70,7 @@ class SingleApplicationScreenWidget(GridLayout):
             self.rows_minimum[0] = Window.size[1]
             self.add_widget(self.__childWidget)
 
-    def set_widget(self, widget: SingleAppWidget):
+    def set_widget(self, widget: SingleApplicationScreenSubWidget):
         self.__childWidget = widget
         self.__update_layout()
 

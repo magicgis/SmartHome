@@ -13,5 +13,5 @@ If you need a guide how to set up the server and how plugins are written take a 
 
 ## Embedded System
 
-The Embedded System is a Java based Framework meant to run on a Raspberry PI connected to a touchscreen but it is able to run on every Java enabled platform.
+The Embedded System is a Python based Framework meant to run on a Raspberry PI connected to a touchscreen.
 This system provides functionality of writing apps, so you can create and highly personalize touch wallpanels with ease

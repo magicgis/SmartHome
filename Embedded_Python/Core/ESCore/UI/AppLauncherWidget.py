@@ -1,14 +1,18 @@
 from kivy.uix.gridlayout import GridLayout
 from kivy.graphics import Color, Rectangle
 
-from ESCore.UI.SingleAppWidget import SingleAppWidget
-from ESCore.UI.AppIconWidget import AppIconWidget
+from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
+from ESCore.UI.AppLauncherIconWidget import AppLauncherIconWidget
 
 import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as FileIO
 
 
-class AppLauncherWidget(SingleAppWidget, GridLayout):
+class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
+    """
+        Displays a background and all installed apps so the user can select and start one
+    """
+
     def __init__(self, **kwargs):
         super(AppLauncherWidget, self).__init__(**kwargs)
 
@@ -36,6 +40,6 @@ class AppLauncherWidget(SingleAppWidget, GridLayout):
 
         for index in range(0, ApplicationManager.instance.application_count()):
             app = ApplicationManager.instance.application_at(index)
-            widget = AppIconWidget(app.icon(), app.name(), lambda: ApplicationManager.instance.start_app(app), self.row_default_height)
+            widget = AppLauncherIconWidget(app.icon(), app.name(), lambda: ApplicationManager.instance.start_app(app), self.row_default_height)
             widget.set_image_size(self.row_default_height, 0.7)
             self.add_widget(widget)

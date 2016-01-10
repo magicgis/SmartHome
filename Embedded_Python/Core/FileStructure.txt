@@ -5,8 +5,8 @@
     - Apps
         - MySampleApp1
             - Icon.png
-            - src
-                - MySampleApp1.py #Contains Application class
+            - MySampleApp1Src
+                - MySampleApp1App.py #Contains Application class
                 - CustomFile1.py
                 - CustomFile2.py
     - Data

@@ -3,6 +3,10 @@ import ESApi.FileIO as FileIO
 
 
 class LoadingScreenWidget(Video):
+    """
+        Displays the loading screen video
+    """
+
     def __init__(self, **kwargs):
         super(LoadingScreenWidget, self).__init__(**kwargs)
         self.volume = 0
