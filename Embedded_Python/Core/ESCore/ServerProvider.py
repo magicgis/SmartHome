@@ -3,7 +3,13 @@ from ESApi.ServerProvider import ConnectionIdentifier, MessageListenerIdentifier
 from ESApi.IXPFile import IXPFile
 
 
+<<<<<<< HEAD
 class ServerProvider(AbstractServerProvider):    
+=======
+class ServerProvider(AbstractServerProvider):
+    __connections = {}  # type: Dictionary
+
+>>>>>>> develop
     def request_connection(self) -> ConnectionIdentifier:
         """
             override of superclass method

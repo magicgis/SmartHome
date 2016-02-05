@@ -6,7 +6,11 @@ import ESApi.Networking as Networking
 
 from ClockSrc.UI.MainScreen import MainScreen
 
+<<<<<<< HEAD
 import ClockSrc.TimeManager as TimeManager
+=======
+#import ClockSrc.TimeManager as TimeManager
+>>>>>>> develop
 
 
 class ClockApp(Application):
@@ -16,8 +20,13 @@ class ClockApp(Application):
     def on_system_boot(self):
         instance = self
         self.__curScreen = MainScreen()
+<<<<<<< HEAD
         self.__connection = Networking.instance.get_server().request_connection()
         TimeManager.instance.start()
+=======
+  #      self.__connection = Networking.instance.get_server().request_connection()
+ #       TimeManager.instance.start()
+>>>>>>> develop
 
     def get_current_screen(self) -> AppScreen:
         return self.__curScreen
