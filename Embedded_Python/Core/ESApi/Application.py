@@ -25,3 +25,10 @@ class Application (object):
         """
 
         raise NotImplementedError()
+
+    def on_unset(self):
+        """
+            Called when the app is unset
+        """
+
+        raise NotImplementedError()

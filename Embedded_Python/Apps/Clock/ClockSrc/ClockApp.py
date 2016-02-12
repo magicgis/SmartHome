@@ -35,4 +35,7 @@ class ClockApp(Application):
     def on_set(self):
         pass
 
+    def on_unset(self):
+        pass
+
 instance = None  # type: ClockApp

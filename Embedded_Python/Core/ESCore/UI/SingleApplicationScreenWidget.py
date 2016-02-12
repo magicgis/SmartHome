@@ -2,8 +2,9 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.app import Widget
 from kivy.uix.image import Image
 from kivy.core.window import Window
+from kivy.uix.button import Button
 from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
-
+from ESCore.UI.ScreenStack import ScreenStack
 
 class SingleApplicationScreenWidget(GridLayout):
     """
@@ -20,9 +21,13 @@ class SingleApplicationScreenWidget(GridLayout):
     __bottomBarHeight = 50  # type: int
     __topBarHeight = 100  # type: int
 
+    __stack = None  # type: ScreenStack
+
     def __init__(self, child: SingleApplicationScreenSubWidget, useTopBar: bool = True, useBottomBar: bool = True, **kwargs):
         super(SingleApplicationScreenWidget, self).__init__(**kwargs)
         self.cols = 1
+        self.__stack = ScreenStack()
+        self.__stack.push(child)
         self.__useBottomBar = useBottomBar
         self.__useTopBar = useTopBar
         self.__childWidget = child
@@ -30,8 +35,28 @@ class SingleApplicationScreenWidget(GridLayout):
         self.__update_layout()
 
     def __create_bars(self):
-        self.__bottomBar = Image()
-        self.__bottomBar.color = [0, 0, 0, 1]
+        self.__bottomBar = Widget()
+        bottomBack = Image()
+        bottomBack.color = [1, 0, 0, 1]
+        bottomBack.width = Window.size[0]
+        bottomBack.height = self.__bottomBarHeight
+        self.__bottomBar.add_widget(bottomBack)
+
+        btnGrid = GridLayout()
+        btnGrid.cols = 5
+        btnGrid.rows = 1
+        btnGrid.width = Window.size[0]
+        btnGrid.height = self.__bottomBarHeight
+        self.__bottomBar.add_widget(btnGrid)
+
+        btnBack = Button(text="Back")
+        btnBack.bind(on_press=lambda instance: self.get_screen_back())
+        btnGrid.add_widget(btnBack, 5)
+
+        btnHome = Button(text="Home")
+        btnHome.bind(on_press=lambda instance: self.set_widget(self.__stack.get_first_element()))
+        btnGrid.add_widget(btnHome, 4)
+
         self.__topBar = Image()
         self.__topBar.color = [0, 0, 0, 1]
         self.col_default_width = Window.size[0]
@@ -39,6 +64,13 @@ class SingleApplicationScreenWidget(GridLayout):
         self.row_force_default = True
 
     def __update_layout(self):
+        if self.__childWidget is not None:
+            if self.__childWidget.parent is not None:
+                self.__childWidget.parent.remove_widget(self.__childWidget)
+
+        for child in self.children:
+            self.remove_widget(child)
+
         for child in self.children:
             self.remove_widget(child)
 
@@ -71,8 +103,20 @@ class SingleApplicationScreenWidget(GridLayout):
             self.add_widget(self.__childWidget)
 
     def set_widget(self, widget: SingleApplicationScreenSubWidget):
+        if self.__childWidget is widget:
+            return
+
         self.__childWidget = widget
+        self.__stack.push(widget)
         self.__update_layout()
+
+    def get_screen_back(self):
+        screen = self.__stack.pop()
+
+        if screen == None:
+            return
+
+        self.set_widget(screen)
 
     def toggle_bars(self, topBar: bool = True, bottomBar: bool = True):
         updateLayout = (topBar is not self.__useTopBar) or (bottomBar is not self.__useBottomBar)

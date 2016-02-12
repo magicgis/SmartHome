@@ -36,8 +36,15 @@ class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
         self.col_default_width = self.size[0] / self.cols
         self.row_default_height = self.size[1] / self.rows
 
+        count = 0
         for widget in self.children:
-            self.remove_widget(widget)
+            count += 1
+
+        if count is not 0:
+            return
+
+        """for widget in self.children:"""
+        """    self.remove_widget(widget)"""
 
         for index in range(0, ApplicationManager.instance.application_count()):
             app = ApplicationManager.instance.application_at(index)

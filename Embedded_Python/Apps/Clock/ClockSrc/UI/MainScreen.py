@@ -14,3 +14,9 @@ class MainScreen(AppScreen, BoxLayout):
 
     def _on_resize(self):
         pass
+
+    def on_set(self):
+        pass
+
+    def on_unset(self):
+        pass

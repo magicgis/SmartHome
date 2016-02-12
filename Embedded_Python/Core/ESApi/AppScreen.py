@@ -32,3 +32,9 @@ class AppScreen(Widget):
         """
 
         pass
+
+    def on_set(self):
+        pass
+
+    def on_unset(self):
+        pass

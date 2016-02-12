@@ -41,10 +41,12 @@ class AppController(Controller):
         """
 
         self.__app.app().on_set()
+        self.__app.app().get_current_screen().on_set()
 
     def on_unset(self):
         """
             override of superclass method
         """
 
-        pass
+        self.__app.app().get_current_screen().on_unset()
+        self.__app.app().on_unset()
