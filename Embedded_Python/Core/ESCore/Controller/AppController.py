@@ -40,7 +40,7 @@ class AppController(Controller):
             override of superclass method
         """
 
-        pass
+        self.__app.app().on_set()
 
     def on_unset(self):
         """

@@ -18,3 +18,10 @@ class Application (object):
             Returns the applications current screen
         """
         raise NotImplementedError()
+
+    def on_set(self):
+        """
+            Called when the app is set active
+        """
+
+        raise NotImplementedError()
