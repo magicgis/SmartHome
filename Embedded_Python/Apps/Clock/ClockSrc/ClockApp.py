@@ -32,4 +32,7 @@ class ClockApp(Application):
 
         return self.__connection
 
+    def on_set(self):
+        pass
+
 instance = None  # type: ClockApp

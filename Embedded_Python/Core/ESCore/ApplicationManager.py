@@ -59,7 +59,6 @@ class ApplicationManager:
         MainWidget.instance.set_controller(AppController(app))
 
     def __load_app(self, app_dir: str, app_name: str) -> Application:
-        print(app_dir + "/");
         sys.path.append(app_dir + "/")
         module = __import__(app_name + "Src." + app_name + "App")
         type = getattr(module, app_name + "App")

@@ -4,6 +4,7 @@ from kivy.uix.image import Image as ImageWidget
 from kivy.uix.label import Label
 from kivy.core.image import Image
 
+from ESCore.AppStarter import AppStarter
 
 class AppLauncherIconWidget(GridLayout):
     """
@@ -15,15 +16,15 @@ class AppLauncherIconWidget(GridLayout):
     __imageWidget = None  # type: ImageWidget
     __nameWidget = None  # type: Label
 
-    __callback = None  # type: classmethod
+    __starter = None  # type: AppStarter
 
     __paddingTmp = -1  # type: int
     __touched = False  # type: int
 
-    def __init__(self, image: Image, name: str, callback: classmethod, height: int, **kwargs):
+    def __init__(self, image: Image, name: str, starter: AppStarter, height: int, **kwargs):
         super(AppLauncherIconWidget, self).__init__(**kwargs)
 
-        self.__callback = callback
+        self.__starter = starter
 
         self.cols = 1
         self.rows = 2
@@ -66,7 +67,7 @@ class AppLauncherIconWidget(GridLayout):
 
     def on_touch_up(self, touch):
         if self.__imageParent.collide_point(*touch.pos):
-            self.__callback()
+            self.__starter.start_app()
 
         self.__imageParent.padding = [self.__paddingTmp, self.__paddingTmp, self.__paddingTmp, self.__paddingTmp]
         self.__paddingTmp = -1

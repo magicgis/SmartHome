@@ -3,6 +3,7 @@ from kivy.graphics import Color, Rectangle
 
 from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 from ESCore.UI.AppLauncherIconWidget import AppLauncherIconWidget
+from ESCore.AppStarter import AppStarter
 
 import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as FileIO
@@ -40,6 +41,6 @@ class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
 
         for index in range(0, ApplicationManager.instance.application_count()):
             app = ApplicationManager.instance.application_at(index)
-            widget = AppLauncherIconWidget(app.icon(), app.name(), lambda: ApplicationManager.instance.start_app(app), self.row_default_height)
+            widget = AppLauncherIconWidget(app.icon(), app.name(), AppStarter(app), self.row_default_height)
             widget.set_image_size(self.row_default_height, 0.7)
             self.add_widget(widget)
