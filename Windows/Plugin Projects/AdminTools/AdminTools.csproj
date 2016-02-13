@@ -68,11 +68,16 @@
     <Compile Include="DPPluginOverview.cs" />
     <Compile Include="PLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PNetworkLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin\Plugin.csproj">
       <Project>{E3957C03-BA27-4948-A0B5-9FB33F88B39D}</Project>
       <Name>Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Networking\Networking.csproj">
+      <Project>{869EDF48-7873-4342-99B3-DB2B9FA39C65}</Project>
+      <Name>Networking</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
