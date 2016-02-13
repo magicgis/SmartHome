@@ -13,7 +13,7 @@ class ServerProvider(AbstractServerProvider):
         """
 
         identifier = ConnectionIdentifier()
-        socket = BufferedIXPSocket("192.168.178.94", 10250)
+        socket = BufferedIXPSocket("192.168.178.47", 10250)
         self.__connections[identifier] = socket
         return identifier
 

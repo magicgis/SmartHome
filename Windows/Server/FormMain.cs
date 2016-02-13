@@ -63,10 +63,17 @@ namespace Server {
         }
 
         private void tcTabs_Deselecting(object sender, TabControlCancelEventArgs e) {
+			if (tcTabs.SelectedTab == null)
+				return;
+
             _tabMap[tcTabs.SelectedTab].OnControlInvisible();    
         }
 
         private void tcTabs_Selecting(object sender, TabControlCancelEventArgs e) {
+			if(!_tabMap.ContainsKey (tcTabs.SelectedTab)){
+				return;
+			}
+
             _tabMap[tcTabs.SelectedTab].OnControlVisible();
         }        
     }
