@@ -1,6 +1,7 @@
 from ESApi.ServerProvider import ServerProvider as AbstractServerProvider
 from ESApi.ServerProvider import ConnectionIdentifier, MessageListenerIdentifier
 from ESApi.IXPFile import IXPFile
+from ESCore.BufferedIXPSocket import BufferedIXPSocket
 
 
 class ServerProvider(AbstractServerProvider):
@@ -11,14 +12,27 @@ class ServerProvider(AbstractServerProvider):
             override of superclass method
         """
 
-        raise NotImplementedError()
+        identifier = ConnectionIdentifier()
+        socket = BufferedIXPSocket("192.168.178.94", 10250)
+        self.__connections[identifier] = socket
+        return identifier
 
     def free_connection(self, connection: ConnectionIdentifier):
         """
             override of superclass method
         """
 
-        raise NotImplementedError()
+        connection = self.__connections[connection]
+        connection.stop()
+
+
+    def free_all_connections(self):
+        """
+            override of superclass method
+        """
+
+        for identifier in self.__connections:
+            self.free_connection(identifier)
 
     def connection_avaliable(self, connection: ConnectionIdentifier) -> bool:
         """

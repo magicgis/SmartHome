@@ -49,6 +49,8 @@ class Thread:
             Internal callback that gets called by kivy after thread has finished
         :param dt: Delta Time
         """
+        if self.__callback is None:
+            return
 
         self.__callback()
 

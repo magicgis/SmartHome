@@ -6,6 +6,7 @@ from ESApi.ServerProvider import ServerProvider, ConnectionIdentifier
 
 from QuitSrc.MainScreen import MainScreen
 
+import ESApi.System as System
 
 class QuitApp(Application):
     __curScreen = None  # type: AppScreen
@@ -19,4 +20,4 @@ class QuitApp(Application):
         return self.__curScreen
 
     def on_set(self):
-        App.get_running_app().stop()
+        System.instance.shutdown()

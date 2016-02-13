@@ -1,5 +1,8 @@
 import socket
+from socket import error as socket_error
 from functools import partial
+from select import select
+import time
 
 import kivy.clock
 
@@ -12,25 +15,35 @@ class _SocketListener(Thread):
 
     __callbacks = []  # type: List
 
+    __running = True  # type: bool
+
     def __init__(self, socket: socket.socket, size: int):
+        super(_SocketListener, self).__init__()
         self.__socket = socket
         self.__size = size
 
     def register_callback(self, callback: callable):
         self.__callbacks.append(callback);
 
+    def stop(self):
+        self.__running = False
+
     def _run(self):
         try:
-            while True:
-                data = self.__socket.recv(self.__size)
+            while self.__running is True:
+                r, _, _ = select([self.__socket], [], [])
+                if r:
+                    data = self.__socket.recv(self.__size)
 
-                if not data:
-                    continue
+                    if not data:
+                        continue
 
-                kivy.clock.ClockBase.schedule_once(kivy.clock.Clock, partial(self._listener_internal_callback, data))
-        except socket.timeout:
+                    kivy.clock.ClockBase.schedule_once(kivy.clock.Clock, partial(self._listener_internal_callback, data))
+
+                time.sleep(0.5)
+        except socket_error as serr:
             return
-        pass
+
 
     def _listener_internal_callback(self, data: str, *largs):
         for listener in self.__callbacks:
@@ -57,6 +70,7 @@ class SocketClient:
         self.__listener.start()
 
     def close(self):
+        self.__listener.stop()
         self.__socket.close()
 
     def register_callback(self, callback: callable):

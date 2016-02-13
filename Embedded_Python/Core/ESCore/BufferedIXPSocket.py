@@ -19,6 +19,9 @@ class BufferedIXPSocket:
         self.__client.register_callback(self._message_received)
         self.__client.connect()
 
+    def stop(self):
+        self.__client.close()
+
     def register_callback(self, callback: callable):
         self.__callbacks.append(callback)
 

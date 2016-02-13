@@ -33,6 +33,12 @@ class MainScreen(AppScreen, BoxLayout):
     def _on_resize(self):
         pass
 
+    def update_time(self, hours: int, minutes: int):
+        self.__time.text = hours + ":" + minutes
+
+    def update_date(self, weekday: str, day: int, month: int, year: int):
+        self.__date.text = weekday + " " + day + "." + month + "." + year
+
     def on_set(self):
         pass
 
