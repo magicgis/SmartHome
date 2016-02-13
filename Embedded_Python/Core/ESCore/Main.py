@@ -4,6 +4,10 @@
 import sys
 
 import CoreFileIO as CoreFileIO
+from kivy.config import Config
+Config.set('graphics', 'resizable', '0')
+Config.set('graphics', 'width', '800')
+Config.set('graphics', 'height', '480')
 
 sys.path.append(CoreFileIO.core_directory())
 

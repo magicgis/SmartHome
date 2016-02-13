@@ -19,7 +19,7 @@ class SingleApplicationScreenWidget(GridLayout):
     __useTopBar = True  # type: Widget
 
     __bottomBarHeight = 50  # type: int
-    __topBarHeight = 100  # type: int
+    __topBarHeight = 50  # type: int
 
     __stack = None  # type: ScreenStack
 
