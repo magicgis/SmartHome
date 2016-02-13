@@ -43,9 +43,4 @@ class BootThread(Thread):
 
     def __system_shutdown_callback(self):
         thread = ShutdownThread()
-        thread.set_callback(self.__shutdown)
         thread.start()
-
-
-    def __shutdown(self):
-        App.get_running_app().stop()

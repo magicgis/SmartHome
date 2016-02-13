@@ -2,6 +2,7 @@ import time
 
 import kivy.clock as clock
 
+from kivy.app import App
 from ESApi.Thread import Thread
 
 from ESCore.ServerProvider import ServerProvider
@@ -21,3 +22,4 @@ class ShutdownThread(Thread):
             ApplicationManager.instance.application_at(index).app().on_system_shutdown()
 
         Networking.instance.get_server().free_all_connections()
+        App.get_running_app().stop()
