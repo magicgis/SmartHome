@@ -25,6 +25,9 @@ class BufferedIXPSocket:
     def register_callback(self, callback: callable):
         self.__callbacks.append(callback)
 
+    def send(self, ixpFile: IXPFile):
+        self.__client.write(ixpFile.get_xml())
+
     def _message_received(self, data: str):
         self.__buffer += data
         self.__search_buffer()
@@ -39,13 +42,13 @@ class BufferedIXPSocket:
         for startIndex in range(0, bufferLength - len(self.__IXP_START) - len(self.__IXP_END) + 1):
             startSub = self.__buffer[startIndex:startIndex + len(self.__IXP_START)]
 
-            if startSub is not self.__IXP_START:
+            if startSub != self.__IXP_START:
                 continue
 
             for endIndex in range(startIndex + len(self.__IXP_START), bufferLength - len(self.__IXP_END) + 1):
                 endSub = self.__buffer[endIndex:endIndex + len(self.__IXP_END)]
 
-                if endSub is not self.__IXP_END:
+                if endSub != self.__IXP_END:
                     continue
 
                 xml = self.__buffer[startIndex : endIndex + len(self.__IXP_END)]

@@ -3,6 +3,7 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from ESApi.AppScreen import AppScreen
 
+import ClockSrc.TimeManager as TimeManager
 
 class MainScreen(AppScreen, BoxLayout):
     __background = None  # type: Widget
@@ -30,11 +31,13 @@ class MainScreen(AppScreen, BoxLayout):
         self.__date.color = [0, 0, 0, 1]
         self.__background.add_widget(self.__date)
 
+        TimeManager.instance.register_time_listener(self.__timemanager_timechanged)
+
     def _on_resize(self):
         pass
 
     def update_time(self, hours: int, minutes: int):
-        self.__time.text = hours + ":" + minutes
+        self.__time.text = str(hours) + ":" + str(minutes)
 
     def update_date(self, weekday: str, day: int, month: int, year: int):
         self.__date.text = weekday + " " + day + "." + month + "." + year
@@ -44,3 +47,6 @@ class MainScreen(AppScreen, BoxLayout):
 
     def on_unset(self):
         pass
+
+    def __timemanager_timechanged(self, hours: int = None, minutes: int = None, seconds: int = None):
+        self.update_time(hours, minutes)

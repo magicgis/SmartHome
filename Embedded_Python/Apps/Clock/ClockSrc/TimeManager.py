@@ -1,5 +1,5 @@
-import ClockSrc.ClockApp as ClockApp
 import ESApi.Networking as Networking
+import ClockSrc.ClockNetworking as ClockNetworking
 
 from ESApi.ServerProvider import ConnectionIdentifier, ServerProvider
 from ESApi.IXPFile import IXPFile
@@ -14,11 +14,12 @@ class TimeManager:
 
     def start(self):
         server = Networking.instance.get_server()
-        con = ClockApp.instance.get_connection()
+        con = ClockNetworking.instance.get_connection()
         server.register_message_listener(con, "clock_time_listener", self.time_listener)
 
         request = IXPFile()
         request.set_network_function("com.projectgame.clock.clock.registertotimeservice")
+        request.add_info("functionName", "clock_time_listener")
         server.no_response_request(con, request)
 
     def register_time_listener(self, callback):

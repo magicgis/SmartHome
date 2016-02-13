@@ -26,8 +26,6 @@ class BootThread(Thread):
         # init networking
         Networking.instance.provide_server(ServerProvider())
 
-        Networking.instance.get_server().request_connection()
-
         # init app launcher on main thread
         clock.ClockBase.schedule_once(clock.Clock, self._init_app_launcher)
 

@@ -33,12 +33,14 @@ class _SocketListener(Thread):
             while self.__running is True:
                 r, _, _ = select([self.__socket], [], [])
                 if r:
-                    data = self.__socket.recv(self.__size)
+                    data = self.__socket.recv(self.__size)  # type: bytes
 
                     if not data:
                         continue
 
-                    kivy.clock.ClockBase.schedule_once(kivy.clock.Clock, partial(self._listener_internal_callback, data))
+                    decoded = data.decode()
+
+                    kivy.clock.ClockBase.schedule_once(kivy.clock.Clock, partial(self._listener_internal_callback, decoded))
 
                 time.sleep(0.5)
         except socket_error as serr:
@@ -77,4 +79,4 @@ class SocketClient:
         self.__listener.register_callback(callback)
 
     def write(self, data: str):
-        self.__socket.send(data)
+        self.__socket.send(data.encode(encoding='utf_8'))

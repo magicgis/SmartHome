@@ -7,6 +7,11 @@ from ESCore.BufferedIXPSocket import BufferedIXPSocket
 class ServerProvider(AbstractServerProvider):
     __connections = {}  # type: Dictionary
 
+    __listeners = []
+    __listenerConnections = {}
+    __listenerFunctions = {}
+    __listenerCallbacks = {}
+
     def request_connection(self) -> ConnectionIdentifier:
         """
             override of superclass method
@@ -14,6 +19,7 @@ class ServerProvider(AbstractServerProvider):
 
         identifier = ConnectionIdentifier()
         socket = BufferedIXPSocket("192.168.178.47", 10250)
+        socket.register_callback(lambda ixpFile: self.__message_received(identifier, ixpFile))
         self.__connections[identifier] = socket
         return identifier
 
@@ -39,28 +45,38 @@ class ServerProvider(AbstractServerProvider):
             override of superclass method
         """
 
-        raise NotImplementedError()
+        return True
 
     def register_message_listener(self, connection: ConnectionIdentifier, function: str, callback) -> MessageListenerIdentifier:
         """
             override of superclass method
         """
 
-        raise NotImplementedError()
+        identifier = MessageListenerIdentifier()
+        self.__listeners.append(identifier)
+        self.__listenerConnections[identifier] = connection
+        self.__listenerFunctions[identifier] = function
+        self.__listenerCallbacks[identifier] = callback
+
+        return identifier
 
     def unregister_message_listener(self, listener: MessageListenerIdentifier):
         """
             override of superclass method
         """
 
-        raise NotImplementedError()
+        self.__listeners.remove(listener)
+        del self.__listenerConnections[listener]
+        del self.__listenerFunctions[listener]
+        del self.__listenerCallbacks[listener]
 
     def no_response_request(self, connection: ConnectionIdentifier, request: IXPFile):
         """
             override of superclass method
         """
 
-        raise NotImplementedError()
+        socket = self.__connections[connection]  # type: BufferedIXPSocket
+        socket.send(request)
 
     def simple_int_request(self, connection: ConnectionIdentifier, request: IXPFile) -> int:
         """
@@ -117,3 +133,13 @@ class ServerProvider(AbstractServerProvider):
         """
 
         raise NotImplementedError()
+
+    def __message_received(self, connection: ConnectionIdentifier, ixpFile: IXPFile):
+        for identifier in self.__listeners:
+            if connection != self.__listenerConnections[identifier]:
+                continue
+
+            func = self.__listenerFunctions[identifier]
+
+            if func == ixpFile.get_network_function():
+                self.__listenerCallbacks[identifier](ixpFile)
