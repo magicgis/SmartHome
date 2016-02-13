@@ -6,6 +6,9 @@ class AppScreen(Widget):
         A app screen is a single screen displayed by an application
     """
 
+    use_bottom_bar = True
+    use_top_bar = True
+
     def __init(self, **kwargs):
         """
             Initialize the base Widget

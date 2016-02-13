@@ -23,13 +23,13 @@ class SingleApplicationScreenWidget(GridLayout):
 
     __stack = None  # type: ScreenStack
 
-    def __init__(self, child: SingleApplicationScreenSubWidget, useTopBar: bool = True, useBottomBar: bool = True, **kwargs):
+    def __init__(self, child: SingleApplicationScreenSubWidget, **kwargs):
         super(SingleApplicationScreenWidget, self).__init__(**kwargs)
         self.cols = 1
         self.__stack = ScreenStack()
         self.__stack.push(child)
-        self.__useBottomBar = useBottomBar
-        self.__useTopBar = useTopBar
+        self.__useBottomBar = child.use_bottom_bar
+        self.__useTopBar = child.use_top_bar
         self.__childWidget = child
         self.__create_bars()
         self.__update_layout()
@@ -37,7 +37,7 @@ class SingleApplicationScreenWidget(GridLayout):
     def __create_bars(self):
         self.__bottomBar = Widget()
         bottomBack = Image()
-        bottomBack.color = [1, 0, 0, 1]
+        bottomBack.color = [0, 0, 0, 1]
         bottomBack.width = Window.size[0]
         bottomBack.height = self.__bottomBarHeight
         self.__bottomBar.add_widget(bottomBack)
@@ -51,11 +51,11 @@ class SingleApplicationScreenWidget(GridLayout):
 
         btnBack = Button(text="Back")
         btnBack.bind(on_press=lambda instance: self.get_screen_back())
-        btnGrid.add_widget(btnBack, 5)
+        btnGrid.add_widget(btnBack)
 
         btnHome = Button(text="Home")
         btnHome.bind(on_press=lambda instance: self.set_widget(self.__stack.get_first_element()))
-        btnGrid.add_widget(btnHome, 4)
+        btnGrid.add_widget(btnHome)
 
         self.__topBar = Image()
         self.__topBar.color = [0, 0, 0, 1]
@@ -73,6 +73,8 @@ class SingleApplicationScreenWidget(GridLayout):
 
         for child in self.children:
             self.remove_widget(child)
+
+        self.rows_minimum = []
 
         if self.__useBottomBar and self.__useTopBar:
             self.rows = 3
@@ -107,6 +109,8 @@ class SingleApplicationScreenWidget(GridLayout):
             return
 
         self.__childWidget = widget
+        self.__useBottomBar = self.__childWidget.use_bottom_bar
+        self.__useTopBar = self.__childWidget.use_top_bar
         self.__stack.push(widget)
         self.__update_layout()
 

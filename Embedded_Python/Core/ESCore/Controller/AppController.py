@@ -30,7 +30,7 @@ class AppController(Controller):
         subWidget = self.__app.app().get_current_screen()
 
         if subWidget is not self.__tmpCurrentScreen:
-            self.__widget = SingleApplicationScreenWidget(subWidget, useTopBar=True, useBottomBar=True)
+            self.__widget = SingleApplicationScreenWidget(subWidget)
             self.__tmpCurrentScreen = subWidget
 
         return self.__widget

@@ -17,6 +17,8 @@ class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
     def __init__(self, **kwargs):
         super(AppLauncherWidget, self).__init__(**kwargs)
 
+        self.use_top_bar = False
+
         self.cols = 4
         self.rows = 2
 
