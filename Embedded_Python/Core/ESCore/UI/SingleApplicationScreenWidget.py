@@ -6,6 +6,58 @@ from kivy.uix.button import Button
 from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 from ESCore.UI.ScreenStack import ScreenStack
 
+class BottomBar(Widget):
+    def __init__(self, height: int, backCallback: callable, homeCallback: callable, **kwargs):
+        super(BottomBar, self).__init__(**kwargs)
+
+        bottomBack = Image()
+        bottomBack.color = [0, 0, 0, 1]
+        bottomBack.width = Window.size[0]
+        bottomBack.height = height
+        self.add_widget(bottomBack)
+
+        btnGrid = GridLayout()
+        btnGrid.cols = 5
+        btnGrid.rows = 1
+        btnGrid.width = Window.size[0]
+        btnGrid.height = height
+        self.add_widget(btnGrid)
+
+        btnBack = Button(text="Back")
+        btnBack.bind(on_press=lambda instance: backCallback())
+        btnGrid.add_widget(btnBack, 0)
+
+        btnHome = Button(text="Home")
+        btnHome.bind(on_press=lambda instance: homeCallback)
+        btnGrid.add_widget(btnHome, 1)
+
+class TopBar(Widget):
+    __grid = None  # type: GridLayout
+
+    def __init__(self, height: int, **kwargs):
+        super(TopBar, self).__init__(**kwargs)
+        topBack = Image()
+        topBack.color = [0, 0, 0, 1]
+        topBack.width = Window.size[0]
+        topBack.height = height
+        self.add_widget(topBack)
+
+        self.__grid = GridLayout()
+        self.__grid.cols = 10
+        self.__grid.rows = 1
+        self.__grid.width = Window.size[0]
+        self.__grid.height = height
+        self.add_widget(self.__grid)
+
+    def clear_buttons(self):
+        for child in self.__grid.children:
+            self.__grid.remove_widget(child)
+
+    def add_buttons(self, buttons):
+        for index in range(0, len(buttons)):
+            btn = buttons[index]  # type: Button
+            self.__grid.add_widget(btn, self.__grid.cols - 1 - index)
+
 class SingleApplicationScreenWidget(GridLayout):
     """
         Displays a single screen with the possibility to toggle a top and a bottom bar
@@ -35,30 +87,9 @@ class SingleApplicationScreenWidget(GridLayout):
         self.__update_layout()
 
     def __create_bars(self):
-        self.__bottomBar = Widget()
-        bottomBack = Image()
-        bottomBack.color = [0, 0, 0, 1]
-        bottomBack.width = Window.size[0]
-        bottomBack.height = self.__bottomBarHeight
-        self.__bottomBar.add_widget(bottomBack)
+        self.__bottomBar = BottomBar(self.__bottomBarHeight, lambda: self.get_screen_back(), lambda: self.set_widget(self.__stack.get_first_element()))
+        self.__topBar = TopBar(self.__topBarHeight)
 
-        btnGrid = GridLayout()
-        btnGrid.cols = 5
-        btnGrid.rows = 1
-        btnGrid.width = Window.size[0]
-        btnGrid.height = self.__bottomBarHeight
-        self.__bottomBar.add_widget(btnGrid)
-
-        btnBack = Button(text="Back")
-        btnBack.bind(on_press=lambda instance: self.get_screen_back())
-        btnGrid.add_widget(btnBack)
-
-        btnHome = Button(text="Home")
-        btnHome.bind(on_press=lambda instance: self.set_widget(self.__stack.get_first_element()))
-        btnGrid.add_widget(btnHome)
-
-        self.__topBar = Image()
-        self.__topBar.color = [0, 0, 0, 1]
         self.col_default_width = Window.size[0]
         self.col_force_default = True
         self.row_force_default = True
@@ -75,6 +106,10 @@ class SingleApplicationScreenWidget(GridLayout):
             self.remove_widget(child)
 
         self.rows_minimum = []
+
+        if self.__useTopBar:
+            self.__topBar.clear_buttons()
+            self.__topBar.add_buttons(self.__childWidget.get_topbar_buttons())
 
         if self.__useBottomBar and self.__useTopBar:
             self.rows = 3
@@ -105,7 +140,7 @@ class SingleApplicationScreenWidget(GridLayout):
             self.add_widget(self.__childWidget)
 
     def set_widget(self, widget: SingleApplicationScreenSubWidget):
-        if self.__childWidget is widget:
+        if self.__childWidget == widget:
             return
 
         self.__childWidget = widget

@@ -20,3 +20,6 @@ class AppScreenWidget(SingleApplicationScreenSubWidget, BoxLayout):
 
     def _on_resize(self):
         self.__appScreen.change_size(self.width, self.height)
+
+    def get_topbar_buttons(self):
+        return self.__appScreen.get_topbar_buttons()

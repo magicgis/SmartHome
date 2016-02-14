@@ -19,3 +19,6 @@ class SingleApplicationScreenSubWidget(Widget):
 
     def _on_resize(self):
         pass
+
+    def get_topbar_buttons(self) -> list:
+        return []

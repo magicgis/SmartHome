@@ -1,6 +1,5 @@
 from kivy.app import Widget
 
-
 class AppScreen(Widget):
     """
         A app screen is a single screen displayed by an application
@@ -15,6 +14,9 @@ class AppScreen(Widget):
         """
 
         super(AppScreen, self).__init__(**kwargs)
+
+    def get_topbar_buttons(self) -> list:
+        return []
 
     def change_size(self, width: int, height: int):
         """

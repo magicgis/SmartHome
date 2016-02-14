@@ -50,13 +50,16 @@ namespace AdminTools {
         /// Writes all messages from the internal cache to the log list
         /// </summary>
         public void WriteCache() {
-            foreach (KeyValuePair<int, string> cachedMessage in _internalCache)
-                this.Invoke((MethodInvoker)delegate {
-                    lbLog.Items.Add(String.Format("[{0}]: {1}", Plugin.Debug.GetChannelName(cachedMessage.Key), cachedMessage.Value));
-                    lbLog.SelectedIndex = lbLog.Items.Count - 1;
-                });
+			try{
+				List<KeyValuePair<int, string>> clone = new List<KeyValuePair<int, string>> (_internalCache);
+	            foreach (KeyValuePair<int, string> cachedMessage in clone)
+	                this.Invoke((MethodInvoker)delegate {
+	                    lbLog.Items.Add(String.Format("[{0}]: {1}", Plugin.Debug.GetChannelName(cachedMessage.Key), cachedMessage.Value));
+	                    lbLog.SelectedIndex = lbLog.Items.Count - 1;
+	                });
 
-            _internalCache.Clear();
+	            _internalCache.Clear();
+			}catch(Exception e){}
         }
         
         /// <summary>
