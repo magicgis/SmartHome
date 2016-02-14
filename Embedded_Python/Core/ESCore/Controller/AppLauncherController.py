@@ -17,7 +17,7 @@ class AppLauncherController(Controller):
 
     def initialize(self):
         self.__child = AppLauncherWidget()
-        self.__widget = SingleApplicationScreenWidget(self.__child, useBottomBar = True, useTopBar = False)
+        self.__widget = SingleApplicationScreenWidget(self.__child)
 
     def get_widget(self) -> Widget:
         """

@@ -1,15 +1,18 @@
 import time
 
 import kivy.clock as clock
+from kivy.app import App
 
 from ESApi.Thread import Thread
 
 from ESCore.ServerProvider import ServerProvider
+from ESCore.Threads.ShutdownThread import ShutdownThread
 
 import ESCore.Controller.AppLauncherController as AppLauncherController
 import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as CoreFileIO
 import ESApi.Networking as Networking
+import ESApi.System as System
 
 class BootThread(Thread):
     """
@@ -17,6 +20,9 @@ class BootThread(Thread):
     """
 
     def _run(self):
+        #init system
+        System.instance.provide_shutdown_callback(self.__system_shutdown_callback)
+
         # init networking
         Networking.instance.provide_server(ServerProvider())
 
@@ -31,3 +37,8 @@ class BootThread(Thread):
 
     def _init_app_launcher(self, dt: int = 0):
         AppLauncherController.instance.initialize()
+
+
+    def __system_shutdown_callback(self):
+        thread = ShutdownThread()
+        thread.start()

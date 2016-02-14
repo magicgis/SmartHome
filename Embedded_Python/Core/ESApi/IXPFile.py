@@ -43,8 +43,14 @@ class IXPFile:
         """
 
         # If no source is provided everything is done already
-        if source is None:
+        if source == None:
             return
+
+        self.__header_names = []
+        self.__header_values = []
+        self.__info_names = []
+        self.__info_values = []
+        self.__network_function = ""
 
         # Parse source to minidom xml
         doc = minidom.parseString(source)
@@ -188,7 +194,7 @@ class IXPFile:
         for index in range(0, self.headers_count()):
             hName = self.header_name_at(index)
 
-            if hName is name:
+            if hName == name:
                 return self.header_value_at(index)
 
         return None
@@ -197,7 +203,7 @@ class IXPFile:
         for index in range(0, self.infos_count()):
             iName = self.info_name_at(index)
 
-            if iName is name:
+            if iName == name:
                 return self.info_value_at(index)
 
         return None

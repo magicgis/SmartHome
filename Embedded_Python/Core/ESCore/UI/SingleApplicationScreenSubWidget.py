@@ -6,6 +6,9 @@ class SingleApplicationScreenSubWidget(Widget):
         Base class for widgets displayed by a SingleApplicationScreenWidget
     """
 
+    use_bottom_bar = True
+    use_top_bar = True
+
     def __init__(self, **kwargs):
         super(SingleApplicationScreenSubWidget, self).__init__(**kwargs)
 
@@ -16,3 +19,6 @@ class SingleApplicationScreenSubWidget(Widget):
 
     def _on_resize(self):
         pass
+
+    def get_topbar_buttons(self) -> list:
+        return []

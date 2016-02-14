@@ -3,6 +3,7 @@ from kivy.graphics import Color, Rectangle
 
 from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 from ESCore.UI.AppLauncherIconWidget import AppLauncherIconWidget
+from ESCore.AppStarter import AppStarter
 
 import ESCore.ApplicationManager as ApplicationManager
 import ESCore.CoreFileIO as FileIO
@@ -15,6 +16,8 @@ class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
 
     def __init__(self, **kwargs):
         super(AppLauncherWidget, self).__init__(**kwargs)
+
+        self.use_top_bar = False
 
         self.cols = 4
         self.rows = 2
@@ -35,11 +38,18 @@ class AppLauncherWidget(SingleApplicationScreenSubWidget, GridLayout):
         self.col_default_width = self.size[0] / self.cols
         self.row_default_height = self.size[1] / self.rows
 
+        count = 0
         for widget in self.children:
-            self.remove_widget(widget)
+            count += 1
+
+        if count is not 0:
+            return
+
+        """for widget in self.children:"""
+        """    self.remove_widget(widget)"""
 
         for index in range(0, ApplicationManager.instance.application_count()):
             app = ApplicationManager.instance.application_at(index)
-            widget = AppLauncherIconWidget(app.icon(), app.name(), lambda: ApplicationManager.instance.start_app(app), self.row_default_height)
+            widget = AppLauncherIconWidget(app.icon(), app.name(), AppStarter(app), self.row_default_height)
             widget.set_image_size(self.row_default_height, 0.7)
             self.add_widget(widget)

@@ -13,8 +13,28 @@ class Application (object):
         """
         pass
 
+    def on_system_shutdown(self):
+        """
+            Gets challed on system shutdown
+        """
+        pass
+
     def get_current_screen(self) -> AppScreen:
         """
             Returns the applications current screen
         """
         raise NotImplementedError()
+
+    def on_set(self):
+        """
+            Called when the app is set active
+        """
+
+        pass
+
+    def on_unset(self):
+        """
+            Called when the app is unset
+        """
+
+        pass

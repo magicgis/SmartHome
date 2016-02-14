@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AdminTools</RootNamespace>
     <AssemblyName>com.projectgame.admintools</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -68,11 +68,16 @@
     <Compile Include="DPPluginOverview.cs" />
     <Compile Include="PLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PNetworkLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin\Plugin.csproj">
-      <Project>{e3957c03-ba27-4948-a0b5-9fb33f88b39d}</Project>
+      <Project>{E3957C03-BA27-4948-A0B5-9FB33F88B39D}</Project>
       <Name>Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Networking\Networking.csproj">
+      <Project>{869EDF48-7873-4342-99B3-DB2B9FA39C65}</Project>
+      <Name>Networking</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -30,7 +30,7 @@ class AppController(Controller):
         subWidget = self.__app.app().get_current_screen()
 
         if subWidget is not self.__tmpCurrentScreen:
-            self.__widget = SingleApplicationScreenWidget(subWidget, useTopBar=True, useBottomBar=True)
+            self.__widget = SingleApplicationScreenWidget(subWidget)
             self.__tmpCurrentScreen = subWidget
 
         return self.__widget
@@ -40,11 +40,13 @@ class AppController(Controller):
             override of superclass method
         """
 
-        pass
+        self.__app.app().on_set()
+        self.__app.app().get_current_screen().on_set()
 
     def on_unset(self):
         """
             override of superclass method
         """
 
-        pass
+        self.__app.app().get_current_screen().on_unset()
+        self.__app.app().on_unset()

@@ -50,6 +50,9 @@ class Thread:
         :param dt: Delta Time
         """
 
+        if self.__callback is None:
+            return
+
         self.__callback()
 
     def _run(self):

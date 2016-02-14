@@ -24,8 +24,8 @@ namespace AdminTools {
         /// Refreshes the currently avaliable network functions
         /// </summary>
         public void RefreshFunctions() {
-            if (!this.Created)
-                return;
+            //if (!this.Created)
+            //    return;
             if (this.IsDisposed)
                 return;
 

@@ -5,23 +5,39 @@ from ESApi.ServerProvider import ConnectionIdentifier, ServerProvider
 from ESApi.IXPFile import IXPFile
 
 
-class TimeManager:
-    __hours = -1  # type: int
-    __minutes = -1  # type: int
-    __seconds = -1  # type: int
-
-    __callbacks = []  # type: List[callable]
-    __dateCallbacks = []
+class TimerManager:
+    __FUNCTION_TIMER_STARTED = "clock_timer_started"
+    __FUNCTION_TIMER_STOPPED = "clock_timer_stopped"
+    __FUNCTION_TIMER_UPDATED = "clock_timer_updated"
+    __FUNCTION_TIMER_CALLED = "clock_timer_called"
 
     def start(self):
         server = Networking.instance.get_server()
         con = ClockNetworking.instance.get_connection()
-        server.register_message_listener(con, "clock_time_listener", self.time_listener)
+        server.register_message_listener(con, self.__FUNCTION_TIMER_STARTED, self.__network_timer_started)
+        server.register_message_listener(con, self.__FUNCTION_TIMER_STOPPED, self.__network_timer_stopped)
+        server.register_message_listener(con, self.__FUNCTION_TIMER_UPDATED, self.__network_timer_updated)
+        server.register_message_listener(con, self.__FUNCTION_TIMER_CALLED, self.__network_timer_called)
 
         request = IXPFile()
-        request.set_network_function("com.projectgame.clock.clock.registertotimeservice")
-        request.add_info("functionName", "clock_time_listener")
+        request.set_network_function("com.projectgame.clock.timer.registertotimerservice")
+        request.add_info("startedFunction", self.__FUNCTION_TIMER_STARTED)
+        request.add_info("stoppedFunction", self.__FUNCTION_TIMER_STOPPED)
+        request.add_info("updatedFunction", self.__FUNCTION_TIMER_UPDATED)
+        request.add_info("calledFunction", self.__FUNCTION_TIMER_UPDATED)
         server.no_response_request(con, request)
+
+    def __network_timer_started(self, ixpFile: IXPFile = None):
+        pass
+
+    def __network_timer_stopped(self, ixpFile: IXPFile = None):
+        pass
+
+    def __network_timer_updated(self, ixpFile: IXPFile = None):
+        pass
+
+    def __network_timer_called(self, ixpFile: IXPFile = None):
+        pass
 
     def register_time_listener(self, callback):
         """
@@ -113,4 +129,4 @@ class TimeManager:
         for listener in self.__callbacks:
             listener(hours=self.__hours, minutes=self.__minutes, seconds=self.__seconds)
 
-instance = TimeManager()
+instance = TimerManager()

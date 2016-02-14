@@ -39,6 +39,13 @@ class ServerProvider:
 
         raise NotImplementedError()
 
+    def free_all_connections(self):
+        """
+            Closes all connections to the smart home server
+        """
+
+        raise NotImplementedError()
+
     def connection_avaliable(self, connection: ConnectionIdentifier) -> bool:
         """
             Checks if a connection is still avaliable
