@@ -37,7 +37,19 @@ class MainScreen(AppScreen, BoxLayout):
         pass
 
     def update_time(self, hours: int, minutes: int):
-        self.__time.text = str(hours) + ":" + str(minutes)
+        string = ""
+
+        if hours < 10:
+            string += "0"
+
+        string += str(hours) + ":"
+
+        if minutes < 10:
+            string += "0"
+
+        string += str(minutes)
+
+        self.__time.text = string
 
     def update_date(self, weekday: str, day: int, month: int, year: int):
         self.__date.text = weekday + " " + day + "." + month + "." + year
