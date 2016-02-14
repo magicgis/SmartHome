@@ -32,6 +32,7 @@ class MainScreen(AppScreen, BoxLayout):
         self.__background.add_widget(self.__date)
 
         TimeManager.instance.register_time_listener(self.__timemanager_timechanged)
+        TimeManager.instance.register_date_listener(self.__timemanager_datechanged)
 
     def _on_resize(self):
         pass
@@ -52,7 +53,7 @@ class MainScreen(AppScreen, BoxLayout):
         self.__time.text = string
 
     def update_date(self, weekday: str, day: int, month: int, year: int):
-        self.__date.text = weekday + " " + day + "." + month + "." + year
+        self.__date.text = weekday + " " + str(day) + "." + str(month) + "." + str(year)
 
     def on_set(self):
         pass
@@ -62,3 +63,23 @@ class MainScreen(AppScreen, BoxLayout):
 
     def __timemanager_timechanged(self, hours: int = None, minutes: int = None, seconds: int = None):
         self.update_time(hours, minutes)
+
+    def __timemanager_datechanged(self, year: int = None, month: int = None, day: int = None, weekday: int = None):
+        wd = ""
+
+        if weekday == 0:
+            wd = "Mon"
+        elif weekday == 1:
+            wd = "Tue"
+        elif weekday == 2:
+            wd = "Wed"
+        elif weekday == 3:
+            wd = "Thu"
+        elif weekday == 4:
+            wd = "Fri"
+        elif weekday == 5:
+            wd = "Sat"
+        elif weekday == 6:
+            wd = "Sun"
+
+        self.update_date(wd, day, month, year)

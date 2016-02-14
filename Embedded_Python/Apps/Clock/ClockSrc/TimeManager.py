@@ -11,6 +11,7 @@ class TimeManager:
     __seconds = -1  # type: int
 
     __callbacks = []  # type: List[callable]
+    __dateCallbacks = []
 
     def start(self):
         server = Networking.instance.get_server()
@@ -41,6 +42,12 @@ class TimeManager:
 
         self.__callbacks.remove(callback)
 
+    def register_date_listener(self, callback):
+        self.__dateCallbacks.append(callback)
+
+    def unregister_date_listener(self, callback):
+        self.__callbacks.remove(callback)
+
     def time_listener(self, message: IXPFile = None):
         sH = message.get_info("hours")
         sM = message.get_info("minutes")
@@ -50,7 +57,39 @@ class TimeManager:
         iM = int(sM)
         iS = int(sS)
 
+        needsDateUpdate = False
+
+        if self.__hours == -1:
+            needsDateUpdate = True
+
+        if self.__hours != 0 and iH == 0:
+            needsDateUpdate = True
+
+        if needsDateUpdate:
+            server = Networking.instance.get_server()
+            con = ClockNetworking.instance.get_connection()
+            request = IXPFile()
+            request.set_network_function("com.projectgame.clock.clock.getdate")
+            server.ixp_request_async(con, request, lambda ixpFile: self.__date_listener(ixpFile))
+
         self.__set_time(hours=iH, minutes=iM, seconds=iS)
+
+    def __date_listener(self, ixpFile: IXPFile):
+        sY = ixpFile.get_info("year")
+        sM = ixpFile.get_info("month")
+        sD = ixpFile.get_info("day")
+        sW = ixpFile.get_info("weekday")
+
+        iY = int(sY)
+        iM = int(sM)
+        iD = int(sD)
+        iW = int(sW)
+
+        if iW == -1:
+            iW = 6
+
+        for listener in self.__dateCallbacks:
+            listener(year=iY, month=iM, day=iD, weekday=iW)
 
     def __set_time(self, hours: int, minutes: int, seconds: int):
         timeChanges = False

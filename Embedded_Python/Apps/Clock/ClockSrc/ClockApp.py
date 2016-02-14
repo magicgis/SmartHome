@@ -6,6 +6,7 @@ from ClockSrc.UI.MainScreen import MainScreen
 import ClockSrc.TimeManager as TimeManager
 import ClockSrc.ClockNetworking as ClockNetworking
 
+
 class ClockApp(Application):
     __curScreen = None  # type: AppScreen
 
