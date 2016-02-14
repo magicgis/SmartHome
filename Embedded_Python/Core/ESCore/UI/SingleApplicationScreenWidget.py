@@ -28,7 +28,7 @@ class BottomBar(Widget):
         btnGrid.add_widget(btnBack, 0)
 
         btnHome = Button(text="Home")
-        btnHome.bind(on_press=lambda instance: homeCallback)
+        btnHome.bind(on_press=lambda instance: homeCallback())
         btnGrid.add_widget(btnHome, 1)
 
 class TopBar(Widget):
@@ -87,7 +87,7 @@ class SingleApplicationScreenWidget(GridLayout):
         self.__update_layout()
 
     def __create_bars(self):
-        self.__bottomBar = BottomBar(self.__bottomBarHeight, lambda: self.get_screen_back(), lambda: self.set_widget(self.__stack.get_first_element()))
+        self.__bottomBar = BottomBar(self.__bottomBarHeight, lambda: self.get_screen_back(), lambda: self.to_home_screen())
         self.__topBar = TopBar(self.__topBarHeight)
 
         self.col_default_width = Window.size[0]
@@ -149,7 +149,12 @@ class SingleApplicationScreenWidget(GridLayout):
         self.__stack.push(widget)
         self.__update_layout()
 
+    def to_home_screen(self):
+        screen = self.__stack.get_first_element()
+        self.set_widget(screen)
+
     def get_screen_back(self):
+        self.__stack.pop()
         screen = self.__stack.pop()
 
         if screen == None:
