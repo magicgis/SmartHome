@@ -1,6 +1,7 @@
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.image import Image
 from kivy.uix.label import Label
+from kivy.uix.button import Button
 from ESApi.AppScreen import AppScreen
 
 import ClockSrc.TimeManager as TimeManager
@@ -9,6 +10,7 @@ class MainScreen(AppScreen, BoxLayout):
     __background = None  # type: Widget
     __time = None  # type: Label
     __date = None  # type: Label
+    __timersButton = None  # type: Button
 
 
     def __init__(self, **kwargs):
@@ -30,6 +32,9 @@ class MainScreen(AppScreen, BoxLayout):
         self.__date.pos = (337, 100)
         self.__date.color = [0, 0, 0, 1]
         self.__background.add_widget(self.__date)
+
+        self.__timersButton = Button()
+        self.__timersButton.text = "Timers"
 
         TimeManager.instance.register_time_listener(self.__timemanager_timechanged)
         TimeManager.instance.register_date_listener(self.__timemanager_datechanged)
@@ -83,3 +88,6 @@ class MainScreen(AppScreen, BoxLayout):
             wd = "Sun"
 
         self.update_date(wd, day, month, year)
+
+    def get_topbar_buttons(self):
+        return [self.__timersButton]

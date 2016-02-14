@@ -17,7 +17,7 @@ class BottomBar(Widget):
         self.add_widget(bottomBack)
 
         btnGrid = GridLayout()
-        btnGrid.cols = 5
+        btnGrid.cols = 2
         btnGrid.rows = 1
         btnGrid.width = Window.size[0]
         btnGrid.height = height
@@ -40,13 +40,15 @@ class TopBar(Widget):
         topBack.color = [0, 0, 0, 1]
         topBack.width = Window.size[0]
         topBack.height = height
+        topBack.pos = (0, Window.size[1] - height)
         self.add_widget(topBack)
 
         self.__grid = GridLayout()
-        self.__grid.cols = 10
+        self.__grid.cols = 8
         self.__grid.rows = 1
         self.__grid.width = Window.size[0]
         self.__grid.height = height
+        self.__grid.pos = (0, Window.size[1] - height)
         self.add_widget(self.__grid)
 
     def clear_buttons(self):
@@ -54,9 +56,12 @@ class TopBar(Widget):
             self.__grid.remove_widget(child)
 
     def add_buttons(self, buttons):
+        for i in range(0, self.__grid.cols - len(buttons)):
+            self.__grid.add_widget(Widget())
+
         for index in range(0, len(buttons)):
             btn = buttons[index]  # type: Button
-            self.__grid.add_widget(btn, self.__grid.cols - 1 - index)
+            self.__grid.add_widget(btn)
 
 class SingleApplicationScreenWidget(GridLayout):
     """
@@ -64,11 +69,11 @@ class SingleApplicationScreenWidget(GridLayout):
     """
 
     __childWidget = None  # type: SingleApplicationScreenSubWidget
-    __bottomBar = None  # type: Widget
-    __topBar = None  # type: Widget
+    __bottomBar = None  # type: BottomBar
+    __topBar = None  # type: TopBar
 
-    __useBottomBar = True  # type: Widget
-    __useTopBar = True  # type: Widget
+    __useBottomBar = True  # type: bool
+    __useTopBar = True  # type: bool
 
     __bottomBarHeight = 50  # type: int
     __topBarHeight = 50  # type: int
