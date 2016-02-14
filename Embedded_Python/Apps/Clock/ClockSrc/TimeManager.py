@@ -55,16 +55,16 @@ class TimeManager:
     def __set_time(self, hours: int, minutes: int, seconds: int):
         timeChanges = False
 
-        if hours is not self.__hours:
+        if hours != self.__hours:
             timeChanges = True
 
-        if minutes is not self.__minutes:
+        if minutes != self.__minutes:
             timeChanges = True
 
-        if seconds is not self.__seconds:
+        if seconds != self.__seconds:
             timeChanges = True
 
-        if not timeChanges:
+        if timeChanges == False:
             return
 
         self.__hours = hours

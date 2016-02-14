@@ -43,8 +43,14 @@ class IXPFile:
         """
 
         # If no source is provided everything is done already
-        if source is None:
+        if source == None:
             return
+
+        self.__header_names = []
+        self.__header_values = []
+        self.__info_names = []
+        self.__info_values = []
+        self.__network_function = ""
 
         # Parse source to minidom xml
         doc = minidom.parseString(source)
