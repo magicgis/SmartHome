@@ -15,7 +15,7 @@ class MainWidget(BoxLayout):
         super(MainWidget, self).__init__(**kwargs)
 
     def set_controller(self, controller: Controller):
-        if not self.activeController is None:
+        if self.activeController is not None:
             self.activeController.on_unset()
             self.remove_widget(self.activeController.get_widget())
 

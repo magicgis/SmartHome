@@ -1,4 +1,5 @@
 from functools import partial
+import gc
 
 import kivy.clock
 

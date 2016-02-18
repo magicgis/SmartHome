@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Networking;
 using Newtonsoft.Json.Linq;
 using System.Collections.ObjectModel;
+using System.Windows.Forms;
 
 namespace HueLightning.API {  
     /// <summary>
@@ -26,7 +27,8 @@ namespace HueLightning.API {
                 JObject json = JObject.Parse(response);
                 JToken lightToken = json.GetValue("lights");
                 return response.Length > 0;
-            } catch {
+			} catch (Exception e){
+				MessageBox.Show (e.Message);
                 return false;
             }                              
         }

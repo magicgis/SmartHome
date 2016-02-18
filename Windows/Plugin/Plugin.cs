@@ -37,13 +37,13 @@ namespace Plugin {
         /// </summary>
         public MySqlConnection GetDatabaseConnection {
             get {
-                MySqlConnection checkCon = new MySqlConnection("Server=192.168.178.94; Uid=dev; Pwd=test");
+				MySqlConnection checkCon = new MySqlConnection("Server=127.0.0.1; Uid=root; Pwd=test");
                 checkCon.Open();
                 MySqlCommand cmd = new MySqlCommand("CREATE DATABASE IF NOT EXISTS " + Name.Replace('.', '_') + "", checkCon);
                 cmd.ExecuteNonQuery();
                 checkCon.Close();
 
-                MySqlConnection con = new MySqlConnection("Server=192.168.178.94; Database=" + Name.Replace('.', '_') + "; Uid=dev; Pwd=test");
+				MySqlConnection con = new MySqlConnection("Server=127.0.0.1; Database=" + Name.Replace('.', '_') + "; Uid=root; Pwd=test");
                 return con;
             }
         }

@@ -12,9 +12,10 @@ class QuitApp(Application):
     __curScreen = None  # type: AppScreen
     __connection = None  # type: ConnectionIdentifier
 
-    def on_system_boot(self):
+    def on_system_boot(self, finishedCallback: callable):
         instance = self
         self.__curScreen = MainScreen()
+        finishedCallback()
 
     def get_current_screen(self) -> AppScreen:
         return self.__curScreen

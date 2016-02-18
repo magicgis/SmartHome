@@ -5,6 +5,8 @@ from kivy.uix.button import Button
 from ESApi.AppScreen import AppScreen
 
 import ClockSrc.TimeManager as TimeManager
+from ClockSrc import ClockApp
+
 
 class MainScreen(AppScreen, BoxLayout):
     __background = None  # type: Widget
@@ -35,9 +37,13 @@ class MainScreen(AppScreen, BoxLayout):
 
         self.__timersButton = Button()
         self.__timersButton.text = "Timers"
+        self.__timersButton.bind(on_press=lambda instance: self.__move_to_timers())
 
         TimeManager.instance.register_time_listener(self.__timemanager_timechanged)
         TimeManager.instance.register_date_listener(self.__timemanager_datechanged)
+
+    def __move_to_timers(self):
+        ClockApp.clockAppInstance.set_screen(ClockApp.clockAppInstance.timerScreen)
 
     def _on_resize(self):
         pass

@@ -56,7 +56,7 @@ namespace HueLightning {
             res.PutInfo("Count", "" + lights.Count);
             
             for(int i = 0; i < lights.Count; i++) {
-                res.PutInfo("" + i, lights.ElementAt(i).Id);
+                res.PutInfo("L" + i, lights.ElementAt(i).Id);
             }
 
             return res;

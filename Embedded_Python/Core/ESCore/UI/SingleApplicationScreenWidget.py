@@ -6,6 +6,7 @@ from kivy.uix.button import Button
 from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 from ESCore.UI.ScreenStack import ScreenStack
 
+
 class BottomBar(Widget):
     def __init__(self, height: int, backCallback: callable, homeCallback: callable, **kwargs):
         super(BottomBar, self).__init__(**kwargs)

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Networking;
 using Newtonsoft.Json.Linq;
 using Plugin;
+using System.Data;
 
 namespace HueLightning.API {
     /// <summary>
@@ -45,9 +46,9 @@ namespace HueLightning.API {
                     req.Send();
                     string response = req.Read();
                     JObject json = JObject.Parse(response);
-                    JToken nameValue = json.First.Next.Next;
-                    JValue value = (JValue)nameValue.First;
-                    return (string)value.Value;
+					JToken nameValue = json["name"];
+					string name = nameValue.Value<String> ();
+					return name;
                 } catch(Exception e){
                     Debug.Log(_debugChannel, $"Could not fetch name. Exception={e.Message}");
                     return null;
@@ -75,9 +76,9 @@ namespace HueLightning.API {
                     req.Send();
                     string response = req.Read();
                     JObject json = JObject.Parse(response);
-                    JToken onValue = json.First.First.First;
-                    JValue value = (JValue)onValue.First;
-                    return (bool)value.Value;
+					JToken onValue = json["state"]["on"];
+					bool value = onValue.Value<bool> ();
+					return value;
                 }catch(Exception e) {
                     Debug.Log(_debugChannel, $"Could not fetch on state. Exception={e.Message}");
                     return false;
@@ -105,9 +106,9 @@ namespace HueLightning.API {
                     req.Send();
                     string response = req.Read();
                     JObject json = JObject.Parse(response);
-                    JToken onValue = json.First.First.First.Next;
-                    JValue value = (JValue)onValue.First;   
-                    return (byte)((long)value.Value);
+                    JToken onValue = json["state"]["bri"];
+					byte value = (byte)onValue.Value<long>();   
+                    return value;
                 } catch (Exception e) {
                     Debug.Log(_debugChannel, $"Could not fetch brightness. Exception={e.Message}");
                     return 0;
@@ -135,9 +136,9 @@ namespace HueLightning.API {
                     req.Send();
                     string response = req.Read();
                     JObject json = JObject.Parse(response);
-                    JToken onValue = json.First.First.First.Next.Next;
-                    JValue value = (JValue)onValue.First;
-                    return (ushort)((long)value.Value);
+					JToken onValue = json["state"]["hue"];
+					ushort value = (ushort)onValue.Value<long>();   
+					return value;
                 } catch (Exception e) {
                     Debug.Log(_debugChannel, $"Could not fetch hue. Exception={e.Message}");
                     return 0;
@@ -164,10 +165,10 @@ namespace HueLightning.API {
                     HttpGETRequest req = new HttpGETRequest(Bridge.BaseUrl, "lights/" + Id);
                     req.Send();
                     string response = req.Read();
-                    JObject json = JObject.Parse(response);
-                    JToken onValue = json.First.First.First.Next.Next.Next;
-                    JValue value = (JValue)onValue.First;
-                    return (byte)((long)value.Value);
+					JObject json = JObject.Parse(response);
+					JToken onValue = json["state"]["sat"];
+					byte value = (byte)onValue.Value<long>();   
+					return value;
                 } catch (Exception e) {
                     Debug.Log(_debugChannel, $"Could not fetch saturation. Exception={e.Message}");
                     return 0;

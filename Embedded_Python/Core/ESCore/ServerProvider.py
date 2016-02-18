@@ -31,7 +31,7 @@ class ServerProvider(AbstractServerProvider):
         """
 
         identifier = ConnectionIdentifier()
-        socket = BufferedIXPSocket("192.168.178.47", 10250)
+        socket = BufferedIXPSocket("127.0.0.1", 10250)
         socket.register_callback(lambda ixpFile: self.__message_received(identifier, ixpFile))
         self.__connections[identifier] = socket
         return identifier
@@ -123,7 +123,6 @@ class ServerProvider(AbstractServerProvider):
         """
             override of superclass method
         """
-
         raise NotImplementedError()
 
     def simple_string_request_async(self, connection: ConnectionIdentifier, request: IXPFile, callback):
@@ -131,7 +130,10 @@ class ServerProvider(AbstractServerProvider):
             override of superclass method
         """
 
-        raise NotImplementedError()
+        self.ixp_request_async(connection, request, lambda ixpFile: self.__internal_simple_string_request_async(callback, ixpFile))
+
+    def __internal_simple_string_request_async(self, callback, ixpFile: IXPFile = None):
+        callback(response=ixpFile.get_info("Response"))
 
     def simple_bool_request(self, connection: ConnectionIdentifier, request: IXPFile, callback):
         """

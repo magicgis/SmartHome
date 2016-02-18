@@ -5,6 +5,8 @@ from ESCore.CoreApplication import CoreApplication
 from ESCore.UI.SingleApplicationScreenWidget import SingleApplicationScreenWidget
 from ESCore.UI.SingleApplicationScreenSubWidget import SingleApplicationScreenSubWidget
 
+import ESCore.UI.MainWidget as MainWidget
+
 class AppController(Controller):
     """
         Handles displaying apps and their corresponding screens
@@ -21,6 +23,7 @@ class AppController(Controller):
         """
 
         self.__app = app
+        self.__app.app().provide_refresh_callback(self.update_widget())
 
     def get_widget(self) -> Widget:
         """
@@ -34,6 +37,9 @@ class AppController(Controller):
             self.__tmpCurrentScreen = subWidget
 
         return self.__widget
+
+    def update_widget(self):
+        MainWidget.instance.set_controller(self)
 
     def on_set(self):
         """
