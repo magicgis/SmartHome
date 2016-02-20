@@ -171,11 +171,11 @@ class ServerProvider(AbstractServerProvider):
             if self.__asyncListenersTypes[identifier] == self.__ASYNC_LISTENER_TYPE_IXP:
                 self.__asyncListenersCallbacks[identifier](ixpFile)
             elif self.__asyncListenersTypes[identifier] == self.__ASYNC_LISTENER_TYPE_BOO:
-                pass
+                continue
             elif self.__asyncListenersTypes[identifier] == self.__ASYNC_LISTENER_TYPE_INT:
-                pass
+                continue
             elif self.__asyncListenersTypes[identifier] == self.__ASYNC_LISTENER_TYPE_STR:
-                pass
+                continue
 
             self.__asyncListeners.remove(identifier)
             del self.__asyncListenersCallbacks[identifier]

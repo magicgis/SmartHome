@@ -75,6 +75,7 @@ class _LightSelectionController(_ScreenController):
         count = int(ixpFile.get_info("Count"))
 
         for index in range(0, count):
+            time.sleep(0.5)
             id = int(ixpFile.get_info("L" + str(index)))
             self.__lights[id] = ""
             getLightNameReq = IXPFile()
