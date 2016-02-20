@@ -18,8 +18,11 @@ class ShutdownThread(Thread):
     """
 
     def _run(self):
+        self.set_callback(self.__finished)
         for index in range(0, ApplicationManager.instance.application_count()):
             ApplicationManager.instance.application_at(index).app().on_system_shutdown()
 
         Networking.instance.get_server().free_all_connections()
+
+    def __finished(self):
         App.get_running_app().stop()

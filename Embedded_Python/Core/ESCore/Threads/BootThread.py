@@ -1,7 +1,6 @@
 import time
 
 import kivy.clock as clock
-from kivy.app import App
 
 from ESApi.Thread import Thread
 

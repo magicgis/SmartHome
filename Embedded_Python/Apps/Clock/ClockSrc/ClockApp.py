@@ -18,6 +18,8 @@ class ClockApp(Application):
 
     def on_system_boot(self, finishedCallback: callable):
         set_instance(self)
+        finishedCallback()
+        return
         ClockNetworking.instance.connect()
         TimeManager.instance.start()
         self.mainScreen = MainScreen()
