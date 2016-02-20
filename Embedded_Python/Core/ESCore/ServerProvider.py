@@ -32,7 +32,7 @@ class ServerProvider(AbstractServerProvider):
         """
 
         identifier = ConnectionIdentifier()
-        socket = BufferedIXPSocket("127.0.0.1", 10250)
+        socket = BufferedIXPSocket("192.168.178.94", 10250)
         socket.register_callback(lambda ixpFile: self.__message_received(identifier, ixpFile))
         self.__connections[identifier] = socket
         return identifier
