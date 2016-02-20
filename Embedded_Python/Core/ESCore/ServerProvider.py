@@ -2,6 +2,7 @@ from ESApi.ServerProvider import ServerProvider as AbstractServerProvider
 from ESApi.ServerProvider import ConnectionIdentifier, MessageListenerIdentifier
 from ESApi.IXPFile import IXPFile
 from ESCore.BufferedIXPSocket import BufferedIXPSocket
+import uuid
 
 class AsyncListenerIdentifier:
     pass
@@ -31,7 +32,7 @@ class ServerProvider(AbstractServerProvider):
         """
 
         identifier = ConnectionIdentifier()
-        socket = BufferedIXPSocket("192.168.178.94", 10250)
+        socket = BufferedIXPSocket("127.0.0.1", 10250)
         socket.register_callback(lambda ixpFile: self.__message_received(identifier, ixpFile))
         self.__connections[identifier] = socket
         return identifier
@@ -147,11 +148,13 @@ class ServerProvider(AbstractServerProvider):
             override of superclass method
         """
 
+        reqId = uuid.uuid4().hex
+        request.add_header("req_id", reqId)
         identifier = AsyncListenerIdentifier()
         self.__asyncListeners.append(identifier)
         self.__asyncListenersCallbacks[identifier] = callback
         self.__asyncListenersConnections[identifier] = connection
-        self.__asyncListenersFunctions[identifier] = request.get_network_function()
+        self.__asyncListenersFunctions[identifier] = reqId
         self.__asyncListenersTypes[identifier] = self.__ASYNC_LISTENER_TYPE_IXP
 
         socket = self.__connections[connection]  # type: BufferedIXPSocket
@@ -162,7 +165,7 @@ class ServerProvider(AbstractServerProvider):
             if connection != self.__asyncListenersConnections[identifier]:
                 continue
 
-            if self.__asyncListenersFunctions[identifier] != ixpFile.get_network_function():
+            if self.__asyncListenersFunctions[identifier] != ixpFile.get_header("req_id"):
                 continue
 
             if self.__asyncListenersTypes[identifier] == self.__ASYNC_LISTENER_TYPE_IXP:

@@ -140,11 +140,15 @@ namespace Plugin {
                 nfunc.Invoke(dicParams);
             else if (nfunc.ReturnType == typeof(IXPFile)) {
                 IXPFile file = (IXPFile)nfunc.Invoke(dicParams);
+				if(ixp.Headers.Contains ("req_id"))
+					file.PutHeader ("req_id", ixp.GetHeaderValue ("req_id"));
                 arg1.Send(Encoding.UTF8.GetBytes(file.XML));
             } else {
                 object response = nfunc.Invoke(dicParams);
                 IXPFile iresponse = new IXPFile();
-                iresponse.NetworkFunction = ixp.NetworkFunction;
+				iresponse.NetworkFunction = ixp.NetworkFunction;
+				if(ixp.Headers.Contains("req_id"))
+					iresponse.PutHeader ("req_id", ixp.GetHeaderValue ("req_id"));
                 iresponse.PutInfo("Response", response.ToString());
                 arg1.Send(Encoding.UTF8.GetBytes(iresponse.XML));
             }

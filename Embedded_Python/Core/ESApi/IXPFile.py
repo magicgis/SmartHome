@@ -42,15 +42,14 @@ class IXPFile:
         :param source: Existing IXP String to parse
         """
 
-        # If no source is provided everything is done already
-        if source == None:
-            return
-
         self.__header_names = []
         self.__header_values = []
         self.__info_names = []
         self.__info_values = []
-        self.__network_function = ""
+
+        # If no source is provided everything is done already
+        if source == None:
+            return
 
         # Parse source to minidom xml
         doc = minidom.parseString(source)

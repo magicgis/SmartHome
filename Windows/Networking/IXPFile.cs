@@ -182,7 +182,8 @@ namespace Networking {
         }
         private XmlNode GetHeaderInfoNode(string name) {
             foreach (XmlNode node in GetHeaderNode().ChildNodes) {
-                if (GetHeaderInfoNameAttr(node).Name.Equals(name))
+				string nName = GetHeaderInfoNameAttr(node).Value;
+                if (nName.Equals(name))
                     return node;
             }
 

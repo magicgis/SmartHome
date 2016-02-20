@@ -4,6 +4,8 @@ from ESApi.AppScreen import AppScreen
 from ESApi.ServerProvider import ConnectionIdentifier, ServerProvider
 from ESApi.IXPFile import IXPFile
 
+import time
+
 import LightSrc.LightNetworking as LightNetworking
 from LightSrc.UI.LightSelection import LightSelection
 
@@ -78,11 +80,13 @@ class _LightSelectionController(_ScreenController):
             getLightNameReq = IXPFile()
             getLightNameReq.set_network_function("com.projectgame.huelightning.hue.getlightname")
             getLightNameReq.add_info("light_id", str(id))
-            server.simple_string_request_async(con, getLightNameReq, lambda response: self.__network_light_name_arrived(id, response))
+            server.simple_string_request_async(con, getLightNameReq, self.__get_name_lambda(id))
             app.add_boot_step()
 
         app.do_boot_step()
 
+    def __get_name_lambda(self, id: int):
+        return lambda response: self.__network_light_name_arrived(id, response)
 
     def __network_light_name_arrived(self, id: int, response: str = None):
         global app
