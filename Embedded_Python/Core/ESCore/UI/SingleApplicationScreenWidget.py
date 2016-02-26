@@ -53,8 +53,9 @@ class TopBar(Widget):
         self.add_widget(self.__grid)
 
     def clear_buttons(self):
-        for child in self.__grid.children:
-            self.__grid.remove_widget(child)
+        while len(self.__grid.children) > 0:
+            for child in self.__grid.children:
+                self.__grid.remove_widget(child)
 
     def add_buttons(self, buttons):
         for i in range(0, self.__grid.cols - len(buttons)):
@@ -62,6 +63,10 @@ class TopBar(Widget):
 
         for index in range(0, len(buttons)):
             btn = buttons[index]  # type: Button
+
+            if btn.parent is not None:
+                btn.parent.remove_widget(btn)
+
             self.__grid.add_widget(btn)
 
 class SingleApplicationScreenWidget(GridLayout):

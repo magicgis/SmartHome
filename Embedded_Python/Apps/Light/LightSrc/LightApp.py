@@ -8,6 +8,7 @@ import time
 
 import LightSrc.LightNetworking as LightNetworking
 from LightSrc.UI.LightSelection import LightSelection
+from LightSrc.UI.LightData import LightData
 
 app = None  # type: LightApp
 
@@ -19,6 +20,7 @@ class _ScreenController:
 
 class LightApp(Application):
     lightSelection = None  # type: _LightSelectionController
+    lightData = None  # type _LightDataController
 
     __curScreen = None  # type: AppScreen
     __bootStepsNeeded = 1
@@ -32,6 +34,7 @@ class LightApp(Application):
         app = self
         LightNetworking.instance.connect()
         self.lightSelection = _LightSelectionController()
+        self.lightData = _LightDataController()
         self.__curScreen = self.lightSelection.get_screen()
         self.do_boot_step()
 
@@ -89,15 +92,31 @@ class _LightSelectionController(_ScreenController):
     def __get_name_lambda(self, id: int):
         return lambda response: self.__network_light_name_arrived(id, response)
 
+    def __light_selected_lambda(self, id: int):
+        return lambda: self.light_selected(id)
+
     def __network_light_name_arrived(self, id: int, response: str = None):
         global app
         self.__lights[id] = response
-        self.__screen.add_light(response, self.light_selected)
+        self.__screen.add_light(response, self.__light_selected_lambda(id))
         app.do_boot_step()
 
 
-    def light_selected(self):
-        pass
+    def light_selected(self, id : int):
+        global app
+        app.switch_screen(app.lightData)
 
     def get_screen(self):
         return self.__screen
+
+class _LightDataController(_ScreenController):
+    __screen = None  # type: LightData
+
+    def __init__(self):
+        self.__screen = LightData(self.__btn_back_pressed)
+
+    def get_screen(self) -> AppScreen:
+        return self.__screen
+
+    def __btn_back_pressed(self):
+        print("Want to go back")

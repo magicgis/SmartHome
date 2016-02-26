@@ -39,6 +39,6 @@ class LightSelection(AppScreen, BoxLayout):
     def add_light(self, name: str, callback: callable):
         btn = Button()
         btn.text = name
-        btn.bind(on_press=callback)
+        btn.bind(on_press=lambda instance: callback())
         self.__lights.append(btn)
         self.__refresh_lights()

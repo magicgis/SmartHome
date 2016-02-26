@@ -23,7 +23,7 @@ class AppController(Controller):
         """
 
         self.__app = app
-        self.__app.app().provide_refresh_callback(self.update_widget())
+        self.__app.app().provide_refresh_callback(self.update_widget)
 
     def get_widget(self) -> Widget:
         """

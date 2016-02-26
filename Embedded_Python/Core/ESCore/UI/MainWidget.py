@@ -19,6 +19,10 @@ class MainWidget(BoxLayout):
             self.activeController.on_unset()
             self.remove_widget(self.activeController.get_widget())
 
+        while len(self.children) > 0:
+            for child in self.children:
+                self.remove_widget(child)
+
         widget = controller.get_widget()
         self.add_widget(widget)
         self.activeController = controller
