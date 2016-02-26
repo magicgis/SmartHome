@@ -1,4 +1,5 @@
 import time
+import sys
 
 import kivy.clock as clock
 
@@ -26,3 +27,4 @@ class ShutdownThread(Thread):
 
     def __finished(self):
         App.get_running_app().stop()
+        sys.exit()
