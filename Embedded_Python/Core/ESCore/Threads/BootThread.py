@@ -35,8 +35,7 @@ class BootThread(Thread):
         # load all applications in apps directory
         ApplicationManager.instance.load_applications(CoreFileIO.apps_directory())
 
-        for index in range(0, ApplicationManager.instance.application_count()):
-            ApplicationManager.instance.application_at(index).app().on_system_boot(self.__app_finished)
+        clock.ClockBase.schedule_once(clock.Clock, self._init_apps)
 
         while self.__counter < ApplicationManager.instance.application_count():
             time.sleep(0.1)
@@ -47,6 +46,9 @@ class BootThread(Thread):
     def _init_app_launcher(self, dt: int = 0):
         AppLauncherController.instance.initialize()
 
+    def _init_apps(self, dt: int = 0):
+        for index in range(0, ApplicationManager.instance.application_count()):
+            ApplicationManager.instance.application_at(index).app().on_system_boot(self.__app_finished)
 
     def __system_shutdown_callback(self):
         thread = ShutdownThread()
