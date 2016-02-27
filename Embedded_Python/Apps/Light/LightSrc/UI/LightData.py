@@ -13,19 +13,22 @@ import ESApi.FileIO
 class LightData(AppScreen, BoxLayout):
     __background = None  # type: Image
 
-    __btnBack = None  # type: Button
-
     __colorPalette = None  # type: Image
     __brightnessBar = None  # type: Image
 
-    def __init__(self, backCallback: callable, **kwargs):
+    __hue = 0  # type: int
+    __sat = 0  # type: int
+    __bri = 0  # type: int
+
+    def __init__(self, backCallback: callable, hue: int = 0, sat: int = 255, bri: int = 255, **kwargs):
         super(LightData, self).__init__(**kwargs)
+
+        self.__hue = hue
+        self.__sat = sat
+        self.__bri = bri
+
         self.__background = Image(color=[1, 1, 1, 1])
         self.add_widget(self.__background)
-
-        self.__btnBack = Button()
-        self.__btnBack.text = "Back"
-        self.__btnBack.bind(on_press=lambda instance: backCallback)
 
         coreColorPalette = CoreImage.load(ESApi.FileIO.apps_directory() + "/Light/Media/HSBPalette.png")
         self.__colorPalette = Image()
@@ -41,9 +44,6 @@ class LightData(AppScreen, BoxLayout):
         self.__brightnessBar.keep_ratio = False
         self.__background.add_widget(self.__brightnessBar)
 
-    def get_topbar_buttons(self):
-        return [self.__btnBack]
-
     def on_touch_down(self, touch):
         self.__touch_input(touch)
 
@@ -52,11 +52,12 @@ class LightData(AppScreen, BoxLayout):
 
     def _on_resize(self):
         size = self.size[1]
-        self.__colorPalette.size = (size, size)
-        self.__colorPalette.pos = (self.size[0] - size, 50)
 
-        self.__brightnessBar.size = (50, size)
-        self.__brightnessBar.pos = (self.__colorPalette.pos[0], 50)
+        self.__brightnessBar.size = (100, size)
+        self.__brightnessBar.pos = (self.size[0] - 100, 50)
+
+        self.__colorPalette.size = (size, size)
+        self.__colorPalette.pos = (self.__brightnessBar.pos[0] - size, 50)
 
     def __touch_input(self, touch):
         if self.__colorPalette.collide_point(touch.pos[0], touch.pos[1]): # Color Palette Input
@@ -70,7 +71,15 @@ class LightData(AppScreen, BoxLayout):
             relativeX = float(touchX - frameX) / float(frameW)
             relativeY = float(touchY - frameY) / float(frameH)
 
-            sat = int(relativeX * 255)
-            hue = int(65535 - (relativeY * 65535))
+            self.__sat = int(relativeX * 255)
+            self.__hue = int(65535 - (relativeY * 65535))
 
-            self.__background.color = Color(float(hue) / float(65535), relativeX, 1, mode="hsv").rgba
+            self.__debug_color()
+
+        if self.__brightnessBar.collide_point(touch.pos[0], touch.pos[1]): # Brightness Bar Input
+            relative = float(touch.pos[1] - self.__brightnessBar.pos[1]) / float(self.__brightnessBar.size[1])
+            self.__bri = int(relative * 255)
+            self.__debug_color()
+
+    def __debug_color(self):
+            self.__background.color = Color(float(self.__hue) / float(65535), float(self.__sat) / float(255), float(self.__bri) / float(255), mode="hsv").rgba
