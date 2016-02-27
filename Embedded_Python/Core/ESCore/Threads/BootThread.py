@@ -21,11 +21,6 @@ class BootThread(Thread):
     __counter = 0
 
     def _run(self):
-
-
-        import pydevd
-        pydevd.settrace('192.168.178.47', port=46645, stdoutToServer=True, stderrToServer=True)
-
         self.__counter = 0
 
         #init system
