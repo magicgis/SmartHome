@@ -105,7 +105,7 @@ namespace HueLightning {
             HueLight light = lights.FirstOrDefault(l => l.Id.Equals(light_id));
 
             IXPFile res = new IXPFile();
-            res.NetworkFunction = "com.projectgame.huelightning.hue.getcolor";
+            res.NetworkFunction = "com.projectgame.huelightning.hue.getlightcolor";
             res.PutInfo("bri", "" + light.Brightness);
             res.PutInfo("sat", "" + light.Saturation);
             res.PutInfo("hue", "" + light.Hue);

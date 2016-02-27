@@ -95,28 +95,57 @@ class _LightSelectionController(_ScreenController):
     def __light_selected_lambda(self, id: int):
         return lambda: self.light_selected(id)
 
+    def __light_data_lambda(self, id: int):
+        return lambda response: self.__network_light_data_arrived(id, response)
+
     def __network_light_name_arrived(self, id: int, response: str = None):
         global app
         self.__lights[id] = response
         self.__screen.add_light(response, self.__light_selected_lambda(id))
         app.do_boot_step()
 
+    def __network_light_data_arrived(self, id: int, response: IXPFile = None):
+        global app
+
+        hue = int(response.get_info("hue"))
+        sat = int(response.get_info("sat"))
+        bri = int(response.get_info("bri"))
+
+        app.lightData.update(id, hue, sat, bri)
+        app.switch_screen(app.lightData)
 
     def light_selected(self, id : int):
-        global app
-        app.switch_screen(app.lightData)
+        con = LightNetworking.instance.get_connection()  # type: ConnectionIdentifier
+        server = Networking.instance.get_server()
+        getLightColor = IXPFile()
+        getLightColor.set_network_function("com.projectgame.huelightning.hue.getlightcolor")
+        getLightColor.add_info("light_id", str(id))
+        server.ixp_request_async(con, getLightColor, self.__light_data_lambda(id))
 
     def get_screen(self):
         return self.__screen
 
 class _LightDataController(_ScreenController):
     __screen = None  # type: LightData
+    __id = None  # type: int
 
     def __init__(self):
-        self.__screen = LightData(self.__btn_back_pressed)
+        self.__screen = LightData(self.__data_changed)
+
+    def update(self, id: int, hue: int = 0, sat: int = 255, bri: int = 255):
+        self.__id = id
+        self.__screen.update_data(hue, sat, bri)
 
     def get_screen(self) -> AppScreen:
         return self.__screen
 
-    def __btn_back_pressed(self):
-        print("Want to go back")
+    def __data_changed(self, hue: int = 0, sat: int = 0, bri: int = 0):
+        con = LightNetworking.instance.get_connection()  # type: ConnectionIdentifier
+        server = Networking.instance.get_server()
+        setLightColor = IXPFile()
+        setLightColor.set_network_function("com.projectgame.huelightning.hue.setlightcolor")
+        setLightColor.add_info("light_id", str(self.__id))
+        setLightColor.add_info("hue", str(hue))
+        setLightColor.add_info("sat", str(sat))
+        setLightColor.add_info("bri", str(bri))
+        server.no_response_request(con, setLightColor)

@@ -20,12 +20,12 @@ class LightData(AppScreen, BoxLayout):
     __sat = 0  # type: int
     __bri = 0  # type: int
 
-    def __init__(self, backCallback: callable, hue: int = 0, sat: int = 255, bri: int = 255, **kwargs):
+    __callback = None  # type: callable
+
+    def __init__(self, dataChangedCallback: callable, hue: int = 0, sat: int = 255, bri: int = 255, **kwargs):
         super(LightData, self).__init__(**kwargs)
 
-        self.__hue = hue
-        self.__sat = sat
-        self.__bri = bri
+        self.__callback = dataChangedCallback
 
         self.__background = Image(color=[1, 1, 1, 1])
         self.add_widget(self.__background)
@@ -43,6 +43,17 @@ class LightData(AppScreen, BoxLayout):
         self.__brightnessBar.allow_stretch = True
         self.__brightnessBar.keep_ratio = False
         self.__background.add_widget(self.__brightnessBar)
+
+        self.__hue = hue
+        self.__sat = sat
+        self.__bri = bri
+        self.__debug_color()
+
+    def update_data(self, hue: int = 0, sat: int = 255, bri: int = 255):
+        self.__hue = hue
+        self.__sat = sat
+        self.__bri = bri
+        self.__debug_color()
 
     def on_touch_down(self, touch):
         self.__touch_input(touch)
@@ -74,12 +85,15 @@ class LightData(AppScreen, BoxLayout):
             self.__sat = int(relativeX * 255)
             self.__hue = int(65535 - (relativeY * 65535))
 
-            self.__debug_color()
+            self.__debug_color(True)
 
         if self.__brightnessBar.collide_point(touch.pos[0], touch.pos[1]): # Brightness Bar Input
             relative = float(touch.pos[1] - self.__brightnessBar.pos[1]) / float(self.__brightnessBar.size[1])
             self.__bri = int(relative * 255)
-            self.__debug_color()
+            self.__debug_color(True)
 
-    def __debug_color(self):
+    def __debug_color(self, useCallback: bool = False):
             self.__background.color = Color(float(self.__hue) / float(65535), float(self.__sat) / float(255), float(self.__bri) / float(255), mode="hsv").rgba
+
+            if useCallback:
+                self.__callback(hue=self.__hue, sat=self.__sat, bri=self.__bri)
