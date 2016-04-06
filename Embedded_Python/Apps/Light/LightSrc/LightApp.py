@@ -145,8 +145,8 @@ class _LightDataController(_ScreenController):
     def __data_changed(self, hue: int = 0, sat: int = 0, bri: int = 0):
         curTimeStamp = datetime.now().time()
 
-        if curTimeStamp <= self.__delay:
-            return
+        #if curTimeStamp <= self.__delay:
+        #    return
 
         self.__delay = curTimeStamp + 10
 
