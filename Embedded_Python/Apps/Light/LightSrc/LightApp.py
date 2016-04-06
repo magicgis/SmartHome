@@ -148,7 +148,7 @@ class _LightDataController(_ScreenController):
         if curTimeStamp <= self.__delay:
             return
 
-        self.__delay = curTimeStamp + 1
+        self.__delay = curTimeStamp + 10
 
         con = LightNetworking.instance.get_connection()  # type: ConnectionIdentifier
         server = Networking.instance.get_server()
