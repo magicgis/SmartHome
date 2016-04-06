@@ -10,6 +10,8 @@ import LightSrc.LightNetworking as LightNetworking
 from LightSrc.UI.LightSelection import LightSelection
 from LightSrc.UI.LightData import LightData
 
+from datetime import datetime
+
 app = None  # type: LightApp
 
 
@@ -128,6 +130,7 @@ class _LightSelectionController(_ScreenController):
 class _LightDataController(_ScreenController):
     __screen = None  # type: LightData
     __id = None  # type: int
+    __delay = -1  # type: int
 
     def __init__(self):
         self.__screen = LightData(self.__data_changed)
@@ -140,6 +143,13 @@ class _LightDataController(_ScreenController):
         return self.__screen
 
     def __data_changed(self, hue: int = 0, sat: int = 0, bri: int = 0):
+        curTimeStamp = datetime.now().time()
+
+        if curTimeStamp <= self.__delay:
+            return
+
+        self.__delay = curTimeStamp + 1
+
         con = LightNetworking.instance.get_connection()  # type: ConnectionIdentifier
         server = Networking.instance.get_server()
         setLightColor = IXPFile()
