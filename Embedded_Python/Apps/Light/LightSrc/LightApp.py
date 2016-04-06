@@ -109,8 +109,8 @@ class _LightSelectionController(_ScreenController):
     def __network_light_data_arrived(self, id: int, response: IXPFile = None):
         global app
 
-        hue = int(response.get_info("hue"))
-        sat = int(response.get_info("sat"))
+        hue = 1 #int(response.get_info("hue"))
+        sat = 1 #int(response.get_info("sat"))
         bri = int(response.get_info("bri"))
 
         app.lightData.update(id, hue, sat, bri)
@@ -145,8 +145,8 @@ class _LightDataController(_ScreenController):
     def __data_changed(self, hue: int = 0, sat: int = 0, bri: int = 0):
         curTimeStamp = datetime.now().time()
 
-        #if curTimeStamp <= self.__delay:
-        #    return
+        if curTimeStamp <= self.__delay:
+            return
 
         self.__delay = curTimeStamp + 10
 
